@@ -1,0 +1,11 @@
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  padding: 0 2rem;
+
+  :nth-child(2) {
+    margin-left: auto;
+  }
+}
