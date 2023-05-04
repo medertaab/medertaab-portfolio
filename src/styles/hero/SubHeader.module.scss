@@ -1,0 +1,64 @@
+
+.subHeader {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  height: min-content;
+  width: min-content;
+  margin-right: 5%;
+
+  h2 {
+    flex: 1 0 1;
+    width: 100%;
+    font-size: 3rem;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    white-space: nowrap
+  }
+
+  span {
+    display: inline-flex;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: var(--lime);
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+  }
+
+  div {
+    display: inline-flex;
+    height: 4rem;
+    flex: 1;
+    border: 2px solid var(--black);
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "DotGothic16", sans-serif;
+  }
+}
+
+@media (min-width: $widescreen) {
+  .subHeader {
+    margin-right: 15%;
+    h2 {
+      font-size: max(4vw, 2rem);
+    }
+    
+    span {
+      font-size: 4vw;
+      height: min(4rem, 6vw);
+      width: min(4rem, 6vw);
+    }
+
+    div {
+      height: min(4rem, 6vw);
+      font-size: 2.2vw;
+    }
+  }
+}

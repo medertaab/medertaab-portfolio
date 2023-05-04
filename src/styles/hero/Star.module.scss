@@ -1,0 +1,38 @@
+.starAnimation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  margin: 3rem auto 1rem auto;
+
+  .rays {
+    height: 100%;
+    fill: var(--lime);
+  }
+
+  .starBig {
+    height: 90%;
+    position: absolute;
+    z-index: 2;
+    fill: var(--black);
+    opacity: 80%;
+  }
+
+  .starSmall {
+    height: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 2;
+    fill: var(--black);
+  }
+}
+
+@media (min-width: $widescreen) {
+  .starAnimation {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}

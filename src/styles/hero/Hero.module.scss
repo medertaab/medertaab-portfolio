@@ -1,0 +1,27 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $widescreen) {
+  .heroSection {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+  }
+
+  .heroContainer {
+    height: 25vw;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+  }
+}
