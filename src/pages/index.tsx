@@ -5,6 +5,11 @@ import styles from '@component/styles/Home.module.scss'
 import Navbar from '@component/components/Navbar'
 import Hero from '@component/components/hero'
 import ShootingStars from '@component/components/hero/ShootingStars'
+import About from '@component/components/About'
+import Skills from '@component/components/Skills'
+import Footer from '@component/components/Footer'
+import Projects from '@component/components/projects'
+import Contact from '@component/components/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,14 +23,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </Head>
 
       <main className={`${styles.main} ${inter.className}`}>
         <Navbar />
         <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+
+        <Footer />
+
         <ShootingStars />
       </main>
     </>

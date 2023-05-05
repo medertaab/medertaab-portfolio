@@ -1,0 +1,201 @@
+@mixin projects-alternating {
+  @for $i from 1 through 3 {
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      .projectCard {
+        background-color: var(--cosmic-light);
+
+        a:last-child {
+          color: var(--cosmic-light);
+        }
+      }
+    }
+  }
+}
+
+@mixin background-alternating {
+  @for $i from 1 through 3 {
+    &:nth-child(even) {
+      background-color: var(--cosmic-light);
+
+      @media (min-width: $widescreen) {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@mixin thumbnails {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      $margin-left: ($i - 1.5) * 2.5rem;
+      $margin-top: (3 - $i) * 1rem;
+
+      z-index: 4 - $i;
+      left: $margin-left;
+      top: $margin-top;
+    }
+  }
+}
+
+.project {
+  @include background-alternating;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 1rem;
+  background-color: var(--lime);
+
+  border-radius: 3rem;
+
+  .projectImages {
+    position: relative;
+    top: 1rem;
+    height: 70vw;
+    
+
+    img {
+      @include thumbnails;
+      position: absolute;
+      width: 80%;
+      border: 0.5rem solid var(--black);
+      border-radius: 3rem;
+      transform: perspective(1000px) rotateY(-30deg) rotateX(-7deg)
+        rotateZ(4deg);
+      transition: 0.2s ease-in-out;
+    }
+
+    img:hover {
+      z-index: 3;
+      transform: translateY(-2rem) perspective(1000px) rotateY(-15deg)
+        rotateX(-15deg) rotateZ(5deg);
+    }
+  }
+
+  .projectCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 2.5rem;
+      top: 2.5rem;
+      height: 2.5rem;
+      width: 2.5rem;
+      background-image: url("~public/svg/star.svg");
+    }
+  }
+
+  .projectContainer {
+    border: 3px solid var(--black);
+    position: relative;
+    border-radius: 2.5rem;
+    padding: 2rem 1rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    span {
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    .links {
+      display: flex;
+      width: 100%;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      height: 2.25rem;
+      padding: 0 1rem;
+      border: 3px solid var(--black);
+      border-radius: 1.125rem;
+      flex-grow: 1;
+    }
+
+    a:last-child {
+      background-color: var(--black);
+      color: var(--lime);
+    }
+  }
+}
+
+
+@media (min-width: $widescreen) {
+  .project {
+    @include projects-alternating;
+    background-color: transparent;
+    flex-direction: row;
+    margin: 3rem auto 4rem;
+    max-width: var(--max-width);
+    width: 100%;
+  
+    .projectImages {
+      flex: 2;
+      height: auto;
+    }
+  
+    .projectCard {
+      flex: 3;
+      background-color: var(--lime);
+      min-height: 20rem;
+      border-radius: 3rem;
+      overflow: hidden;
+  
+      &::after {
+        content: "";
+        right: 3rem;
+        top: 2.75rem;
+        height: 3.5rem;
+        width: 3.5rem;
+      }
+    }
+  
+    .projectContainer {
+      height: 100%;
+      padding: 2rem 3rem;
+  
+      span {
+        position: absolute;
+        bottom: 2rem;
+        text-align: left;
+      }
+  
+      .links {
+        flex-direction: column;
+        position: absolute;
+        bottom: 2rem;
+        right: 3rem;
+      }
+  
+      a {
+        margin-left: auto;
+        font-size: 1.2rem;
+      }
+    }
+  
+    .decoration{
+      position: absolute;
+      background: rgb(224,255,161);
+      background: radial-gradient(circle, rgb(255, 230, 0) 0%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);    height: 100%;
+      mix-blend-mode: overlay;
+      height: 150%;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+    }
+  }
+}

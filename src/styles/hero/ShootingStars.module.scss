@@ -3,17 +3,16 @@ $length: 2s;
 .shootingStars {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
   top: 0;
   left: 0;
   background-color: none;
-  overflow-x: hidden;
 }
 
 .starsContainer {
   position: absolute;
   height: 120vw;
-  width: 120vw;
   margin: 0 auto;
   position: relative;
   transform: rotate(30deg);
@@ -92,6 +91,11 @@ $length: 2s;
 
 
 @media (min-width: $widescreen) {
+  .shootingStars {
+    top: -25%;
+    left: -10%;
+  }
+
   .starsContainer {
     height: 100vh;
     width: 100vh;

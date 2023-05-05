@@ -1,0 +1,58 @@
+.footer {
+  width: 100%;
+  background-color: var(--black);
+
+  ::-moz-selection { /* Code for Firefox */
+    color: var(--black);
+    background: var(--lime);
+  }
+  
+  ::selection {
+    color: var(--black);
+    background: var(--lime);
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    list-style: none;
+    justify-content: center;
+  }
+
+  li {
+    color: var(--lime);
+    margin: 0 1rem;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  span {
+    display: block;
+    text-align: right;
+    color: var(--lime);
+    margin: 0 1rem;
+    max-width: var(--max-width);
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: $widescreen) {
+  .footer {
+    padding: 2rem;
+  
+    ul {
+      margin: 1rem auto 3rem auto;
+    }
+  
+    li {
+      margin: 0 4rem;
+      font-size: 1.1rem;
+    }
+  
+    span {
+      margin: 0 auto;
+    }
+  }
+}

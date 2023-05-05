@@ -1,0 +1,147 @@
+.contact {
+  background-color: var(--lime);
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .contactContainer {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    overflow: hidden;
+
+    h3 {
+      font-weight: 500;
+      margin: 1rem;
+    }
+  }
+
+  .emailButton {
+    font-family: "DotGothic16", sans-serif;
+    font-size: 1;
+    color: var(--lime);
+    background-color: var(--cosmic);
+    width: fit-content;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10rem;
+    transition: 0.1s ease-in-out;
+  }
+
+  .emailButton:hover {
+    box-shadow: 0.3rem 0.3rem 0 black;
+    transform: translate(-0.3rem, -0.3rem);
+  }
+
+  .emailButton:active {
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > * {
+      background-color: transparent;
+      border: 2px solid var(--black);
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+
+    input {
+      height: 2rem;
+      padding-left: 1rem;
+    }
+
+    textarea {
+      min-height: 15rem;
+      max-height: 20rem;
+      resize: vertical;
+      padding: 1rem;
+    }
+
+    .sendButton {
+      width: 7rem;
+      height: 2.5rem;
+      border-radius: 1.5rem;
+      background-color: var(--black);
+      color: var(--lime);
+      font-family: "Lato", sans-serif;
+      font-size: 1rem;
+      padding-bottom: 0.1rem;
+      transition: 0.1s ease-in-out;
+      transform: translate(0, 0);
+    }
+
+    .sendButton:hover {
+      box-shadow: 0.2rem 0.2rem 0 var(--cosmic);
+      transform: translate(-0.2rem, -0.2rem);
+    }
+
+    .sendButton:active {
+      box-shadow: none;
+      transform: translate(0, 0);
+    }
+  }
+
+  .contactContainer::after {
+    content: "";
+    position: absolute;
+    height: 60%;
+    aspect-ratio: 1/1;
+    left: 95%;
+    bottom: 5%;
+    background-image: url("~public/svg/star.svg");
+  }
+}
+
+.contact::before {
+  content: "";
+  width: 100%;
+  height: 5rem;
+  background-color: var(--black);
+}
+
+@media (min-width: $widescreen) {
+  .contact {
+    .contactContainer {
+      position: relative;
+      max-width: 900px;
+      padding: 3rem;
+
+      h3 {
+        font-size: 4rem;
+        font-weight: 500;
+      }
+    }
+
+    .emailButton {
+      position: absolute;
+      right: 3rem;
+      top: 4rem;
+      font-size: 1.1rem;
+      width: fit-content;
+      max-width: 15rem;
+      padding: 0.5rem 1rem;
+    }
+
+    form {
+      width: 90%;
+      margin: 0 auto;
+
+      .sendButton {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
