@@ -12,12 +12,8 @@
   font-family: "Lato", sans-serif;
   font-weight: 900;
 
-  & > * {
-    box-shadow: 0 0 5px var(--white);
-    background-color: var(--white);
-  }
-
   a {
+    color: var(--white);
     margin-left: 1rem;
     display: inline-flex;
     align-items: center;
@@ -25,7 +21,7 @@
     svg {
       height: 2.2rem;
       width: 2.2rem;
-      fill: var(--black);
+      fill: var(--white);
     }
   }
 
@@ -33,7 +29,7 @@
     width: 4rem;
     height: 2.2rem;
     border-radius: 1.1rem;
-    background-color: var(--black);
+    background-color: var(--white);
     margin-left: 1rem;
   }
 

@@ -27,7 +27,7 @@
 
   svg {
     fill: var(--black);
-    height: 100%;
+    height: max(60%, 1.8rem);
   }
 
   .lightButton,
@@ -37,6 +37,10 @@
     border: none;
     border-radius: 50%;
     background-color: var(--lime);
+  }
+
+  .lightButton {
+    padding: 0.5rem;
   }
 
   .starButton {
@@ -87,9 +91,13 @@
       width: 7.5vw;
     }
 
-    .starButton {
-      margin-left: 1vw;
-      padding: 1rem;
+    .lightButton {
+      padding: min(1.5rem, 2vw);
+    }
+
+    .gameButton {
+      font-size: 7rem;
+      color: white;
     }
   }
 }

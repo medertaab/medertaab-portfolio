@@ -28,6 +28,20 @@ const projects = [
       "./thumbnails/quickstretch2.jpg",
     ],
   },
+  {
+    title: "Portfolder",
+    description: [
+      "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
+    ],
+    technologies: ["Typescript", "NextJS", "Tailwind"],
+    url: "http://",
+    github: "http://",
+    images: [
+      "./thumbnails/portfolder0.jpg",
+      "./thumbnails/portfolder1.jpg",
+      "./thumbnails/portfolder2.jpg",
+    ],
+  },
 ];
 
 export default projects;

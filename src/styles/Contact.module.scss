@@ -7,6 +7,16 @@
   align-items: center;
   justify-content: center;
 
+  ::-moz-selection { /* Code for Firefox */
+    color: var(--lime);
+    background: var(--black);
+  }
+  
+  ::selection {
+    color: var(--lime);
+    background: var(--black);
+  }
+
   .contactContainer {
     position: relative;
     width: 100%;
@@ -14,11 +24,15 @@
     display: flex;
     flex-direction: column;
     height: fit-content;
-    overflow: hidden;
 
     h3 {
       font-weight: 500;
       margin: 1rem;
+      color: var(--black);
+    }
+
+    p {
+      color: var(--black);
     }
   }
 
@@ -48,12 +62,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    
 
     & > * {
       background-color: transparent;
       border: 2px solid var(--black);
       border-radius: 1rem;
       margin-top: 1rem;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
     }
 
     input {
@@ -90,11 +107,16 @@
       box-shadow: none;
       transform: translate(0, 0);
     }
+
+    textarea:focus {
+      outline: none;
+    }
   }
 
   .contactContainer::after {
     content: "";
     position: absolute;
+    z-index: 2;
     height: 60%;
     aspect-ratio: 1/1;
     left: 95%;
@@ -111,7 +133,7 @@
 }
 
 @media (min-width: $widescreen) {
-  .contact {
+  .contact {    
     .contactContainer {
       position: relative;
       max-width: 900px;

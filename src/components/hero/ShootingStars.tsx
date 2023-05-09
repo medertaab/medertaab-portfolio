@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/hero/ShootingStars.module.scss";
-import StarGraphic from "../../../public/svg/star2.svg";
+import StarGraphic from "../../../public/svg/star2-white.svg";
 
 export default function ShootingStars() {
   const numberOfStars = 7

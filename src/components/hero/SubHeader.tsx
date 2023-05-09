@@ -1,26 +1,55 @@
-import React, { useEffect, useState } from 'react'
-import styles from '../../styles/hero/SubHeader.module.scss'
+import React, { useState, useEffect, useRef } from "react";
+import styles from "../../styles/hero/SubHeader.module.scss";
 
 export default function SubHeader() {
-  const [titleId, setTitleId] = useState(0)
-  const titles = ["Illustrator", "Copywriter", "Translator", "Internet resident"]
-  
+  const [current, setCurrent] = useState(0);
+  const [text, setText] = useState("");
+  const interval = useRef() as any;
+  const timeout = useRef as any;
+
+  function scramble(string: string) {
+    const symbols =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+=";
+
+    const newString = string.split("").map((it) => {
+      return symbols.charAt(Math.floor(Math.random() * symbols.length));
+    });
+    return newString.join("");
+  }
+
   useEffect(() => {
-    setInterval(() => {
-      setTitleId((prev) => {
-        if (prev === titles.length - 1) {
-          setTitleId(0)
+
+    interval.current = setTimeout(() => {
+      setText(scramble(titles[current]));
+    }, 300);
+
+    timeout.current = setTimeout(() => {
+      clearTimeout(interval.current);
+      setText(titles[current]);
+      
+      setTimeout(() => {
+        if (current === titles.length - 1) {
+          setCurrent(0);
         } else {
-          setTitleId(prev + 1)
+          setCurrent(current + 1);
         }
-      })
-    }, 1000)
-  }, [])
-  
+      }, 2000);
+
+    }, 2000);
+  }, [current, text]);
+
+  const titles = [
+    "Illustrator",
+    "Copywriter",
+    "Translator",
+    "Internet resident",
+  ];
+
   return (
     <div className={styles.subHeader}>
       <h2>WEB DEVELOPER</h2>
-      <span>&</span><div>Illustrator</div>
+      <span>&</span>
+      <div className={styles.title}>{text}</div>
     </div>
-  )
+  );
 }

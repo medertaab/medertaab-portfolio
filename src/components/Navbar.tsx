@@ -6,7 +6,7 @@ import LinkedinLogo from "../../public/svg/linkedin.svg"
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
-      <span className={styles.logo}>M</span>
+      <a href="#main" className={styles.logo}>M</a>
       <a href=""><GithubLogo /></a>
       <a href=""><LinkedinLogo /></a>
       <button></button>

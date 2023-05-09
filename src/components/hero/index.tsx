@@ -1,17 +1,21 @@
 import React from "react";
 import styles from "../../styles/hero/Hero.module.scss";
+import Galaxy from "./Galaxy";
 import Name from "./Name";
 import Star from "./Star";
 import SubHeader from "./SubHeader";
 
 export default function Hero() {
   return (
-    <section className={styles.heroSection}>
+    <section className={styles.heroSection} id="main">
       <div className={styles.heroContainer}>
-        <Star />
+        <div></div>
         <Name />
       </div>
-      <SubHeader />
+      <div className={styles.subContainer}>
+        <Galaxy />
+        <SubHeader />
+      </div>
     </section>
   );
 }

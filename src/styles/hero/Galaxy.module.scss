@@ -1,0 +1,95 @@
+.galaxyContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 2rem;
+    z-index: 3;
+  }
+}
+
+.galaxy {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.mainRing {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: min(50%, 10vw);
+  border-radius: 100%;
+  border: 3px solid var(--black);
+}
+
+.upperRing, .lowerRing {
+  position: absolute;
+  display: inline-block;
+  width: 65%;
+  height: min(25%, 7vw);
+  border-radius: 100%;
+  border: 3px solid var(--black);
+}
+
+.upperRing {
+  top: 15%;
+  z-index: 3;
+  animation: upperRing-move 5s ease-in-out infinite;
+}
+
+.lowerRing {
+  bottom: 15%;
+  animation: lowerRing-move 5s ease-in-out infinite;
+}
+
+.star {
+  height: min(4rem, 7vw);
+  z-index: 2;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: var(--white);
+}
+
+@media (min-width: $widescreen) {
+  .galaxy {
+    max-width: 40%;
+    max-height: 90%;
+  }
+
+  .upperRing {
+    top: 2.5rem;
+  }
+  
+  .lowerRing {
+    bottom: 2.5rem;
+  }
+  
+}
+
+@keyframes upperRing-move {
+  0% {
+    top: 15%;
+  } 50% {
+    top: 60%;
+  } 100% {
+    top: 15%;
+  }
+}
+
+@keyframes lowerRing-move {
+  0% {
+    bottom: 15%;
+  } 50% {
+    bottom: 60%;
+  } 100% {
+    bottom: 15%;
+  }
+}

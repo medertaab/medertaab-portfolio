@@ -9,7 +9,7 @@ export default function Projects() {
       <h3>Projects</h3>
 
       {projectsData.map((project, index) => {
-        return <ProjectCard project={project} index={index} key={index} />;
+        return <ProjectCard project={project} key={index} />;
       })}
     </section>
   );

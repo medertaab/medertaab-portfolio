@@ -2,13 +2,18 @@ import React from "react";
 import styles from "../../styles/hero/Name.module.scss";
 import Star from "../../../public/svg/star.svg"
 import ReactLogo from "../../../public/svg/reactlogo.svg"
+import Lightbulb from "../../../public/svg/lightbulb.svg"
 
 export default function Name() {
   return (
     <div className={styles.name}>
       <div>
-        <button className={styles.lightButton}></button>
-        <button className={styles.gameButton}></button>
+        <button className={styles.lightButton}>
+          <Lightbulb />
+        </button>
+        <button className={styles.gameButton}>
+          
+        </button>
       </div>
       <div>
         <h1>MEDER</h1>

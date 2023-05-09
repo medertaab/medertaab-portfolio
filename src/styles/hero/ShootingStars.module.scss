@@ -2,12 +2,12 @@ $length: 2s;
 
 .shootingStars {
   position: absolute;
-  width: 100%;
   width: 100vw;
-  min-height: 100vh;
+  max-width: 100%;
   top: 0;
   left: 0;
   background-color: none;
+  overflow: hidden;
 }
 
 .starsContainer {
@@ -16,6 +16,8 @@ $length: 2s;
   margin: 0 auto;
   position: relative;
   transform: rotate(30deg);
+  top: -25vh;
+  left: -25vh;
 
   span {
     @mixin random {
@@ -40,7 +42,7 @@ $length: 2s;
     align-items: center;
     width: fit-content;
     border-radius: 100% 0 0 100%;
-    background-color: var(--black);
+    background-color: var(--white);
     animation: tail $length ease-in-out infinite,
       shooting $length ease-in-out infinite;
     
@@ -51,7 +53,7 @@ $length: 2s;
       height: 1rem;
       right: -0.25rem;
       animation: shining $length ease-in-out infinite both;
-      transform: rotate(-30deg);
+      fill: var(--white);
     }
   }
 }
@@ -80,12 +82,14 @@ $length: 2s;
 @keyframes shining {
   0% {
     width: 0;
+    transform: rotate(0deg);
   }
   50% {
     width: 1rem;
   }
   100% {
     width: 0;
+    transform: rotate(180deg);
   }
 }
 

@@ -2,7 +2,6 @@
   max-width: var(--max-width);
   margin-top: 3rem;
   padding: 0 1.5rem;
-
   h3 {
     margin-bottom: 1rem;
     margin-left: 2rem;
@@ -24,9 +23,9 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: $widescreen) {
   .aboutSection {
-    padding: 0;
+    padding: 2rem;
     margin: 0;
 
     h3 {
@@ -34,12 +33,12 @@
     }
     
     p {
-      font-size: 1.3rem;
-      line-height: 2.7rem;
+      font-size: 1.1rem;
+      line-height: 2.1rem;
     }
     
     :nth-child(2) {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 2rem;
     }
   }
