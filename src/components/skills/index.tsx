@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Skills.module.scss";
+import styles from "./Skills.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
@@ -21,17 +21,17 @@ export default function Skills() {
   return (
     <Swiper
       modules={[Autoplay]}
-      className={styles.skills}
-      slidesPerView={7}
+      className={styles.skillsContainer}
+      slidesPerView={6}
       loop={true}
-      freeMode
-      mousewheel={{ releaseOnEdges: true }}
-      autoplay
+      autoplay={{ delay: 2000 }}
     >
       {skillTitles.map((skill, index) => {
         return (
           <SwiperSlide>
-            <sup>{index}</sup>{skill}
+            <div className={styles.skill} key={index}>
+              <sup>{index}</sup>{skill}
+            </div>
           </SwiperSlide>
         );
       })}

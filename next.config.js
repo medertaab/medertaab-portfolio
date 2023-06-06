@@ -29,7 +29,7 @@ const nextConfig = {
     return config;
   },
   sassOptions: {
-    prependData: `@import "@component/styles/variables.scss";`,
+    prependData: `@use "@component/styles/variables.scss" as *;`,
   },
 };
 

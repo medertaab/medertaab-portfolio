@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import styles from "../../styles/projects/Project.module.scss";
+import React from "react";
+import styles from "./ProjectCard.module.scss";
 
 interface Project {
   title: string;
@@ -51,14 +51,11 @@ export default function Project(props: ProjectProps) {
           <div className={styles.lowerHalf}>
             <span>Built with {technologiesText()}</span>
             <div className={styles.links}>
-              <a href={project.url}>Site link ↗</a>
-              <a href={project.github}>Github repo ↗</a>
+              <a href={project.url}>Site link &#8599;&#xFE0E;</a>
+              <a href={project.github}>Github repo &#8599;&#xFE0E;</a>
             </div>
           </div>
         </div>
-
-        {/* Background element */}
-        <span className={styles.decoration} ></span>
       </div>
     </article>
   );

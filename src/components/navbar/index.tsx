@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '../styles/Navbar.module.scss'
-import GithubLogo from "../../public/svg/github.svg"
-import LinkedinLogo from "../../public/svg/linkedin.svg"
+import styles from './Navbar.module.scss'
+import GithubLogo from "@public/svg/github.svg"
+import LinkedinLogo from "@public/svg/linkedin.svg"
 
 export default function Navbar() {
   return (

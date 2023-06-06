@@ -1,8 +1,9 @@
-import React from "react";
-import styles from "../../styles/hero/Name.module.scss";
-import Star from "../../../public/svg/star.svg"
-import ReactLogo from "../../../public/svg/reactlogo.svg"
-import Lightbulb from "../../../public/svg/lightbulb.svg"
+import React, { useEffect } from "react";
+import styles from "./Name.module.scss";
+import Star from "@public/svg/star.svg"
+import ReactLogo from "@public/svg/reactlogo.svg"
+import Lightbulb from "@public/svg/lightbulb.svg"
+import ShootingStars from "../shootingStars";
 
 export default function Name() {
   return (
@@ -16,7 +17,7 @@ export default function Name() {
         </button>
       </div>
       <div>
-        <h1>MEDER</h1>
+        <h1 className={styles.firstName}>MEDER</h1>
         <button className={styles.starButton}>
           <Star />
         </button>
@@ -27,6 +28,9 @@ export default function Name() {
         </button>
         <h1>TAAB</h1>
       </div>
+
+      <ShootingStars left/>
+      <ShootingStars right/>
     </div>
   );
 }

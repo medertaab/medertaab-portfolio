@@ -3,18 +3,12 @@
   --navbar-height: 2.5rem;
   --border-radius: 12px;
 
-  --black: rgba(35, 35, 35);
+  --black: rgb(20, 20, 20);
   --white: rgba(235, 235, 235);
   --lime: rgba(178, 223, 0);
   --cosmic: #6000fc;
   --cosmic-light: rgb(143, 117, 255);
   --orange: rgb(255, 110, 27);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-
-  }
 }
 
 * {

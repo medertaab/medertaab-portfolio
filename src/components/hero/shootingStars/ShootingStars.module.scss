@@ -1,0 +1,64 @@
+$length: 2s;
+$colors: (rgb(255, 187, 0), rgb(199, 0, 199));
+
+@function random-color() {
+  @return nth($colors, random(length($colors)));
+}
+
+.shootingStars {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 40%;
+
+  &.left {
+    right: 100%;
+  }
+
+  &.right {
+    left: 100%;
+  }
+
+  span {
+    @mixin random {
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          $delay: random(2000) + 0ms;
+          animation-delay: $delay;
+
+          svg {
+            animation-delay: $delay;
+            fill: random-color();
+          }
+        }
+      }
+    }
+
+    @include random;
+    position: absolute;
+
+    svg {
+      position: absolute;
+      width: 1.5rem;
+      animation: shining $length ease-in-out 1 both;
+    }
+  }
+}
+
+@keyframes shining {
+  0% {
+    scale: 0;
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+    rotate: 180deg;
+  }
+}
+
+@media (min-width: $widescreen) {
+}

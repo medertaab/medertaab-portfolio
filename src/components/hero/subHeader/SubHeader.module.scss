@@ -1,0 +1,105 @@
+.subHeader {
+  width: 100%;
+  z-index: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #c3ff99;
+  background-image: radial-gradient(
+      at 81% 85%,
+      rgb(196, 162, 255) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 87% 15%, hsla(277, 71%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 56%, hsla(36, 99%, 70%, 1) 0px, transparent 80%),
+    radial-gradient(at 33% 25%, rgb(255, 219, 102) 0px, transparent 50%);
+
+  .titlesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+    max-width: 80rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 500;
+      white-space: nowrap;
+      color: var(--black);
+    }
+
+    .and {
+      display: block;
+      aspect-ratio: 1/1;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      font-family: "Urbanist", sans-serif;
+      border-radius: 100%;
+      border: 1px solid $black;
+      color: $black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .titles {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      span {
+        margin: 0;
+        color: $black;
+        text-decoration: underline;
+        text-align-last: justify;
+        width: 100%;
+        min-width: 17rem;
+        font-family: "Urbanist", sans-serif;
+      }
+    }
+  }
+
+  .decoration {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    img {
+      height: 2rem;
+    }
+
+    .decorativeEl {
+      width: 20rem;
+      height: 2rem;
+      background-color: $black;
+      float: right;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .subHeader {
+    .titlesContainer {
+      gap: 1rem;
+      flex-wrap: nowrap;
+
+      h2 {
+        flex-grow: 1;
+        font-size: max(3.5rem, 4vw);
+      }
+
+      .and {
+        height: 3rem;
+      }
+
+      .titles {
+        width: 25rem;
+      }
+    }
+  }
+}
