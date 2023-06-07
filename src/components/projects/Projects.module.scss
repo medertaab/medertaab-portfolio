@@ -1,21 +1,29 @@
 .projects {
   width: 100%;
-  margin-top: 2rem;
-  
+  margin: 0 auto;
+  margin-top: 6rem;
+  width: 100%;
+  max-width: 72rem;
+
 
   h3 {
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto 1rem 2rem;
+    margin: 0 auto;
+    width: $max-width;
+    padding: 0 2rem;
+  
+    &::after {
+      left: 0;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 @media (min-width: $widescreen) {
   .projects {
     padding: 0 2rem;
-   
+
     h3 {
       margin: 0 auto;
     }
-  }  
+  }
 }

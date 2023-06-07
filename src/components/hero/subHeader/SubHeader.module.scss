@@ -20,24 +20,26 @@
     flex-wrap: wrap;
     gap: 0;
     width: 100%;
-    max-width: 80rem;
+    max-width: $max-width;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
 
     h2 {
-      font-size: 2.5rem;
+      font-size: min(4rem, 12vw);
       font-family: "Urbanist", sans-serif;
       font-weight: 500;
       white-space: nowrap;
       color: var(--black);
+      flex-grow: 1;
+      width: 100%;
     }
 
     .and {
       display: block;
       aspect-ratio: 1/1;
-      height: 2.5rem;
-      font-size: 1.5rem;
+      height: 2.4rem;
+      font-size: 1rem;
       font-family: "Urbanist", sans-serif;
       border-radius: 100%;
       border: 1px solid $black;
@@ -50,23 +52,26 @@
     .titles {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      flex-grow: 1;
 
       span {
         margin: 0;
         color: $black;
         text-decoration: underline;
         text-align-last: justify;
-        width: 100%;
-        min-width: 17rem;
+        width: 15rem;
         font-family: "Urbanist", sans-serif;
+        animation: slideup 1s 2s linear;
+        font-size: 0.8rem;
+        width: 100%;
+        padding-left: 1rem;
       }
     }
   }
 
   .decoration {
     width: 100%;
-    max-width: 80rem;
+    max-width: $max-width;
     margin: 0 auto;
 
     img {
@@ -90,7 +95,7 @@
 
       h2 {
         flex-grow: 1;
-        font-size: max(3.5rem, 4vw);
+        font-size: max(3.5rem, 4.2vw);
       }
 
       .and {
@@ -98,7 +103,12 @@
       }
 
       .titles {
-        width: 25rem;
+        flex-grow: 0;
+        min-width: 15rem;
+
+        span {
+          padding: 0;
+        }
       }
     }
   }

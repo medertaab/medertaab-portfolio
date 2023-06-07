@@ -69,6 +69,39 @@
   }
 }
 
+@media (min-width: $widescreen) {
+  .name {
+    & > div {
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: min(12vw, 8rem);
+    }
+
+    button {
+      height: min(9vw, 6rem);
+      border-radius: 100rem;
+    }
+
+    .lightButton,
+    .starButton {
+      width: min(9vw, 6rem);
+    }
+
+    .lightButton {
+      padding: min(1.5rem, 2vw);
+    }
+
+    .gameButton {
+      font-size: 7rem;
+      color: white;
+    }
+  }
+}
+
+////////// Animations
+
 @keyframes button-pop-out {
   0% {
     box-shadow: none;
@@ -93,36 +126,5 @@
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-@media (min-width: $widescreen) {
-  .name {
-    & > div {
-      margin-bottom: 0.5rem;
-    }
-
-    h1 {
-      font-size: max(7vw, 6rem);
-    }
-
-    button {
-      height: max(5.5vw, 4.5rem);
-      border-radius: 100rem;
-    }
-
-    .lightButton,
-    .starButton {
-      width: max(5.5vw, 4.5rem);
-    }
-
-    .lightButton {
-      padding: min(1.5rem, 2vw);
-    }
-
-    .gameButton {
-      font-size: 7rem;
-      color: white;
-    }
   }
 }

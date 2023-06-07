@@ -3,7 +3,7 @@
   --navbar-height: 2.5rem;
   --border-radius: 12px;
 
-  --black: rgb(20, 20, 20);
+  --black: rgb(17, 17, 17);
   --white: rgba(235, 235, 235);
   --lime: rgba(178, 223, 0);
   --cosmic: #6000fc;
@@ -64,9 +64,13 @@ h3::after {
   position: absolute;
   left: -2rem;
   top: -1.5rem;
-  height: 3rem;
-  width: 3rem;
-  background-image: url("~/public/svg/star-cosmic.svg");
+  height: 2rem;
+  width: 2rem;
+  background-image: url("~/public/svg/star-medium-cosmic.svg");
+}
+
+h3.orange::after {
+  background-image: url("~/public/svg/star-medium-orange.svg");
 }
 
 h4 {
@@ -92,14 +96,14 @@ input:focus {
 
 @media (min-width: 600px) {
   h3 {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 
   h3::after {
-    left: -3rem;
-    top: -2rem;
-    height: 4rem;
-    width: 4rem;
+    left: -1.9rem;
+    top: -1.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
   }
 
   h4 {

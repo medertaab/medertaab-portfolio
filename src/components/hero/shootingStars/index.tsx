@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ShootingStars.module.scss";
-import StarGraphic from "@public/svg/star2-white.svg";
+import StarGraphic from "@public/svg/star-medium.svg";
 
 export default function ShootingStars({ left, right }: any) {
   const numberOfStars = 3;

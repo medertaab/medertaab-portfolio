@@ -1,5 +1,5 @@
 $length: 2s;
-$colors: (rgb(255, 187, 0), rgb(199, 0, 199));
+$colors: (rgb(255, 187, 0), $purple);
 
 @function random-color() {
   @return nth($colors, random(length($colors)));

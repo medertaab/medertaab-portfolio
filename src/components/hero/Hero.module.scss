@@ -4,9 +4,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 5rem;
+  position: relative;
+  z-index: 0;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-image: url("/images/bg.png");
+  //   background-size: cover;
+  //   animation: fade-in 1s ease-in 0.5s both;
+  // }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-image: url("/images/noiseanim.gif");
+  //   background-size: 8%;
+  //   mix-blend-mode: overlay;
+  // }
 }
 
 @media (min-width: $widescreen) {
@@ -15,5 +36,13 @@
     height: min(90vh, 75vw);
     width: 100%;
     margin-top: 5vh;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 0.9;
   }
 }
