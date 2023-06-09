@@ -4,18 +4,6 @@
   margin-top: 6rem;
   width: 100%;
   max-width: 72rem;
-
-
-  h3 {
-    margin: 0 auto;
-    width: $max-width;
-    padding: 0 2rem;
-  
-    &::after {
-      left: 0;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 @media (min-width: $widescreen) {

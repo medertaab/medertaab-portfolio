@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./ProjectCard.module.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useInView } from "framer-motion";
 
 interface Project {
   title: string;
@@ -9,6 +9,8 @@ interface Project {
   url: string;
   github: string;
   images: string[];
+  gradient: string;
+  color: string;
 }
 
 interface ProjectProps {
@@ -17,14 +19,10 @@ interface ProjectProps {
 }
 
 export default function Project(props: ProjectProps) {
-  const { project, index } = props;
+  const { project, index  } = props;
 
-  const offsetStart = 800 + index * 300;
-  const offsetEnd = offsetStart + 300;
-
-  const containerRef = useRef(null);
-  const { scrollY } = useScroll();
-  const frameY = useTransform(scrollY, [offsetStart, offsetEnd], [-50, 50]);
+  const projectRef = useRef(null);
+  const isInView = useInView(projectRef, { once: true })
 
   function technologiesText() {
     return project.technologies.map((name, index) => {
@@ -39,18 +37,22 @@ export default function Project(props: ProjectProps) {
   }
 
   return (
-    <article className={styles.project} ref={containerRef}>
+    <article className={styles.project} ref={projectRef} style={{
+      opacity: isInView ? 1 : 0,
+      transform: isInView ? "none" : (index % 2 === 0 ? "translateX(-100px)" : "translateX(100px)")
+    }}>
       {/* Images */}
-      <div className={styles.imageContainer}>
-        <motion.img
+      <div className={styles.imageContainer} style={{backgroundImage: project.gradient }}>
+        <img
           src={project.images[0]}
           alt={`${project.title} thumbnail`}
           className={styles.thumbnail}
-        ></motion.img>
+        ></img>
+        <span className={styles.border}></span>
       </div>
 
       {/* Card */}
-      <div className={styles.projectCard}>
+      <div className={styles.projectCard} style={{backgroundImage: project.gradient}}>
         <div className={styles.projectContainer}>
           <div className={styles.upperHalf}>
             <h4>{project.title}</h4>
@@ -60,10 +62,10 @@ export default function Project(props: ProjectProps) {
           </div>
 
           <div className={styles.lowerHalf}>
-            <span>Built with {technologiesText()}</span>
+            <span className={styles.stack}>Built with {technologiesText()}</span>
             <div className={styles.links}>
               <a href={project.url}>Site link &#8599;&#xFE0E;</a>
-              <a href={project.github}>Github repo &#8599;&#xFE0E;</a>
+              <a href={project.github} style={{color: project.color}}>Github repo &#8599;&#xFE0E;</a>
             </div>
           </div>
         </div>

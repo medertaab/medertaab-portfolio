@@ -6,15 +6,23 @@
   background: linear-gradient(180deg, rgb(44, 44, 44) 0%, rgb(17, 17, 17) 100%);
   overflow: hidden;
 
+  button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    z-index: 100;
+  }
+
   &::after {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url("/images/noiseanim.gif");
+    background-image: url("/images/noise2.gif");
     mix-blend-mode: soft-light;
-    background-size: 10%;
     opacity: 0.2;
+    background-size: 5.4rem;
   }
 
   svg {
@@ -26,21 +34,20 @@
     height: 100%;
     width: 100%;
     transform: scale(1.3);
-    top: -10%;
-    right: -10%;
+
     filter: blur(3vw);
-    
+
     .blob1 {
       right: 30%;
-      height: 40%;
-      fill: #A0B3F7;
+      width: 40%;
+      fill: #a0b3f7;
     }
-  
+
     .blob2 {
       right: 0;
-      height: 80%;
+      width: 58%;
       max-height: 60vw;
-      fill: #A99EEE;
+      fill: #a99eee;
       animation: blob-height 10s ease-in-out infinite;
     }
   }
@@ -48,15 +55,15 @@
   @keyframes blob-height {
     0% {
       transform: translateY(0) rotate(0deg);
-      fill: #A99EEE;
+      fill: #a99eee;
     }
     50% {
-      transform: translateY(5%) rotate(15deg);
+      transform: translateY(-10%) rotate(7deg);
       fill: #7e6ce4;
     }
     100% {
       transform: translateY(0) rotate(0deg);
-      fill: #A99EEE;
+      fill: #a99eee;
     }
   }
 
@@ -73,33 +80,31 @@
     .light1 {
       right: 20%;
       width: 40%;
-      fill: #FF3D00;
+      fill: #ff3d00;
     }
 
     .light2 {
-      left: 15%;
-      width: 40%;
-      fill: #F0FF3F;
-
+      left: 5%;
+      width: 45%;
+      fill: #ffbf10;
     }
 
     .light3 {
       right: 0;
       width: 60%;
-      fill: #FACF60;
+      fill: #facf60;
     }
 
     .light4 {
       left: 20%;
       width: 30%;
-      fill: #FB9638;
+      fill: #fb9638;
     }
 
     .light5 {
       left: 0%;
-      width: 35%;
-      fill: #ADB3EE;
+      width: 40%;
+      fill: #63a1ff;
     }
   }
-
 }

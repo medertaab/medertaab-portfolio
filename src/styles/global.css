@@ -59,20 +59,6 @@ h3 {
   position: relative;
 }
 
-h3::after {
-  content: "";
-  position: absolute;
-  left: -2rem;
-  top: -1.5rem;
-  height: 2rem;
-  width: 2rem;
-  background-image: url("~/public/svg/star-medium-cosmic.svg");
-}
-
-h3.orange::after {
-  background-image: url("~/public/svg/star-medium-orange.svg");
-}
-
 h4 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
@@ -99,14 +85,8 @@ input:focus {
     font-size: 2.3rem;
   }
 
-  h3::after {
-    left: -1.9rem;
-    top: -1.5rem;
-    height: 2.2rem;
-    width: 2.2rem;
-  }
-
   h4 {
     font-size: 2rem;
   }
 }
+

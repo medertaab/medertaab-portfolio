@@ -2,7 +2,6 @@ import React from "react";
 import Gradient from "./gradient";
 import styles from "./Hero.module.scss";
 import Name from "./name";
-import ShootingStars from "./shootingStars";
 import SubHeader from "./subHeader";
 
 export default function Hero() {

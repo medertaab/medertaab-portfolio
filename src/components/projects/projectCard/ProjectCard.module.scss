@@ -2,14 +2,6 @@
   @for $i from 1 through 3 {
     &:nth-child(odd) {
       flex-direction: row-reverse;
-
-      .projectCard {
-        background-color: var(--cosmic-light);
-
-        a:last-child {
-          color: var(--cosmic-light);
-        }
-      }
     }
   }
 }
@@ -22,17 +14,33 @@
   border-radius: 3rem;
   gap: 1rem;
   position: relative;
+  transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+  min-height: 20rem;
 
   .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 20rem;
-    padding: 1rem 1rem;
-    border: 2px solid $lime;
-    border-radius: 3rem;
     width: auto;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 0;
 
     .thumbnail {
       height: 100%;
       border-radius: 2.5rem;
+    }
+
+    .border {
+      position: absolute;
+      height: calc(100% - 4px);
+      width: calc(100% - 4px);
+      z-index: -1;
+      border-radius: 3rem;
+      background-color: $black;
     }
   }
 
@@ -68,6 +76,7 @@
 
     p {
       color: var(--black);
+      cursor: default;
     }
 
     span {
@@ -75,6 +84,9 @@
       text-align: right;
       width: 100%;
       margin-top: 1rem;
+    }
+
+    .stack {
       font-style: italic;
       color: var(--black);
     }
@@ -109,7 +121,7 @@
     color: var(--cosmic-light);
     background: var(--black);
   }
-  
+
   ::selection {
     color: var(--cosmic-light);
     background: var(--black);
@@ -132,12 +144,21 @@
 
     .projectCard {
       flex: 3;
-      background-color: var(--lime);
       min-height: 20rem;
       border-radius: 3rem;
       overflow: hidden;
       position: relative;
+      background-size: 110%;
+      transition: 1s ease-in-out;
+      background-position: center;
 
+      &:hover {
+        background-size: 150%;
+        background-position: right;
+        animation: background-shift 3s ease-in-out infinite 1s;
+      }
+
+      // Star svg
       &::after {
         content: "";
         right: 3rem;
@@ -153,7 +174,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
 
       .lowerHalf {
         display: flex;
@@ -178,5 +198,20 @@
         white-space: nowrap;
       }
     }
+  }
+}
+
+@keyframes background-shift {
+  0% {
+    background-size: 150%;
+    background-position: right;
+  }
+  50% {
+    background-size: 150%;
+    background-position: left;
+  }
+  100% {
+    background-size: 150%;
+    background-position: right;
   }
 }

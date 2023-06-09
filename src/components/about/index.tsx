@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./About.module.scss";
+import SectionTitle from "../ui/sectionTitle";
 
 export default function About() {
   return (
     <section className={styles.aboutSection}>
-      <h3 className="orange">About</h3>
+      <SectionTitle color="#ffbb00">About</SectionTitle>
 
       <p>
         Hello! My name is Meder Taab and I create web stuff and other things 🔮

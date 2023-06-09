@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Gradient.module.scss";
 
 export default function Gradient() {

@@ -1,0 +1,41 @@
+.titleContainer {
+  position: relative;
+  margin: 0 auto;
+  width: calc($max-width - 2rem);
+
+  .star {
+    position: absolute;
+    left: -2rem;
+    top: -1.5rem;
+    height: 2rem;
+    width: 2rem;
+    animation: star-shine 1s;
+    fill: $purple;
+  }
+}
+
+@media (min-width: 600px) {
+  .titleContainer {
+    .star {
+      left: -1.9rem;
+      top: -1.5rem;
+      height: 2.2rem;
+      width: 2.2rem;
+    }
+  }
+}
+
+@keyframes star-shine {
+  0% {
+    transform: rotate(0deg);
+    scale: 0;
+  }
+  80% {
+    transform: rotate(288deg);
+    scale: 1.25;
+  }
+  100% {
+    transform: rotate(360deg);
+    scale: 1;
+  }
+}
