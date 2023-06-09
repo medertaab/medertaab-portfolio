@@ -5,18 +5,17 @@ export default function Gradient() {
   return (
     <div className={styles.gradient}>
       <div className={styles.blobs}>
-        <div className={styles.blob1Container}>
-          <svg
-            className={styles.blob1}
-            viewBox="0 0 578 356"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path>
-              <animate
-                attributeName="d"
-                dur="10000ms"
-                repeatCount="indefinite"
-                values="M110.218 208.148C2.18453 132.946 -6.43618 38.0486 2.75764 0.00012636L406.092 0C406.092 0 518.948 35.4783 521.812 92.4336C524.702 149.91 607.13 276.068 567.012 301.434C510.416 332.768 218.251 283.349 110.218 208.148Z;
+        <svg
+          className={styles.blob1}
+          viewBox="0 0 600 356"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path>
+            <animate
+              attributeName="d"
+              dur="10000ms"
+              repeatCount="indefinite"
+              values="M110.218 208.148C2.18453 132.946 -6.43618 38.0486 2.75764 0.00012636L406.092 0C406.092 0 518.948 35.4783 521.812 92.4336C524.702 149.91 607.13 276.068 567.012 301.434C510.416 332.768 218.251 283.349 110.218 208.148Z;
                 
                 M149.5 127.5C27.5 100.5 -7.43615 38.0486 1.75768 0.00012636L405.092 0C405.092 0 517.949 35.4783 520.812 92.4336C523.702 149.91 684.5 399 451 349.5C256 265 278.021 155.943 149.5 127.5Z;
 
@@ -24,12 +23,9 @@ export default function Gradient() {
 
                 M110.218 208.148C2.18453 132.946 -6.43618 38.0486 2.75764 0.00012636L406.092 0C406.092 0 518.948 35.4783 521.812 92.4336C524.702 149.91 607.13 276.068 567.012 301.434C510.416 332.768 218.251 283.349 110.218 208.148Z;
                 "
-              >
-
-              </animate>
-            </path>
-          </svg>
-        </div>
+            ></animate>
+          </path>
+        </svg>
 
         <svg
           className={styles.blob2}
