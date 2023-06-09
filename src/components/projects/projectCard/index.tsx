@@ -39,7 +39,8 @@ export default function Project(props: ProjectProps) {
   return (
     <article className={styles.project} ref={projectRef} style={{
       opacity: isInView ? 1 : 0,
-      transform: isInView ? "none" : (index % 2 === 0 ? "translateX(-100px)" : "translateX(100px)")
+      transform: isInView ? "none" : (index % 2 === 0 ? "translateX(-100px)" : "translateX(100px)"),
+      backgroundImage: project.gradient
     }}>
       {/* Images */}
       <div className={styles.imageContainer} style={{backgroundImage: project.gradient }}>

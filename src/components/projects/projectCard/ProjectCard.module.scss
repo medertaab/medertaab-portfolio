@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   margin: 2rem 1rem;
-  background-color: var(--lime);
   border-radius: 3rem;
   gap: 1rem;
   position: relative;
@@ -18,19 +17,17 @@
   min-height: 20rem;
 
   .imageContainer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20rem;
-    width: auto;
     padding: 1rem;
-    margin: auto;
     border-radius: 3rem;
-    position: relative;
     z-index: 0;
-
+    margin: auto;
+    
     .thumbnail {
-      height: 100%;
+      width: 100%;
       border-radius: 2.5rem;
     }
 
@@ -50,7 +47,8 @@
     position: relative;
     padding: 1rem;
     overflow: hidden;
-    min-height: 20rem;
+    border-radius: 3rem;
+    background: none;
 
     &::after {
       content: "";
@@ -68,6 +66,7 @@
     position: relative;
     border-radius: 2.5rem;
     padding: 2rem 1rem;
+    min-height: 18rem;
 
     h4 {
       margin-bottom: 1rem;
@@ -113,7 +112,6 @@
 
     a:last-child {
       background-color: var(--black);
-      color: var(--lime);
     }
   }
 
@@ -136,10 +134,25 @@
     margin: 3rem auto 4rem;
     max-width: var(--max-width);
     width: 100%;
+    padding: 0 2.5rem;
+    background: none !important;
 
-    .projectImages {
-      flex: 2;
-      height: auto;
+    .imageContainer {
+      height: 20rem;
+      
+      .thumbnail {
+        height: 100%;
+        width: auto;
+      }
+
+      .border {
+        position: absolute;
+        height: calc(100% - 4px);
+        width: calc(100% - 4px);
+        z-index: -1;
+        border-radius: 3rem;
+        background-color: $black;
+      }
     }
 
     .projectCard {

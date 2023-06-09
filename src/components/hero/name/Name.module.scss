@@ -1,5 +1,6 @@
 .name {
   position: relative;
+  $button-radius: 3.5rem;
 
   & > * {
     display: flex;
@@ -7,7 +8,7 @@
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: "Plus Jakarta Sans", sans-serif;
     letter-spacing: 0.2rem;
     margin: -1.5vw 0;
@@ -16,14 +17,14 @@
 
   .firstName {
     color: transparent;
-    background-image: radial-gradient(#f1cc73, #f4d9a4, #CBB2F6);
-    background-size: 250% 250%;
+    background-image: radial-gradient(#ffc130, #f4d9a4, #ffffff);
+    background-size: 150% 250%;
     animation: gradient 5s ease infinite;
     background-clip: text;
   }
 
   button {
-    height: 4rem;
+    height: $button-radius;
     border-radius: 2rem;
     padding: 0.25rem;
     transition: 0.1s ease-in-out;
@@ -42,7 +43,7 @@
   .lightButton,
   .starButton {
     box-sizing: border-box;
-    width: 4rem;
+    width: $button-radius;
     border: none;
     border-radius: 50%;
     background-color: $lime;

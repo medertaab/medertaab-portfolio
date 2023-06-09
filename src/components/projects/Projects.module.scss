@@ -1,14 +1,14 @@
 .projects {
-  width: 100%;
+  max-width: $max-width;
   margin: 0 auto;
-  margin-top: 6rem;
-  width: 100%;
-  max-width: 72rem;
+  position: relative;
+  margin-top: 5rem;
+
 }
 
 @media (min-width: $widescreen) {
   .projects {
-    padding: 0 2rem;
+    margin-top: 6rem;
 
     h3 {
       margin: 0 auto;
