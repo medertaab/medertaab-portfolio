@@ -1,3 +1,6 @@
+$light-blue: rgb(195, 201, 255);
+$magic: rgb(105, 78, 255);
+
 .name {
   position: relative;
   $button-radius: 3.5rem;
@@ -16,7 +19,7 @@
   }
 
   .firstName {
-    color: rgb(172, 198, 228);
+    color: $light-blue;
     // background-image: radial-gradient(#abd9ff, #a676ff, #ff8ccb);
     background-size: 150% 250%;
     animation: gradient 5s ease infinite;
@@ -36,7 +39,7 @@
   }
 
   svg {
-    fill: var(--black);
+    fill: $light-blue;
     height: max(60%, 1.8rem);
   }
 
@@ -46,7 +49,7 @@
     width: $button-radius;
     border: none;
     border-radius: 50%;
-    background-color: $lime;
+    background-color: $magic;
   }
 
   .lightButton {
@@ -65,7 +68,7 @@
 
   .reactButton {
     width: 100%;
-    background-color: var(--lime);
+    background-color: $magic;
     margin-right: 1vw;
   }
 }

@@ -26,11 +26,11 @@
     border-radius: 3rem;
     z-index: 0;
     margin: auto;
-    height: 100%;
-    min-height: 20rem;
+    height: fit-content;
     
     .thumbnail {
       width: 100%;
+      object-fit: cover;
       border-radius: 2.5rem;
     }
 
@@ -90,8 +90,6 @@
       width: 100%;
       margin-top: 1rem;
     }
-
-
 
     .stack {
       font-style: italic;
