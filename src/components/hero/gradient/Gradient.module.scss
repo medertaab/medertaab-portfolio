@@ -5,6 +5,7 @@
   z-index: -1;
   background: linear-gradient(180deg, rgb(44, 44, 44) 0%, rgb(17, 17, 17) 100%);
   overflow: hidden;
+  transform: scaleX(-1);
 
   button {
     position: absolute;
@@ -33,20 +34,22 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    transform: scale(1.1);
+    transform: scale(2.5);
+    translate: -40% 60%;
     filter: blur(3vw);
+    border: 1px solid red;
 
     .blob1 {
       right: 30%;
       width: 45%;
-      fill: #a0b3f7;
+      fill: #85b3e7;
     }
 
     .blob2 {
       right: 0;
       width: 63%;
       max-height: 60vw;
-      fill: #a99eee;
+      fill: #7476eb;
       animation: blob-height 10s ease-in-out infinite;
     }
   }
@@ -75,6 +78,8 @@
     filter: blur(8vw);
     mix-blend-mode: overlay;
     opacity: 0.9;
+    transform: scale(2);
+    translate: -50% 40%;
 
     .light1 {
       right: 20%;
@@ -96,23 +101,27 @@
 
     .light4 {
       left: 20%;
-      width: 30%;
-      fill: #fb9638;
+      width: 40%;
+      fill: #e69951;
     }
 
     .light5 {
       left: 0%;
-      width: 40%;
-      fill: #63a1ff;
+      width: 35%;
+      fill: #8497ff;
     }
   }
 }
 
 
-@media (min-screen: $widescreen) {
+@media (min-width: $widescreen) {
   .gradient {
+    transform: scaleX(-1);
+
     .blobs {
       transform: scale(1.2);
+      translate: none;
+
       .blob1 {
         width: 40%;
       }
@@ -120,6 +129,11 @@
       .blob2 {
         width: 58%;
       }
+    }
+
+    .lights {
+      transform: none;
+      translate: none;
     }
   }
 }

@@ -8,9 +8,9 @@ export default function About() {
       <SectionTitle color="#ffbb00">About</SectionTitle>
 
       <p>
-        Hello! My name is Meder Taab and I create web stuff and other things 🔮
+        Hello! My name is Meder Taab and I create web stuff 🔮
       </p>
-
+{/* 
       <p>
         I’ve been making websites since I was a child, when I would tinker small
         blogs and message boards, injecting them with my HTML code or
@@ -18,7 +18,7 @@ export default function About() {
         pursuits like illustration and copywriting, I've discovered a real
         affinity for the world of web development. The technical and creative
         challenges of the field perfectly align with my strengths and passions.
-      </p>
+      </p> */}
 
       <p>
         I enjoy creating <strong>engaging and delightful experiences</strong>{" "}

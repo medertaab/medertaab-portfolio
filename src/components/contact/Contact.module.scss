@@ -22,8 +22,9 @@
     width: 100%;
     background-image: url("/images/grad.jpg");
     background-size: cover;
+    background-position: center;
     filter: contrast(0.9);
-    transform: scaleY(-1);
+    transform: scale(-1);
   }
 
   ::-moz-selection { /* Code for Firefox */

@@ -13,11 +13,11 @@ const projects = [
       "./thumbnails/portfolder2.jpg",
     ],
     gradient: `
-      linear-gradient(150deg, #7401EF 0%, transparent 40%),
-      linear-gradient(30deg, #621EEF 0%, transparent 40%),
-      radial-gradient(at 30% 100%, #5608E7 0%, transparent 20%),
-      radial-gradient(at 45% 80%, #5608E7 0%, transparent 45%),
-      linear-gradient(90deg, #6807E1 0%, #8728C4 70%)
+      linear-gradient(150deg, #994bec 0%, transparent 40%),
+      linear-gradient(30deg, #8a52fa 0%, transparent 40%),
+      radial-gradient(at 30% 100%, #884ff1 0%, transparent 20%),
+      radial-gradient(at 45% 80%, #742bfd 0%, transparent 45%),
+      linear-gradient(90deg, #6807E1 0%, #b048f1 70%)
     `,
     color: "#bc4fff"
   },
@@ -43,15 +43,15 @@ const projects = [
   {
     title: "Boulangerie",
     description: [
-      "Website for local bakery that features a landing page, products catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
+      "Website for local bakery that features pages for landing, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
     ],
     technologies: ["Typescript", "NextJS", "Tailwind"],
     url: "http://",
     github: "http://",
     images: [
-      "./thumbnails/portfolder0.jpg",
-      "./thumbnails/portfolder1.jpg",
-      "./thumbnails/portfolder2.jpg",
+      "./thumbnails/boulangerie.jpg",
+      "./thumbnails/boulangerie.jpg",
+      "./thumbnails/boulangerie.jpg",
     ],
     gradient: `
       linear-gradient(45deg, #ffe65b 0%, transparent 50%),

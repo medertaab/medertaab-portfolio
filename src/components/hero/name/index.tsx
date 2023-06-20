@@ -8,14 +8,15 @@ import ShootingStars from "../shootingStars";
 export default function Name() {
   return (
     <div className={styles.name}>
-      <div>
+      {/* <div>
         <button className={styles.lightButton}>
           <Lightbulb />
         </button>
         <button className={styles.gameButton}>
           
         </button>
-      </div>
+      </div> */}
+      
       <div>
         <h1 className={styles.firstName}>MEDER</h1>
         <button className={styles.starButton}>

@@ -16,8 +16,8 @@
   }
 
   .firstName {
-    color: transparent;
-    background-image: radial-gradient(#ffc130, #f4d9a4, #ffffff);
+    color: rgb(172, 198, 228);
+    // background-image: radial-gradient(#abd9ff, #a676ff, #ff8ccb);
     background-size: 150% 250%;
     animation: gradient 5s ease infinite;
     background-clip: text;

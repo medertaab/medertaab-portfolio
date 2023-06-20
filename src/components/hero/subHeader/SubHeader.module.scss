@@ -26,7 +26,7 @@
     margin: 0 auto;
 
     h2 {
-      font-size: min(4rem, 12vw);
+      font-size: min(3rem, 10vw);
       font-family: "Urbanist", sans-serif;
       font-weight: 500;
       white-space: nowrap;
@@ -89,13 +89,15 @@
 
 @media (min-width: 800px) {
   .subHeader {
+    padding: 1rem 2rem;
+
     .titlesContainer {
       gap: 1rem;
       flex-wrap: nowrap;
 
       h2 {
         flex-grow: 1;
-        font-size: max(3.5rem, 4.2vw);
+        font-size: max(3rem, 3vw);
       }
 
       .and {

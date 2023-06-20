@@ -16,8 +16,6 @@ export default function SubHeader() {
       </div>
 
       <div className={styles.decoration}>
-        <img src="/images/pattern.gif" alt="Decorative gif"></img>
-        <img src="/images/pattern.gif" alt="Decorative gif"></img>
         <span className={styles.decorativeEl}></span>
       </div>
     </div>
