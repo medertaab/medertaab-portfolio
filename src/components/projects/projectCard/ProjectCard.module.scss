@@ -10,38 +10,22 @@
   display: flex;
   flex-direction: column;
   margin: 2rem 1rem;
-  border-radius: 3rem;
   gap: 1rem;
   position: relative;
   transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
   min-height: 20rem;
   margin-bottom: 5rem;
 
-  .imageContainer {
+  .thumbnail {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border-radius: 3rem;
     z-index: 0;
     margin: auto;
     height: fit-content;
-    
-    .thumbnail {
-      width: 100%;
-      object-fit: cover;
-      border-radius: 2.5rem;
-    }
-
-    .border {
-      position: absolute;
-      height: calc(100% - 4px);
-      width: calc(100% - 4px);
-      z-index: -1;
-      border-radius: 3rem;
-      background-color: $black;
-    }
+    max-height: 18rem;
   }
 
   .projectCard {
@@ -50,8 +34,8 @@
     position: relative;
     padding: 1rem;
     overflow: hidden;
-    border-radius: 3rem;
     background: none;
+    border-radius: 2rem;
 
     &::after {
       content: "";
@@ -65,10 +49,10 @@
   }
 
   .projectContainer {
-    border: 3px solid var(--black);
+    border: 1px solid var(--black);
     position: relative;
-    border-radius: 2.5rem;
     padding: 2rem 1rem;
+    border-radius: 1.5rem;
     min-height: 18rem;
     display: flex;
     flex-direction: column;
@@ -110,14 +94,16 @@
       font-size: 1rem;
       height: 2.25rem;
       padding: 0 1rem;
-      border: 2px solid var(--black);
+      border: 1px solid var(--black);
       border-radius: 1.125rem;
       flex-grow: 1;
       font-family: "Urbanist", sans-serif;
+      background-color: var(--black);
     }
 
-    a:last-child {
-      background-color: var(--black);
+    a:nth-child(2) {
+      background-color: transparent;
+
     }
   }
 
@@ -140,7 +126,7 @@
     margin: 3rem auto 4rem;
     max-width: var(--max-width);
     width: 100%;
-    padding: 0 2.5rem;
+    padding: 0 1rem;
     background: none !important;
 
     .imageContainer {
@@ -158,7 +144,6 @@
         height: calc(100% - 4px);
         width: calc(100% - 4px);
         z-index: -1;
-        border-radius: 3rem;
         background-color: $black;
       }
     }
@@ -166,7 +151,6 @@
     .projectCard {
       flex: 3;
       min-height: 20rem;
-      border-radius: 3rem;
       overflow: hidden;
       position: relative;
       background-size: 110%;
@@ -191,7 +175,7 @@
 
     .projectContainer {
       height: 100%;
-      padding: 2rem 3rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -205,6 +189,7 @@
       .stack {
         text-align: left;
         margin-bottom: 0.1rem;
+        padding-right: 1rem;
       }
 
       .links {

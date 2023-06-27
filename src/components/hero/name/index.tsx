@@ -1,30 +1,20 @@
-import React, { useEffect } from "react";
+import React, { ReactPropTypes, useEffect } from "react";
 import styles from "./Name.module.scss";
-import Star from "@public/svg/star.svg"
+import Sparkle from "@public/svg/sparkle.svg"
 import ReactLogo from "@public/svg/reactlogo.svg"
-import Lightbulb from "@public/svg/lightbulb.svg"
 import ShootingStars from "../shootingStars";
 
-export default function Name() {
+export default function Name({animating, setAnimating} : any) {
   return (
     <div className={styles.name}>
-      {/* <div>
-        <button className={styles.lightButton}>
-          <Lightbulb />
-        </button>
-        <button className={styles.gameButton}>
-          
-        </button>
-      </div> */}
-      
       <div>
         <h1 className={styles.firstName}>MEDER</h1>
         <button className={styles.starButton}>
-          <Star />
+          <Sparkle />
         </button>
       </div>
       <div>
-        <button className={styles.reactButton}>
+        <button className={styles.reactButton} onClick={() => setAnimating(!animating)}>
           <ReactLogo />
         </button>
         <h1>TAAB</h1>

@@ -9,9 +9,14 @@ $white: rgba(235, 235, 235);
 $lime: rgba(178, 223, 0);
 $cosmic: #6000fc;
 $cosmic-light: rgb(143, 117, 255);
-$yellow: rgb(247, 211, 127);
+$gold: rgb(247, 211, 127);
 $purple: rgb(154, 0, 226);
 $orange: rgb(255, 187, 0);
+$light-blue: rgb(195, 201, 255);
+$magic: rgb(120, 133, 255);
+$off-black: #1a130c;
+$yellow: #e8f800;
+$yellow: #dff800;
 
 $purple-background: linear-gradient(150deg, #7401ef 0%, transparent 40%),
   linear-gradient(30deg, #621eef 0%, transparent 40%),
@@ -19,4 +24,11 @@ $purple-background: linear-gradient(150deg, #7401ef 0%, transparent 40%),
   radial-gradient(at 45% 80%, #5608e7 0%, transparent 45%),
   linear-gradient(90deg, #6807e1 0%, #8728c4 70%);
 
-  
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

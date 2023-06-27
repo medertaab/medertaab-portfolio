@@ -1,7 +1,6 @@
 import Navbar from "@component/components/navbar";
 import Hero from "@component/components/hero";
 import About from "@component/components/about";
-import Skills from "@component/components/skills";
 import Projects from "@component/components/projects";
 import Contact from "@component/components/contact";
 import Footer from "@component/components/footer";
@@ -16,12 +15,11 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        {/* <Skills /> */}
         <Projects />
         <Contact />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

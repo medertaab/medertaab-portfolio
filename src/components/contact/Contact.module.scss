@@ -132,17 +132,6 @@
       outline: none;
     }
   }
-
-  .contactContainer::after {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    height: 60%;
-    aspect-ratio: 1/1;
-    left: 95%;
-    bottom: 5%;
-    background-image: url("~public/svg/star.svg");
-  }
 }
 
 .contact::before {

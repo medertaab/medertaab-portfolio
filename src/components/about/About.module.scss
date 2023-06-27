@@ -19,24 +19,30 @@
   }
 
   p {
-    font-family: 'Urbanist', sans-serif;
+    font-family: "Urbanist", sans-serif;
     line-height: 135%;
     margin: 0 auto 2rem auto;
     text-align: justify;
     font-size: 0.9rem;
     padding: 0 2.5rem;
-
   }
 
   strong {
     font-weight: 400;
-    background-color: var(--lime);
+    background-color: $yellow;
   }
+}
 
-  :nth-child(2) {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    text-align-last: auto;
+.stackContainer {
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  gap: min(2rem, 3vw);
+  justify-content: center;
+
+  img {
+    width: min(2.5rem, 5vw);
+    aspect-ratio: 1/1;
   }
 }
 
@@ -51,11 +57,6 @@
     p {
       line-height: 1.5rem;
       padding: 0 2.5rem;
-    }
-
-    :nth-child(2) {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
     }
   }
 }

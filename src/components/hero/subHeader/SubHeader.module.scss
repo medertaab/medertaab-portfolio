@@ -1,116 +1,112 @@
+@use "../../../styles/variables.scss" as *;
+$block-height: min(3.5rem, 10vw);
+
 .subHeader {
-  width: 100%;
-  z-index: 1;
+  width: calc(100% - 3rem);
+  max-width: $max-width;
+  z-index: 0;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  background-color: #c3ff99;
-  background-image: radial-gradient(
-      at 81% 85%,
-      rgb(196, 162, 255) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 87% 15%, hsla(277, 71%, 70%, 1) 0px, transparent 50%),
-    radial-gradient(at 35% 56%, hsla(36, 99%, 70%, 1) 0px, transparent 80%),
-    radial-gradient(at 33% 25%, rgb(255, 219, 102) 0px, transparent 50%);
+  background-color: $magic;
+  position: relative;
 
-  .titlesContainer {
+  &::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    z-index: -1;
+    left: -1rem;
+    top: -1rem;
+    border-image: linear-gradient(
+        135deg,
+        $yellow 0%,
+        transparent 33%,
+        transparent 66%,
+        $yellow 100%
+      )
+      1 / 1px;
+  }
+
+  .upperHalf {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0;
     width: 100%;
-    max-width: $max-width;
-    align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
+
+    span {
+      display: block;
+      color: $off-black;
+      font-size: min(3rem, 7vw);
+    }
 
     h2 {
-      font-size: min(3rem, 10vw);
+      font-size: min(4.5rem, 8.5vw);
       font-family: "Urbanist", sans-serif;
       font-weight: 500;
-      white-space: nowrap;
-      color: var(--black);
-      flex-grow: 1;
-      width: 100%;
-    }
-
-    .and {
-      display: block;
-      aspect-ratio: 1/1;
-      height: 2.4rem;
-      font-size: 1rem;
-      font-family: "Urbanist", sans-serif;
-      border-radius: 100%;
-      border: 1px solid $black;
-      color: $black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .titles {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-
-      span {
-        margin: 0;
-        color: $black;
-        text-decoration: underline;
-        text-align-last: justify;
-        width: 15rem;
-        font-family: "Urbanist", sans-serif;
-        animation: slideup 1s 2s linear;
-        font-size: 0.8rem;
-        width: 100%;
-        padding-left: 1rem;
-      }
+      color: $off-black;
     }
   }
 
-  .decoration {
-    width: 100%;
-    max-width: $max-width;
-    margin: 0 auto;
+  .lowerHalf {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $off-black;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
 
-    img {
-      height: 2rem;
+    * {
+      // border: 1px solid red;
     }
 
-    .decorativeEl {
-      width: 20rem;
-      height: 2rem;
-      background-color: $black;
-      float: right;
+    .galaxyContainer {
+      height: $block-height;
+      aspect-ratio: 35/10;
+      background-color: $off-black;
+      max-width: 49%;
+    }
+
+    .description {
+      color: $off-black;
+      font-size: min(0.7rem, 1.7vw);
+      font-weight: 500;
+      width: 100%;
+      margin-bottom: 0.5rem;
+      margin-right: 0.5rem;
+      text-align: end;
+    }
+
+    img {
+      height: $block-height;
+      margin-left: auto;
+      max-width: 49%;
     }
   }
 }
 
 @media (min-width: 800px) {
   .subHeader {
-    padding: 1rem 2rem;
 
-    .titlesContainer {
+    .upperHalf {
+      padding: 0 0.5rem;
+    }
+
+    .lowerHalf {
       gap: 1rem;
-      flex-wrap: nowrap;
 
-      h2 {
-        flex-grow: 1;
-        font-size: max(3rem, 3vw);
+      .galaxyContainer {
+        order: 0;
       }
 
-      .and {
-        height: 3rem;
+      .description {
+        max-width: 200px;
+        order: 1;
+        text-align: left;
       }
 
-      .titles {
-        flex-grow: 0;
-        min-width: 15rem;
-
-        span {
-          padding: 0;
-        }
+      img {
+        order: 2;
       }
     }
   }

@@ -1,4 +1,17 @@
-const projects = [
+interface Project {
+  title: string,
+  description: string[],
+  technologies: string[],
+  url: string,
+  github?: string,
+  images: string[],
+  gradient: string,
+  color: string
+}
+
+interface Projects extends Array<Project>{}
+
+const projects: Projects = [
   {
     title: "Portfolder",
     description: [
@@ -47,7 +60,6 @@ const projects = [
     ],
     technologies: ["Typescript", "NextJS", "Tailwind"],
     url: "http://",
-    github: "http://",
     images: [
       "./thumbnails/boulangerie.jpg",
       "./thumbnails/boulangerie.jpg",
