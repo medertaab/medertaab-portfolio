@@ -7,7 +7,7 @@ interface Project {
   description: string[];
   technologies: string[];
   url: string;
-  github: string;
+  github?: string;
   images: string[];
   gradient: string;
   color: string;

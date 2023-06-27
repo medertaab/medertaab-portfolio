@@ -4,6 +4,7 @@ import ProjectCard from "./projectCard";
 import projectsData from "@component/data/projectsData";
 import SectionTitle from "../ui/sectionTitle";
 
+
 export default function Projects() {
 
   return (
