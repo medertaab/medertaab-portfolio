@@ -4,7 +4,7 @@ interface Project {
   technologies: string[],
   url: string,
   github?: string,
-  images: string[],
+  thumbnail: string,
   gradient: string,
   color: string
 }
@@ -18,13 +18,9 @@ const projects: Projects = [
       "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
     ],
     technologies: ["Typescript", "NextJS", "Tailwind"],
-    url: "http://",
+    url: "https://portfolder.netlify.app/",
     github: "http://",
-    images: [
-      "./thumbnails/portfolder0.jpg",
-      "./thumbnails/portfolder1.jpg",
-      "./thumbnails/portfolder2.jpg",
-    ],
+    thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
       linear-gradient(150deg, #994bec 0%, transparent 40%),
       linear-gradient(30deg, #8a52fa 0%, transparent 40%),
@@ -41,13 +37,9 @@ const projects: Projects = [
       "Also comes as a Google Chrome extension.",
     ],
     technologies: ["Typescript", "Vite", "Styled-Components"],
-    url: "http://",
+    url: "https://quickstretch.netlify.app/",
     github: "http://",
-    images: [
-      "./thumbnails/quickstretch0.jpg",
-      "./thumbnails/quickstretch1.jpg",
-      "./thumbnails/quickstretch2.jpg",
-    ],
+    thumbnail: "./thumbnails/quickstretch0.jpg",
     gradient: `
       linear-gradient(70deg,#C9EA4B 20%, #B7EE02 45%, #D9E200 67%)
     `,
@@ -59,19 +51,15 @@ const projects: Projects = [
       "Website for local bakery that features pages for landing, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
     ],
     technologies: ["Typescript", "NextJS", "Tailwind"],
-    url: "http://",
-    images: [
-      "./thumbnails/boulangerie.jpg",
-      "./thumbnails/boulangerie.jpg",
-      "./thumbnails/boulangerie.jpg",
-    ],
+    url: "https://boulangeriekg.netlify.app/",
+    thumbnail: "./thumbnails/boulangerie.jpg",
     gradient: `
       linear-gradient(45deg, #ffe65b 0%, transparent 50%),
       radial-gradient(at 10% 20%, #ffbd22 0px, transparent 50%),
       radial-gradient(at 50% 100%, #ffd03698 0px, transparent 35%),
       linear-gradient(110deg, #ffe6cf 65%, #9465df 100%)
     `,
-    color: "#ffd2f9"
+    color: "rgb(255 223 173)"
   },
 ];
 

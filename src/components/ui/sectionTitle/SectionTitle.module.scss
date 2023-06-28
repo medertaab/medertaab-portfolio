@@ -2,13 +2,14 @@
   margin: 0 auto;
   width: 100%;
   padding: 0 2.5rem;
+  position: relative;
 
   .star {
     position: absolute;
     left: 1rem;
-    top: -1.6rem;
-    height: 2rem;
-    width: 2rem;
+    top: -1rem;
+    height: 1.5rem;
+    width: 1.5rem;
     animation: star-shine 1s;
     fill: $purple;
   }
@@ -21,9 +22,9 @@
 
     .star {
       left: 0rem;
-      top: -1.5rem;
-      height: 2.2rem;
-      width: 2.2rem;
+      top: -1rem;
+      height: 1.7rem;
+      width: 1.7rem;
     }
   }
 }

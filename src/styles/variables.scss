@@ -32,3 +32,14 @@ $purple-background: linear-gradient(150deg, #7401ef 0%, transparent 40%),
     opacity: 1;
   }
 }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}

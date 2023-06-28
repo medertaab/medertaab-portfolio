@@ -2,17 +2,7 @@
   max-width: $max-width;
   margin-top: 3rem;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: url("/images/noiseanim.gif");
-    mix-blend-mode: soft-light;
-    background-size: 10%;
-    opacity: 0.2;
-  }
+  animation: slide-up 0.3s ease 0.2s both;
 
   h3 {
     margin-bottom: 1rem;

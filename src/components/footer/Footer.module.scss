@@ -1,6 +1,7 @@
 .footer {
   width: 100%;
-  background-color: var(--black);
+  background-color: $black;
+  padding: 1rem;
 
   ::-moz-selection { /* Code for Firefox */
     color: var(--black);
@@ -15,40 +16,46 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 2rem auto;
     list-style: none;
-    justify-content: center;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   li {
-    color: var(--lime);
-    margin: 0 1rem;
-    font-family: "DotGothic16", sans-serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.2rem;
+    color: $white;
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: 0.15s ease-in-out;
+    font-weight: 500;
+  }
+
+  li:hover {
+    color: $magic;
   }
 
   span {
     display: block;
     text-align: right;
-    color: var(--lime);
-    margin: 0 1rem;
+    color: $magic;
     max-width: var(--max-width);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
 @media (min-width: $widescreen) {
   .footer {
-    padding: 2rem;
+    padding: 2rem 1rem 1rem 1rem;
   
     ul {
-      margin: 1rem auto 3rem auto;
+      justify-content: center;
+      gap: 3rem;
     }
   
     li {
-      margin: 0 4rem;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
+      text-decoration: underline;
     }
   
     span {

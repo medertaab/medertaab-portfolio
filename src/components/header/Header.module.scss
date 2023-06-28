@@ -1,4 +1,4 @@
-.nav {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -12,8 +12,12 @@
   font-family: "Lato", sans-serif;
   font-weight: 900;
 
+  * {
+    mix-blend-mode: exclusion;
+  }
+
   a {
-    color: var(--white);
+    color: $white;
     margin-left: 1rem;
     display: inline-flex;
     align-items: center;
@@ -21,7 +25,7 @@
     svg {
       height: 2.2rem;
       width: 2.2rem;
-      fill: var(--white);
+      fill: $white;
     }
   }
 
@@ -29,7 +33,7 @@
     width: 4rem;
     height: 2.2rem;
     border-radius: 1.1rem;
-    background-color: var(--white);
+    background-color: $white;
     margin-left: 1rem;
   }
 

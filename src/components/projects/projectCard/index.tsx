@@ -8,7 +8,7 @@ interface Project {
   technologies: string[];
   url: string;
   github?: string;
-  images: string[];
+  thumbnail: string;
   gradient: string;
   color: string;
 }
@@ -21,8 +21,8 @@ interface ProjectProps {
 export default function Project(props: ProjectProps) {
   const { project, index } = props;
 
-  const projectRef = useRef(null);
-  const isInView = useInView(projectRef, { once: true });
+  const viewRef = useRef(null);
+  const isInView = useInView(viewRef, { once: true });
 
   function technologiesText() {
     return project.technologies.map((name, index) => {
@@ -39,7 +39,6 @@ export default function Project(props: ProjectProps) {
   return (
     <article
       className={styles.project}
-      ref={projectRef}
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView
@@ -49,12 +48,14 @@ export default function Project(props: ProjectProps) {
           : "translateX(100px)",
       }}
     >
-      {/* Images */}
-      <img
-        src={project.images[0]}
-        alt={`${project.title} thumbnail`}
-        className={styles.thumbnail}
-      ></img>
+      {/* Image */}
+      <div className={styles.thumbnailWrapper} style={{ "--border": project.color } as React.CSSProperties}>
+        <img
+          src={project.thumbnail}
+          alt={`${project.title} thumbnail`}
+          className={styles.thumbnail}
+        ></img>
+      </div>
 
       {/* Card */}
       <div
@@ -74,7 +75,11 @@ export default function Project(props: ProjectProps) {
               Built with {technologiesText()}
             </span>
             <div className={styles.links}>
-              <a href={project.url} style={{ color: project.color }}>
+              <a
+                href={project.url}
+                style={{ color: project.color }}
+                ref={viewRef}
+              >
                 Site link &#8599;&#xFE0E;
               </a>
               {project.github && (

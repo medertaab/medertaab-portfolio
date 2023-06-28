@@ -10,6 +10,7 @@ $block-height: min(3.5rem, 10vw);
   flex-direction: column;
   background-color: $magic;
   position: relative;
+  animation: slide-up 0.3s ease 0.1s both;
 
   &::before {
     content: "";
@@ -19,14 +20,7 @@ $block-height: min(3.5rem, 10vw);
     z-index: -1;
     left: -1rem;
     top: -1rem;
-    border-image: linear-gradient(
-        135deg,
-        $yellow 0%,
-        transparent 33%,
-        transparent 66%,
-        $yellow 100%
-      )
-      1 / 1px;
+    animation: border 5s infinite;
   }
 
   .upperHalf {
@@ -56,10 +50,6 @@ $block-height: min(3.5rem, 10vw);
     margin-top: 0.5rem;
     flex-wrap: wrap;
 
-    * {
-      // border: 1px solid red;
-    }
-
     .galaxyContainer {
       height: $block-height;
       aspect-ratio: 35/10;
@@ -87,7 +77,6 @@ $block-height: min(3.5rem, 10vw);
 
 @media (min-width: 800px) {
   .subHeader {
-
     .upperHalf {
       padding: 0 0.5rem;
     }
@@ -109,5 +98,87 @@ $block-height: min(3.5rem, 10vw);
         order: 2;
       }
     }
+  }
+}
+
+@keyframes border {
+  0% {
+    border-image: linear-gradient(
+        135deg,
+        transparent -33%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  2% {
+    border-image: linear-gradient(
+        135deg,
+        $yellow 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  4% {
+    border-image: linear-gradient(
+        135deg,
+        $yellow 0%,
+        $yellow 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  6% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        $yellow 33%,
+        $yellow 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  8% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        $yellow 66%,
+        $yellow 100%
+      )
+      1 / 1px;
+  }
+  10% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        $yellow 100%
+      )
+      1 / 1px;
+  }
+  12% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  } 14% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
   }
 }

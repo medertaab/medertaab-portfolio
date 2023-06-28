@@ -1,4 +1,4 @@
-import Navbar from "@component/components/navbar";
+import Header from "@component/components/header";
 import Hero from "@component/components/hero";
 import About from "@component/components/about";
 import Projects from "@component/components/projects";
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head />
-      <Navbar />
+      <Header />
 
       <main>
         <Hero />

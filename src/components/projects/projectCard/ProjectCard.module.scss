@@ -9,23 +9,30 @@
 .project {
   display: flex;
   flex-direction: column;
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 5rem 1rem;
   gap: 1rem;
   position: relative;
   transition: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
   min-height: 20rem;
-  margin-bottom: 5rem;
 
-  .thumbnail {
+  .thumbnailWrapper {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 1rem;
-    z-index: 0;
-    margin: auto;
     height: fit-content;
-    max-height: 18rem;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    aspect-ratio: 4/3;
+    display: flex;
+
+    .thumbnail {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      max-height: 20rem;
+      border-radius: 1.5rem;
+    }
   }
 
   .projectCard {
@@ -36,6 +43,7 @@
     overflow: hidden;
     background: none;
     border-radius: 2rem;
+    flex-grow: 1;
 
     &::after {
       content: "";
@@ -103,7 +111,6 @@
 
     a:nth-child(2) {
       background-color: transparent;
-
     }
   }
 
@@ -118,44 +125,25 @@
   }
 }
 
-@media (min-width: ($widescreen + 100px)) {
+@media (min-width: ($widescreen + 200px)) {
   .project {
     @include projects-alternating;
-    background-color: transparent;
     flex-direction: row;
-    margin: 3rem auto 4rem;
     max-width: var(--max-width);
-    width: 100%;
-    padding: 0 1rem;
-    background: none !important;
+    height: fit-content;
+    align-items: center;
 
-    .imageContainer {
-      height: 20rem;
-      
-      .thumbnail {
-        height: 100%;
-        aspect-ratio: 4/3;
-        object-fit: cover;
-        width: auto;
-      }
-
-      .border {
-        position: absolute;
-        height: calc(100% - 4px);
-        width: calc(100% - 4px);
-        z-index: -1;
-        background-color: $black;
-      }
+    .thumbnailWrapper {
+      max-width: min(26rem, 40%);
     }
 
     .projectCard {
-      flex: 3;
       min-height: 20rem;
-      overflow: hidden;
-      position: relative;
+      min-width: 450px;
       background-size: 110%;
       transition: 1s ease-in-out;
       background-position: center;
+      flex: 1;
 
       &:hover {
         background-size: 150%;
