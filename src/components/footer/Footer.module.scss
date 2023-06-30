@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
   height: $footer-height;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   
   ::-moz-selection { /* Code for Firefox */
     color: var(--black);

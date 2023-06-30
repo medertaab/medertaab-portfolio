@@ -54,6 +54,7 @@ export default function Project(props: ProjectProps) {
           src={project.thumbnail}
           alt={`${project.title} thumbnail`}
           className={styles.thumbnail}
+          ref={viewRef}
         ></img>
       </div>
 
@@ -78,7 +79,6 @@ export default function Project(props: ProjectProps) {
               <a
                 href={project.url}
                 style={{ color: project.color }}
-                ref={viewRef}
               >
                 Site link &#8599;&#xFE0E;
               </a>

@@ -2,7 +2,7 @@
 
 .name {
   position: relative;
-  animation: slide-up 0.3s ease;
+  animation: slide-up 0.3s ease both;
   $button-radius: 3.5rem;
   $button-margin: 0.5rem;
   margin-top: min(45%, 15rem);
@@ -18,13 +18,13 @@
     letter-spacing: 0.2rem;
     line-height: min(17vw, 4.5rem);
     font-weight: 500;
+    color: $yellow;
   }
 
   .firstName {
-    color: $yellow;
+    color: $white;
     background-size: 150% 250%;
     animation: gradient 5s ease infinite;
-    background-clip: text;
   }
 
   button {
