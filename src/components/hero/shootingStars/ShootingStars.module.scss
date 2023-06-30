@@ -1,5 +1,5 @@
 $length: 2s;
-$colors: ($yellow, $purple);
+$colors: ($yellow, $cosmic, $white);
 
 @function random-color() {
   @return nth($colors, random(length($colors)));
@@ -64,19 +64,5 @@ $colors: ($yellow, $purple);
     &.top {
       display: none;
     }
-  }
-}
-
-@keyframes shining {
-  0% {
-    scale: 0;
-    rotate: 0deg;
-  }
-  50% {
-    scale: 1;
-  }
-  100% {
-    scale: 0;
-    rotate: 180deg;
   }
 }

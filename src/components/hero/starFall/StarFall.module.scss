@@ -1,0 +1,67 @@
+$length: 2s;
+$star-size: 2rem;
+
+.starFall {
+  position: absolute;
+  margin: 0 auto;
+  height: 50vh;
+  width: 50vw;
+  transform: rotate(30deg);
+
+  span {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 100% 0 0 100%;
+    background-color: var(--white);
+    animation: tail $length ease-in-out,
+      shooting $length ease-in-out;
+    
+
+    svg {
+      position: absolute;
+      right: calc($star-size/-4);
+      animation: shining $length ease-in-out both;
+      fill: var(--white);
+    }
+  }
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 120px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes shining {
+  0% {
+    width: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: $star-size;
+  }
+  100% {
+    width: 0;
+    transform: rotate(180deg);
+  }
+}

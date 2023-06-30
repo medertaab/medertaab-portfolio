@@ -42,5 +42,18 @@ $purple-background: linear-gradient(150deg, #7401ef 0%, transparent 40%),
     opacity: 1;
     transform: translateY(0);
   }
-  
+}
+
+@keyframes shining {
+  0% {
+    scale: 0;
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+    rotate: 180deg;
+  }
 }

@@ -29,6 +29,22 @@
     }
   }
 
+  .logo {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -15%;
+      height: 1rem;
+      width: 1rem;
+      background-image: url("/svg/logo_sparkle.svg"); 
+      background-repeat: no-repeat;
+      animation: scale 5s ease-in-out infinite;
+    }
+  }
+
   button {
     width: 4rem;
     height: 2.2rem;
@@ -39,5 +55,16 @@
 
   :nth-child(2) {
     margin-left: auto;
+  }
+}
+
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  } 10% {
+    scale: 2;
+  } 20% {
+    scale: 1;
   }
 }
