@@ -8,7 +8,6 @@
   background: rgb(44, 44, 44);
   overflow: hidden;
   animation: fade-in 1s ease both;
-  transform: scaleX(-1); 
   left: 0%;
   filter: saturate(0.9);
 
@@ -118,8 +117,6 @@
 
 @media (min-width: $widescreen) {
   .gradient {
-    transform: scaleX(-1);
-
     &::after {
       background-size: 5.4rem;
     }

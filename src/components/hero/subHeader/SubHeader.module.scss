@@ -51,7 +51,7 @@ $block-height: min(3.5rem, 10vw);
     flex-wrap: wrap;
 
     .galaxyContainer {
-      height: $block-height;
+      height: 2rem;
       aspect-ratio: 35/10;
       background-color: $off-black;
       max-width: 49%;
@@ -59,9 +59,13 @@ $block-height: min(3.5rem, 10vw);
       overflow: hidden;
       padding: 1rem;
 
-      img {
+      svg {
         position: absolute;
-        top: -45%;
+        top: -40%;
+        left: 50%;
+        width: 90%;
+        fill: $yellow;
+        animation: planet 10s ease-in-out infinite;
       }
     }
 
@@ -76,7 +80,7 @@ $block-height: min(3.5rem, 10vw);
     }
 
     .barcode {
-      height: $block-height;
+      height: 2rem;
       margin-left: auto;
       max-width: 49%;
     }
@@ -93,6 +97,7 @@ $block-height: min(3.5rem, 10vw);
       gap: 1rem;
 
       .galaxyContainer {
+        height: $block-height;
         order: 0;
       }
 
@@ -102,8 +107,9 @@ $block-height: min(3.5rem, 10vw);
         text-align: left;
       }
 
-      img {
+      .barcode {
         order: 2;
+        height: $block-height;
       }
     }
   }
@@ -189,5 +195,15 @@ $block-height: min(3.5rem, 10vw);
         transparent 100%
       )
       1 / 1px;
+  }
+}
+
+@keyframes planet {
+  0% {
+    transform: translateY(-20%) translateX(-50%);
+  } 50% {
+    transform: translateY(20%) translateX(-50%);
+  } 100% {
+    transform: translateY(-20%) translateX(-50%);
   }
 }

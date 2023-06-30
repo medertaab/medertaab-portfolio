@@ -84,6 +84,7 @@
     }
 
     .stack {
+      text-align: left;
       font-style: italic;
       color: var(--black);
     }
@@ -93,6 +94,7 @@
       width: 100%;
       gap: 0.5rem;
       margin-top: 1rem;
+      justify-content: end;
     }
 
     a {
@@ -107,6 +109,7 @@
       flex-grow: 1;
       font-family: "Urbanist", sans-serif;
       background-color: var(--black);
+      max-width: 50%;
     }
 
     a:nth-child(2) {
@@ -175,7 +178,6 @@
       }
 
       .stack {
-        text-align: left;
         margin-bottom: 0.1rem;
         padding-right: 1rem;
       }
@@ -191,6 +193,7 @@
         margin-left: auto;
         font-size: 1.2rem;
         white-space: nowrap;
+        max-width: fit-content;
       }
     }
   }

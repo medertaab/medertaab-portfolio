@@ -12,9 +12,9 @@
   z-index: 0;
 
   .staticBg {
+    position: absolute;
     animation: fade-in 1s ease both;
-    scale: 2;
-    translate: 30% 40%;
+    transform: scaleX(-2) scaleY(2) translateY(25%) translateX(25%);
   }
 }
 
@@ -25,9 +25,7 @@
     width: 100%;
 
     .staticBg {
-      animation: fade-in 1s ease both;
-      scale: 1.2;
-      translate: 0;
+      transform: scaleX(-1) scaleY(1) translateY(0) translateX(0);
     }
   }
 }

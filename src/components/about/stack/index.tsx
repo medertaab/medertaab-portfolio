@@ -18,7 +18,8 @@ export default function Stack() {
         return (
           <motion.img
             src={`/icons/${object.path}`}
-            alt={object.title}
+            alt={`${object.title} icon`}
+            title={object.title}
             key={index}
             animate={isInView && {scale: [1, 1.2, 1]}}
             transition={{delay: index*0.1}}

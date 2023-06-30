@@ -18,7 +18,7 @@
     letter-spacing: 0.2rem;
     line-height: min(17vw, 4.5rem);
     font-weight: 500;
-    color: $yellow;
+    color: $magic;
   }
 
   .firstName {
@@ -41,7 +41,7 @@
     transition: 0.2s ease-in-out;
 
     svg {
-      fill: $light-blue;
+      fill: $white;
       height: min(85%, 1.8rem);
       animation: spin 1.5s both, scale-in 1s ease-in-out both;
       transition: 0.5s ease;
@@ -91,7 +91,7 @@
 
 
     button:hover {
-      box-shadow: 0.3rem 0.3rem 0 rgb(255, 255, 255);
+      box-shadow: 0.3rem 0.3rem 0 $magic;
       transform: translate(-0.3rem, -0.3rem);
       transition: 0;
   
@@ -100,6 +100,12 @@
       }
     }
 
+    button:disabled:hover {
+      cursor: default;
+      box-shadow: none;
+      transform: translate(0);
+      transition: 0;
+    }
 
     button:active {
       background-color: transparent;

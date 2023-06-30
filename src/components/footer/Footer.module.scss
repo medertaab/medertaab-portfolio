@@ -6,13 +6,13 @@
   padding: 0.5rem 1rem;
   
   ::-moz-selection { /* Code for Firefox */
-    color: var(--black);
-    background: var(--lime);
+    color: $white;
+    background: $cosmic;
   }
   
   ::selection {
-    color: var(--black);
-    background: var(--lime);
+    color: $white;
+    background: $cosmic;
   }
 
   ul {
@@ -39,7 +39,8 @@
   span {
     display: block;
     text-align: right;
-    color: $black;
+    color: $white;
+    opacity: 0.5;
     max-width: var(--max-width);
     font-size: 0.8rem;
     font-family: 'Plus Jakarta Sans', sans-serif;

@@ -7,6 +7,8 @@ $star-size: 2rem;
   height: 50vh;
   width: 50vw;
   transform: rotate(30deg);
+  left: 15%;
+  pointer-events: none;
 
   span {
     position: absolute;
@@ -20,6 +22,7 @@ $star-size: 2rem;
     background-color: var(--white);
     animation: tail $length ease-in-out,
       shooting $length ease-in-out;
+      left: 0;
     
 
     svg {

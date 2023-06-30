@@ -1,5 +1,5 @@
 .contact {
-  min-height: 45rem;
+  min-height: 35rem;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -20,7 +20,7 @@
     background-position: 40%;
     background-repeat: no-repeat;
     opacity: var(--opacity);
-    scale: -1;
+    transform: scaleY(-1);
     transition: 2s ease;
     z-index: -1;
   }
@@ -128,7 +128,6 @@
     font-size: 1.5rem;
     color: $black;
     transition: 0.1s ease-in;
-
   }
 }
 

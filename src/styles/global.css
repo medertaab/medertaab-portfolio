@@ -19,13 +19,13 @@
 }
 
 ::-moz-selection {
-  color: var(--black);
-  background: var(--lime);
+  color: var(--white);
+  background: var(--cosmic);
 }
 
 ::selection {
-  color: var(--black);
-  background: var(--lime);
+  color: var(--white);
+  background: var(--cosmic);
 }
 
 html,
