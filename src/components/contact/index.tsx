@@ -7,16 +7,17 @@ export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
+  const formRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
-    const myForm = e.target;
-
+    const formData = formRef.current ? new FormData(formRef.current) : null  as any
+    const submitData = new URLSearchParams(formData).toString()
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: myForm?.toString(),
+      body: submitData,
     })
       .then(() => setSubmitted(true))
       .catch((error) => console.log(error));
@@ -42,7 +43,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+      <form ref={formRef} name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Your name"></input>
         <input
           type="email"

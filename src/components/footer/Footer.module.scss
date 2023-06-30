@@ -3,6 +3,7 @@
   position: relative;
   z-index: 1;
   height: $footer-height;
+  padding: 1rem;
   
   ::-moz-selection { /* Code for Firefox */
     color: var(--black);
@@ -32,13 +33,13 @@
   }
 
   li:hover {
-    color: $magic;
+    color: $white;
   }
 
   span {
     display: block;
     text-align: right;
-    color: $magic;
+    color: $black;
     max-width: var(--max-width);
     font-size: 0.8rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
