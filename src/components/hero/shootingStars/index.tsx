@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./ShootingStars.module.scss";
 import StarGraphic from "@public/svg/star-medium.svg";
 
-export default function ShootingStars({ left, right }: any) {
+export default function ShootingStars({ left, right, top }: any) {
   const numberOfStars = 3;
   const [starsRender, setStarsRender] = useState(true);
 
@@ -33,7 +33,7 @@ export default function ShootingStars({ left, right }: any) {
       <div
         className={`${styles.shootingStars} ${left && styles.left} ${
           right && styles.right
-        }`}
+        } ${top && styles.top}`}
       >
         {length.map((it) => star())}
       </div>

@@ -1,8 +1,9 @@
 .footer {
   width: 100%;
-  background-color: $black;
-  padding: 1rem;
-
+  position: relative;
+  z-index: 1;
+  height: $footer-height;
+  
   ::-moz-selection { /* Code for Firefox */
     color: var(--black);
     background: var(--lime);
@@ -23,7 +24,7 @@
   }
 
   li {
-    color: $white;
+    color: $black;
     font-size: 0.8rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     transition: 0.15s ease-in-out;

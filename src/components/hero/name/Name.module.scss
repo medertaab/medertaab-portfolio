@@ -5,6 +5,7 @@
   animation: slide-up 0.3s ease;
   $button-radius: 3.5rem;
   $button-margin: 0.5rem;
+  margin-top: min(45%, 15rem);
 
   & > * {
     display: flex;
@@ -35,7 +36,9 @@
     margin-top: 0.25rem;
     display: flex;
     align-items: center;
+    background-color: transparent;
     justify-content: center;
+    transition: 0.2s ease-in-out;
 
     svg {
       fill: $light-blue;
@@ -45,13 +48,9 @@
     }
   }
 
-  button:hover {
-    box-shadow: 0.3rem 0.3rem 0 rgb(255, 255, 255);
-    transform: translate(-0.3rem, -0.3rem);
-
-    & > svg {
-      transform: rotate(180deg);
-    }
+  button:active {
+    background-color: $magic;
+    transition: 0.2s ease;
   }
 
   .starButton {
@@ -65,6 +64,8 @@
 
 @media (min-width: $widescreen) {
   .name {
+    margin-top: 0;
+
     h1 {
       font-size: min(12vw, 8rem);
       line-height: min(10vw, 7rem);
@@ -73,6 +74,7 @@
     button {
       height: min(9vw, 6rem);
       margin-top: 0.5rem;
+      transition: 0;
 
       svg {
         height: min(4vw, 3rem);
@@ -86,25 +88,28 @@
     .reactButton {
       margin-right: 0.5rem;
     }
+
+
+    button:hover {
+      box-shadow: 0.3rem 0.3rem 0 rgb(255, 255, 255);
+      transform: translate(-0.3rem, -0.3rem);
+      transition: 0;
+  
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+
+
+    button:active {
+      background-color: transparent;
+      transform: translate(0);
+      box-shadow: none;
+    }
   }
 }
 
 ////////// Animations
-
-@keyframes button-pop-out {
-  0% {
-    box-shadow: none;
-    transform: translate();
-  }
-  50% {
-    box-shadow: 0.4rem 0.4rem 0 black;
-    transform: translate(-0.4rem, -0.4rem);
-  }
-  99% {
-    box-shadow: none;
-    transform: translate();
-  }
-}
 
 @keyframes scale-in {
   0% {

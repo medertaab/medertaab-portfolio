@@ -12,12 +12,14 @@ $colors: ($yellow, $purple);
   height: 100%;
   width: 40%;
 
+  &.right,
   &.left {
-    right: 100%;
+    display: none;
   }
 
-  &.right {
-    left: 100%;
+  &.top {
+    top: -100%;
+    width: 100%;
   }
 
   span {
@@ -40,8 +42,27 @@ $colors: ($yellow, $purple);
 
     svg {
       position: absolute;
-      width: 1.5rem;
+      width: 1rem;
       animation: shining $length ease-in-out 1 both;
+    }
+  }
+}
+
+@media (min-width: $widescreen) {
+  .shootingStars {
+    &.top {
+      display: block;
+      top: -100%;
+      width: 100%;
+    }
+
+    &.left {
+      display: block;
+      right: 100%;
+    }
+
+    &.top {
+      display: none;
     }
   }
 }
@@ -58,7 +79,4 @@ $colors: ($yellow, $purple);
     scale: 0;
     rotate: 180deg;
   }
-}
-
-@media (min-width: $widescreen) {
 }

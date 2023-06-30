@@ -2,8 +2,7 @@
 
 .heroSection {
   width: 100%;
-  height: 100vh;
-  height: 100lvh;
+  min-height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,9 +12,7 @@
   z-index: 0;
 
   .staticBg {
-    opacity: 0;
     animation: fade-in 1s ease both;
-    filter: saturate(0.7) hue-rotate(-20deg);
     scale: 2;
     translate: 30% 40%;
   }

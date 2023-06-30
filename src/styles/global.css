@@ -36,10 +36,6 @@ body {
   scroll-behavior: smooth;
 }
 
-main {
-  position: relative;
-}
-
 button {
   border: none;
   background-color: transparent;

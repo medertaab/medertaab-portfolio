@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 
-export default function Footer() {
+export default function Footer({ bgTrigger } : any) {
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={styles.footer}
+      style={{ "--bgOpacity": bgTrigger ? 1 : 1 } as React.CSSProperties}
+    >
       <ul className={styles.links}>
         <li>
           <a href="">LinkedIn</a>

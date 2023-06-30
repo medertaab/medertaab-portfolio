@@ -1,28 +1,28 @@
 .contact {
-  min-height: 70vh;
+  min-height: 45rem;
   display: flex;
   flex-direction: column;
   z-index: 1;
   position: relative;
   justify-content: center;
   gap: 1rem;
-
-  & > * {
-    z-index: 1;
-  }
+  z-index: 0;
 
   &::after {
     content: "";
     position: absolute;
-    height: 100%;
+    height: 65rem;
     width: 100%;
-    background-image: url("/images/gradient_back.jpg");
+    left: 0;
+    bottom: -$footer-height;
+    background-image: url("/images/gradient_bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: 40%;
     background-repeat: no-repeat;
     opacity: var(--opacity);
     scale: -1;
-    transition: 2s ease-in-out;
+    transition: 1s ease;
+    z-index: -1;
   }
 
   ::-moz-selection {
@@ -108,7 +108,7 @@
     font-family: "Plus Jakarta Sans", sans-serif;
     color: $white;
     text-decoration: underline;
-    padding: 0 2rem;
+    padding: 0 2rem 1rem 2rem;
     margin-right: 1.5rem;
 
     &::after {
@@ -121,6 +121,14 @@
 
   .narrowEmail {
     align-self: flex-end;
+    color: $black;
+  }
+
+  .messageAlert {
+    font-size: 1.5rem;
+    color: $black;
+    transition: 0.1s ease-in;
+
   }
 }
 
@@ -129,6 +137,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0;
+
+    &::after {
+      background-position: center;
+    }
 
     .contactContainer {
       margin-top: 5rem;

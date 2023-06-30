@@ -6,16 +6,17 @@ import SubHeader from "./subHeader";
 
 export default function Hero() {
   const [animating, setAnimating] = useState(false);
+  
   return (
     <section className={styles.heroSection} id="main">
       {!animating && (
         <img
-          src="/images/gradient_back.jpg"
+          src="/images/gradient_bg.jpg"
           style={{ width: "100%", position: "absolute", top: "0" }}
           className={styles.staticBg}
         ></img>
       )}
-      <Name animating={animating} setAnimating={setAnimating}/>
+      <Name animating={animating} setAnimating={setAnimating} />
       <SubHeader />
       {animating && <Gradient />}
     </section>

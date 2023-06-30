@@ -48,10 +48,10 @@ const projects: Projects = [
   {
     title: "Boulangerie",
     description: [
-      "Website for local bakery that features pages for landing, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
+      "Website for local bakery that features a landing page, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
     ],
     technologies: ["Typescript", "NextJS", "Tailwind"],
-    url: "https://boulangeriekg.netlify.app/",
+    url: "https://boulangerie.kg/",
     thumbnail: "./thumbnails/boulangerie.jpg",
     gradient: `
       linear-gradient(45deg, #ffe65b 0%, transparent 50%),

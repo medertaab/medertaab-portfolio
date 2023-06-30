@@ -22,6 +22,7 @@ export default function Name({animating, setAnimating} : any) {
 
       <ShootingStars left/>
       <ShootingStars right/>
+      <ShootingStars top/>
     </div>
   );
 }
