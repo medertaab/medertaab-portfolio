@@ -12,8 +12,10 @@ export default function Contact() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
-    const formData = formRef.current ? new FormData(formRef.current) : null  as any
-    const submitData = new URLSearchParams(formData).toString()
+    const formData = formRef.current
+      ? new FormData(formRef.current)
+      : (null as any);
+    const submitData = new URLSearchParams(formData).toString();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -32,7 +34,9 @@ export default function Contact() {
         } as React.CSSProperties
       }
     >
-      <div className={styles.contactContainer}>
+      <div
+        className={styles.contactContainer}
+      >
         <SectionTitle>Contact me</SectionTitle>
         <p ref={ref}>
           I am looking for job opportunities, feel free to send me an e-mail or
@@ -43,7 +47,13 @@ export default function Contact() {
         </a>
       </div>
 
-      <form ref={formRef} name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
+      <form
+        ref={formRef}
+        name="contact"
+        method="post"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" name="name" placeholder="Your name"></input>
         <input

@@ -23,6 +23,7 @@ export default function Hero() {
           src="/images/gradient_bg.jpg"
           style={{ width: "100%", position: "absolute", top: "0" }}
           className={styles.staticBg}
+          alt="Decorative background image of a colorful gradient on black backdrop"
         ></img>
       )}
       <Name

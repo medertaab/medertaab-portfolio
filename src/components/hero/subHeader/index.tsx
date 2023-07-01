@@ -15,8 +15,8 @@ export default function SubHeader() {
           ALSO AN ILLUSTRATOR, COPYWRITER AND FULL-TIME INTERNET RESIDENT &#169;
           2023
         </p>
-        <div className={styles.galaxyContainer}>
-          <Planet />
+        <div className={styles.graphicWrapper}>
+          <img src="/images/hello.gif" />
         </div>
         <img
           src="/images/barcode.png"

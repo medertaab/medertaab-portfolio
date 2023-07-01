@@ -50,7 +50,7 @@ $block-height: min(3.5rem, 10vw);
     margin-top: 0.5rem;
     flex-wrap: wrap;
 
-    .galaxyContainer {
+    .graphicWrapper {
       height: 2rem;
       aspect-ratio: 35/10;
       background-color: $off-black;
@@ -59,13 +59,13 @@ $block-height: min(3.5rem, 10vw);
       overflow: hidden;
       padding: 1rem;
 
-      svg {
+      img {
         position: absolute;
-        top: -40%;
+        top: -17%;
         left: 50%;
-        width: 90%;
+        width: 60%;
+        transform: translateX(-50%);
         fill: $yellow;
-        animation: planet 10s ease-in-out infinite;
       }
     }
 
@@ -96,7 +96,7 @@ $block-height: min(3.5rem, 10vw);
     .lowerHalf {
       gap: 1rem;
 
-      .galaxyContainer {
+      .graphicWrapper {
         height: $block-height;
         order: 0;
       }
@@ -198,12 +198,12 @@ $block-height: min(3.5rem, 10vw);
   }
 }
 
-@keyframes planet {
+@keyframes graphic {
   0% {
-    transform: translateY(-20%) translateX(-50%);
+    transform: translateY(-10%) translateX(-50%);
   } 50% {
-    transform: translateY(20%) translateX(-50%);
+    transform: translateY(10%) translateX(-50%);
   } 100% {
-    transform: translateY(-20%) translateX(-50%);
+    transform: translateY(-10%) translateX(-50%);
   }
 }

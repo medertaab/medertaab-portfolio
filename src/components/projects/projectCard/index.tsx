@@ -65,7 +65,7 @@ export default function Project(props: ProjectProps) {
         style={{ backgroundImage: project.gradient}}
       >
         <div className={styles.projectContainer} >
-          <img src={project.pin} className={styles.pin}></img>
+          <img src={project.pin} className={styles.pin} alt="Decorative icon"></img>
           
           <div className={styles.upperHalf}>
             <h4>{project.title}</h4>
