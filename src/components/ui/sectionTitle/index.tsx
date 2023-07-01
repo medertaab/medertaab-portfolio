@@ -13,7 +13,6 @@ export default function SectionTitle({ children, color }: any) {
       <Star
         className={styles.star}
         style={{
-          fill: color,
           display: isInView ? "block" : "none",
         }}
       />

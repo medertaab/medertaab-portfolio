@@ -33,7 +33,7 @@ export default function Contact() {
       }
     >
       <div className={styles.contactContainer}>
-        <SectionTitle color="#dff800">Contact me</SectionTitle>
+        <SectionTitle>Contact me</SectionTitle>
         <p ref={ref}>
           I am looking for job opportunities, feel free to send me an e-mail or
           contact me through the form

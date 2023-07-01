@@ -39,6 +39,7 @@
     background-color: transparent;
     justify-content: center;
     transition: 0.2s ease-in-out;
+    animation: button-pop-out 7s ease-in-out infinite 5s;
 
     svg {
       fill: $white;
@@ -54,6 +55,7 @@
   }
 
   .starButton {
+    animation: button-pop-out 7s ease-in-out infinite 5.1s;
     aspect-ratio: 1/1;
   }
 
@@ -89,12 +91,12 @@
       margin-right: 0.5rem;
     }
 
-
     button:hover {
       box-shadow: 0.3rem 0.3rem 0 $magic;
       transform: translate(-0.3rem, -0.3rem);
       transition: 0;
-  
+      animation: none;
+
       & > svg {
         transform: rotate(180deg);
       }
@@ -135,5 +137,20 @@
   }
   100% {
     scale: 1;
+  }
+}
+
+@keyframes button-pop-out {
+  0% {
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+  3% {
+    box-shadow: 0.3rem 0.3rem 0 $magic;
+    transform: translate(-0.3rem, -0.3rem);
+  }
+  6% {
+    box-shadow: none;
+    transform: translate(0, 0);
   }
 }

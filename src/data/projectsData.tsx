@@ -6,7 +6,8 @@ interface Project {
   github?: string,
   thumbnail: string,
   gradient: string,
-  color: string
+  color: string,
+  pin: string
 }
 
 interface Projects extends Array<Project>{}
@@ -28,7 +29,8 @@ const projects: Projects = [
       radial-gradient(at 45% 80%, #742bfd 0%, transparent 45%),
       linear-gradient(90deg, #6807E1 0%, #b048f1 70%)
     `,
-    color: "#bc4fff"
+    color: "#bc4fff",
+    pin: "/svg/pin5.svg"
   },
   {
     title: "Quickstretch",
@@ -43,7 +45,8 @@ const projects: Projects = [
     gradient: `
       linear-gradient(70deg,#C9EA4B 20%, #B7EE02 45%, #D9E200 67%)
     `,
-    color: "#D9E200"
+    color: "#D9E200",
+    pin: "/svg/pin4.svg"
   },
   {
     title: "Boulangerie",
@@ -59,7 +62,8 @@ const projects: Projects = [
       radial-gradient(at 50% 100%, #ffd03698 0px, transparent 35%),
       linear-gradient(110deg, #ffe6cf 65%, #9465df 100%)
     `,
-    color: "rgb(255 223 173)"
+    color: "rgb(255 223 173)",
+    pin: "/svg/pin3.svg"
   },
 ];
 

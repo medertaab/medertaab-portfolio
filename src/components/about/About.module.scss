@@ -34,6 +34,11 @@
   img {
     width: min(2.5rem, 5vw);
     aspect-ratio: 1/1;
+    transition: 0.2s ease-in-out;
+  }
+
+  img:hover {
+    scale: 1.2;
   }
 }
 

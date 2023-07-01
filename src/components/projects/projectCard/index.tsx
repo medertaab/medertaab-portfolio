@@ -11,6 +11,7 @@ interface Project {
   thumbnail: string;
   gradient: string;
   color: string;
+  pin: string;
 }
 
 interface ProjectProps {
@@ -61,9 +62,11 @@ export default function Project(props: ProjectProps) {
       {/* Card */}
       <div
         className={styles.projectCard}
-        style={{ backgroundImage: project.gradient }}
+        style={{ backgroundImage: project.gradient}}
       >
-        <div className={styles.projectContainer}>
+        <div className={styles.projectContainer} >
+          <img src={project.pin} className={styles.pin}></img>
+          
           <div className={styles.upperHalf}>
             <h4>{project.title}</h4>
             {project.description.map((text) => (
@@ -79,11 +82,12 @@ export default function Project(props: ProjectProps) {
               <a
                 href={project.url}
                 style={{ color: project.color }}
+                target="_blank"
               >
                 Site link &#8599;&#xFE0E;
               </a>
               {project.github && (
-                <a href={project.github}>Github repo &#8599;&#xFE0E;</a>
+                <a href={project.github} target="_blank">Github repo &#8599;&#xFE0E;</a>
               )}
             </div>
           </div>

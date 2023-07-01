@@ -8,7 +8,7 @@ export default function Projects() {
 
   return (
     <section className={styles.projects}>
-      <SectionTitle color="#6000fc">Projects</SectionTitle>
+      <SectionTitle>Projects</SectionTitle>
 
       {projectsData.map((project, index) => {
         return <ProjectCard project={project} key={index} index={index} />;

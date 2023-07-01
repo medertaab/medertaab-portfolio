@@ -6,7 +6,7 @@ import Stack from "./stack";
 export default function About() {
   return (
     <section className={styles.aboutSection}>
-      <SectionTitle color="#e8f800">About</SectionTitle>
+      <SectionTitle>About</SectionTitle>
 
       <p>
         Hello! My name is Meder Taab and I create web stuff 🔮
