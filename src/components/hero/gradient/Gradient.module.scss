@@ -10,7 +10,6 @@
   overflow: hidden;
   -webkit-animation: fade-in 1s ease both;
   animation: fade-in 1s ease both;
-  left: 0%;
   -webkit-filter: saturate(0.9);
   filter: saturate(0.9);
 
@@ -40,9 +39,9 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    -webkit-transform: scale(2.5) translate(-40%, 60%);
-    transform: scale(2.5);
-    translate: -40% 60%;
+    -webkit-transform: scale(2) translate(-40%, 60%);
+    transform: scale(2);
+    translate: -40% 45%;
     filter: blur(3vw);
 
     .blob1 {

@@ -23,11 +23,11 @@ const projects: Projects = [
     github: "http://",
     thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
-      linear-gradient(150deg, rgba(153, 75, 236, 1) 0%, transparent 40%),
-      linear-gradient(30deg, rgba(138, 82, 250, 1) 0%, transparent 40%),
-      radial-gradient(at 30% 100%, rgba(136, 79, 241, 1) 0%, transparent 20%),
-      radial-gradient(at 45% 80%, rgba(116, 43, 253, 1) 0%, transparent 45%),
-      linear-gradient(90deg, rgba(105, 7, 225, 1) 0%, rgba(176, 72, 241, 1) 70%)
+      linear-gradient(150deg, rgba(153, 71, 241, 0.957) 0%, transparent 40%),
+      linear-gradient(30deg, rgba(133, 74, 252, 0.957) 0%, transparent 40%),
+      radial-gradient(at 30% 100%, rgba(134, 73, 247, 0.973) 0%, transparent 20%),
+      radial-gradient(at 45% 80%, rgba(111, 37, 247, 0.986) 0%, transparent 45%),
+      linear-gradient(90deg, #700becf6 0%, rgba(174, 67, 241, 0.973) 70%)
 
     `,
     color: "#bc4fff",
@@ -58,13 +58,13 @@ const projects: Projects = [
     url: "https://boulangerie.kg/",
     thumbnail: "./thumbnails/boulangerie.jpg",
     gradient: `
-      linear-gradient(45deg, rgba(255, 230, 91, 1) 0%, transparent 50%),
-      radial-gradient(at 10% 20%, rgba(255, 189, 34, 1) 0px, transparent 50%),
-      radial-gradient(at 50% 100%, rgba(255, 208, 54, 0.596) 0px, transparent 35%),
-      linear-gradient(110deg, rgba(255, 230, 207, 1) 65%, rgba(148, 101, 223, 1) 100%)
+      linear-gradient(45deg, #ffe65bf2 0%, transparent 50%),
+      radial-gradient(at 10% 20%, rgba(255, 189, 34, 0.932) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(255, 208, 54, 0.582) 0px, transparent 35%),
+      linear-gradient(110deg, #ffe6cff8 65%, #925de7f2 100%)
     `,
     color: "rgb(255 223 173)",
-    pin: "/svg/pin3.svg"
+    pin: "/svg/pin1.svg"
   },
 ];
 
