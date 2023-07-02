@@ -23,11 +23,12 @@ const projects: Projects = [
     github: "http://",
     thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
-      linear-gradient(150deg, #994bec 0%, transparent 40%),
-      linear-gradient(30deg, #8a52fa 0%, transparent 40%),
-      radial-gradient(at 30% 100%, #884ff1 0%, transparent 20%),
-      radial-gradient(at 45% 80%, #742bfd 0%, transparent 45%),
-      linear-gradient(90deg, #6807E1 0%, #b048f1 70%)
+      linear-gradient(150deg, rgba(153, 75, 236, 1) 0%, transparent 40%),
+      linear-gradient(30deg, rgba(138, 82, 250, 1) 0%, transparent 40%),
+      radial-gradient(at 30% 100%, rgba(136, 79, 241, 1) 0%, transparent 20%),
+      radial-gradient(at 45% 80%, rgba(116, 43, 253, 1) 0%, transparent 45%),
+      linear-gradient(90deg, rgba(105, 7, 225, 1) 0%, rgba(176, 72, 241, 1) 70%)
+
     `,
     color: "#bc4fff",
     pin: "/svg/pin5.svg"
@@ -43,7 +44,7 @@ const projects: Projects = [
     github: "http://",
     thumbnail: "./thumbnails/quickstretch0.jpg",
     gradient: `
-      linear-gradient(70deg,#C9EA4B 20%, #B7EE02 45%, #D9E200 67%)
+      linear-gradient(70deg,rgba(201, 234, 75, 1) 20%, rgba(183, 238, 2, 1) 45%, rgba(217, 226, 0, 1) 67%)
     `,
     color: "#D9E200",
     pin: "/svg/pin4.svg"
@@ -57,10 +58,10 @@ const projects: Projects = [
     url: "https://boulangerie.kg/",
     thumbnail: "./thumbnails/boulangerie.jpg",
     gradient: `
-      linear-gradient(45deg, #ffe65b 0%, transparent 50%),
-      radial-gradient(at 10% 20%, #ffbd22 0px, transparent 50%),
-      radial-gradient(at 50% 100%, #ffd03698 0px, transparent 35%),
-      linear-gradient(110deg, #ffe6cf 65%, #9465df 100%)
+      linear-gradient(45deg, rgba(255, 230, 91, 1) 0%, transparent 50%),
+      radial-gradient(at 10% 20%, rgba(255, 189, 34, 1) 0px, transparent 50%),
+      radial-gradient(at 50% 100%, rgba(255, 208, 54, 0.596) 0px, transparent 35%),
+      linear-gradient(110deg, rgba(255, 230, 207, 1) 65%, rgba(148, 101, 223, 1) 100%)
     `,
     color: "rgb(255 223 173)",
     pin: "/svg/pin3.svg"
