@@ -16,7 +16,10 @@ export default function SubHeader() {
           2023
         </p>
         <div className={styles.graphicWrapper}>
-          <img src="/images/hello.gif" />
+          <img
+            src="/images/hello.gif"
+            alt="Decorative pixel image that says 'Hello'"
+          />
         </div>
         <img
           src="/images/barcode.png"

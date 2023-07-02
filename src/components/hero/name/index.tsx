@@ -9,12 +9,12 @@ export default function Name({bgMoving, setBgMoving, starFall, handleStarFall} :
     <div className={styles.name}>
       <div>
         <h1 className={styles.firstName}>MEDER</h1>
-        <button disabled={starFall} className={styles.starButton} onClick={handleStarFall}>
+        <button name="Star button" disabled={starFall} className={styles.starButton} onClick={handleStarFall}>
           <Sparkle />
         </button>
       </div>
       <div>
-        <button className={styles.reactButton} onClick={() => setBgMoving(!bgMoving)}>
+        <button name="Atom button" className={styles.reactButton} onClick={() => setBgMoving(!bgMoving)}>
           <ReactLogo />
         </button>
         <h1>TAAB</h1>
