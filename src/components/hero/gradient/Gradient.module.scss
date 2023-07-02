@@ -8,8 +8,10 @@
   z-index: -1;
   background: rgb(44, 44, 44);
   overflow: hidden;
+  -webkit-animation: fade-in 1s ease both;
   animation: fade-in 1s ease both;
   left: 0%;
+  -webkit-filter: saturate(0.9);
   filter: saturate(0.9);
 
   &::after {
@@ -38,6 +40,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    -webkit-transform: scale(2.5) translate(-40%, 60%);
     transform: scale(2.5);
     translate: -40% 60%;
     filter: blur(3vw);
@@ -53,6 +56,7 @@
       width: 63%;
       max-height: 60vw;
       fill: #7476eb;
+      -webkit-animation: blob-height 10s ease-in-out infinite;
       animation: blob-height 10s ease-in-out infinite;
     }
   }
@@ -77,9 +81,11 @@
     top: 0;
     height: 120%;
     width: 120%;
+    -webkit-filter: blur(8vw);
     filter: blur(8vw);
     mix-blend-mode: overlay;
     opacity: 0.9;
+    -webkit-transform: scale(2) translate(-50%, 40%);
     transform: scale(2);
     translate: -50% 40%;
 
