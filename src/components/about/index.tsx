@@ -13,17 +13,13 @@ export default function About() {
       </p>
 
       <p>
-        I’ve been making websites since I was a child, when I would tinker small
-        blogs and message boards, injecting them with my HTML code or
-        customizing them with my own CSS. While I've explored other creative
-        pursuits like illustration and copywriting, I've discovered a real
-        affinity for the world of web development. The technical and creative
-        challenges of the field perfectly align with my strengths and passions.
+        I’ve been making websites all my life - from the prime days of message boards, web guestbooks and loud dial-up modem noises, to my current enthrallment with React and the modern web development process. 
       </p>
 
+      <p>While I've explored other creative pursuits like illustration and copywriting, I've discovered a real passion for the world of web development. The technical and creative challenges of the field align perfectly with my skills and interests.</p>
+
       <p>
-        I enjoy creating <strong>engaging and delightful experiences</strong>{" "}
-        for web users by uniting my strive for creativity and logical analysis.
+        I enjoy creating <strong>delightful, engaging and accessible experiences</strong>{" "} for web users by uniting my strive for creativity and logic.
       </p>
 
       <Stack />

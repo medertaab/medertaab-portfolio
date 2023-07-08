@@ -18,8 +18,8 @@ const projects: Projects = [
     description: [
       "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
     ],
-    technologies: ["Typescript", "NextJS", "Tailwind"],
-    url: "https://portfolder.netlify.app/",
+    technologies: ["Javascript", "NextJS", "Tailwind"],
+    url: "https://portfolder.netlify.app/moto",
     github: "http://",
     thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
@@ -54,7 +54,7 @@ const projects: Projects = [
     description: [
       "Website for local bakery that features a landing page, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
     ],
-    technologies: ["Typescript", "NextJS", "Tailwind"],
+    technologies: ["Typescript", "NextJS", "Sass"],
     url: "https://boulangerie.kg/",
     thumbnail: "./thumbnails/boulangerie.jpg",
     gradient: `
