@@ -9,19 +9,16 @@ export default function Footer({ bgTrigger } : any) {
     >
       <ul className={styles.links}>
         <li>
-          <a href="">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/meder-taab-34195b73/">LinkedIn</a>
         </li>
         <li>
-          <a href="">Github</a>
+          <a href="https://github.com/medertaab">Github</a>
         </li>
         <li>
-          <a href="">Twitter</a>
+          <a href="https://twitter.com/mederdiev">Twitter</a>
         </li>
         <li>
-          <a href="">Email</a>
-        </li>
-        <li>
-          <a href="">Discord</a>
+          <a href="medertaab@gmail.com">Email</a>
         </li>
       </ul>
       <span>This website is open source</span>

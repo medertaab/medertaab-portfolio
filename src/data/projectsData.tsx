@@ -14,13 +14,28 @@ interface Projects extends Array<Project>{}
 
 const projects: Projects = [
   {
+    title: "Quickstretch",
+    description: [
+      "A stretching web app that enables you to run quick and easy stretching routines to relieve muscle tension. Features custom illustrations, done by me as well.",
+      "Also comes as a Google Chrome extension.",
+    ],
+    technologies: ["Typescript", "Vite", "Styled-Components"],
+    url: "https://quickstretch.app/",
+    github: "https://github.com/medertaab/quickstretch",
+    thumbnail: "./thumbnails/quickstretch0.jpg",
+    gradient: `
+      linear-gradient(70deg,rgba(201, 234, 75, 1) 20%, rgba(183, 238, 2, 1) 45%, rgba(217, 226, 0, 1) 67%)
+    `,
+    color: "#D9E200",
+    pin: "/svg/pin4.svg"
+  },{
     title: "Portfolder",
     description: [
       "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
     ],
     technologies: ["Javascript", "NextJS", "Tailwind"],
-    url: "https://portfolder.netlify.app/moto",
-    github: "http://",
+    url: "https://portfolder.netlify.app/example",
+    github: "https://github.com/medertaab/portfolder",
     thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
       linear-gradient(150deg, rgba(153, 71, 241, 1) 0%, rgba(153, 71, 241, 0) 40%),
@@ -34,23 +49,7 @@ const projects: Projects = [
     pin: "/svg/pin5.svg"
   },
   {
-    title: "Quickstretch",
-    description: [
-      "A stretching web app that enables you to run quick and easy stretching routines to relieve muscle tension. Features custom illustrations, done by me as well.",
-      "Also comes as a Google Chrome extension.",
-    ],
-    technologies: ["Typescript", "Vite", "Styled-Components"],
-    url: "https://quickstretch.netlify.app/",
-    github: "http://",
-    thumbnail: "./thumbnails/quickstretch0.jpg",
-    gradient: `
-      linear-gradient(70deg,rgba(201, 234, 75, 1) 20%, rgba(183, 238, 2, 1) 45%, rgba(217, 226, 0, 1) 67%)
-    `,
-    color: "#D9E200",
-    pin: "/svg/pin4.svg"
-  },
-  {
-    title: "Boulangerie",
+    title: "Boulangerie.kg",
     description: [
       "Website for local bakery that features a landing page, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management"
     ],

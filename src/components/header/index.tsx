@@ -7,8 +7,8 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a href="#main" className={styles.logo}>M</a>
-      <a href="http://github.com" aria-label="Github" target="_blank" rel="noopener"><GithubLogo /></a>
-      <a href="http://linkedin.com" aria-label="Linkedin" target="_blank" rel="noopener"><LinkedinLogo /></a>
+      <a href="https://github.com/medertaab" aria-label="Github" target="_blank" rel="noopener"><GithubLogo /></a>
+      <a href="https://www.linkedin.com/in/meder-taab-34195b73/" aria-label="Linkedin" target="_blank" rel="noopener"><LinkedinLogo /></a>
     </header>
   )
 }
