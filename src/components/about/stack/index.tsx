@@ -13,10 +13,11 @@ export default function Stack() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className={styled.stackContainer} ref={ref}>
+    <ul className={styled.stackContainer} ref={ref}>
       {techStack.map((object: TechObject, index: number) => {
         return (
-          <motion.img
+          <li>
+            <motion.img
             src={`/icons/${object.path}`}
             alt={`${object.title} icon`}
             title={object.title}
@@ -24,8 +25,9 @@ export default function Stack() {
             animate={isInView && {scale: [1, 1.2, 1]}}
             transition={{delay: index*0.1}}
           />
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }

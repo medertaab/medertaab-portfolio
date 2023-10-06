@@ -43,10 +43,8 @@ export default function Project(props: ProjectProps) {
       style={{
         opacity: isInView ? 1 : 0,
         transform: isInView
-          ? "none"
-          : index % 2 === 0
-          ? "translateX(-100px)"
-          : "translateX(100px)",
+          ? "translateY(0px)"
+          : "translateY(50px)",
       }}
     >
       {/* Image */}

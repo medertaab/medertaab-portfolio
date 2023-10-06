@@ -10,6 +10,7 @@
   --cosmic-light: rgb(143, 117, 255);
   --orange: rgb(255, 110, 27);
   --magic: rgb(120, 133, 255);
+  --magic-transparent: rgba(155, 165, 255, 0.568);
 }
 
 * {

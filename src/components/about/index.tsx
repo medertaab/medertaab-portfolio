@@ -8,20 +8,21 @@ export default function About() {
     <section className={styles.aboutSection}>
       <SectionTitle>About</SectionTitle>
 
+      <p>Hi! My name is Meder Taab and I create web stuff 🔮</p>
+
       <p>
-        Hello! My name is Meder Taab and I create web stuff 🔮
+        I'm a creative professional working in webdev with a focus on <strong>front-end development</strong>. I enjoy creating delightful, engaging and accessible experiences for web users.
       </p>
 
       <p>
-        I’ve been making websites all my life - from the prime days of message boards, web guestbooks and loud dial-up modem noises, to my current enthrallment with React and the modern web development process. 
+        With a lifelong interest in tech and the web, and over a decade worth of experience in creative industries like illustration and writing, I strive to combine strong senses of <strong>creativity and logic</strong> in my work.
       </p>
-
-      <p>While I've explored other creative pursuits like illustration and copywriting, I've discovered a real passion for the world of web development. The technical and creative challenges of the field align perfectly with my skills and interests.</p>
 
       <p>
-        I enjoy creating <strong>delightful, engaging and accessible experiences</strong>{" "} for web users by uniting my strive for creativity and logic.
+        I'm eager to use my skills contribute to new projects, utilize my unique background and explore new opportunities!
       </p>
 
+      <p>What I use:</p>
       <Stack />
     </section>
   );

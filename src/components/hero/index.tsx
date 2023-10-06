@@ -10,10 +10,10 @@ export default function Hero() {
   const [starFall, setStarFall] = useState(false);
 
   function handleStarFall() {
-    setStarFall(true)
+    setStarFall(true);
     setTimeout(() => {
-      setStarFall(false)
-    }, 2500)
+      setStarFall(false);
+    }, 2500);
   }
 
   return (
@@ -33,6 +33,7 @@ export default function Hero() {
         handleStarFall={handleStarFall}
       />
       <SubHeader />
+      <span className={styles.circle}></span>
       {bgMoving && <Gradient />}
       {starFall && <StarFall />}
     </section>

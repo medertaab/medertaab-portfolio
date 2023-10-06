@@ -4,7 +4,6 @@ import Sparkle from "@public/svg/sparkle.svg"
 import ReactLogo from "@public/svg/reactlogo.svg"
 
 export default function Name({bgMoving, setBgMoving, starFall, handleStarFall} : any) {
-
   return (
     <div className={styles.name}>
       <div>

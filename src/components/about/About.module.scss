@@ -8,10 +8,14 @@
     margin-bottom: 1rem;
   }
 
+  *:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
   p {
     font-family: "Urbanist", sans-serif;
     line-height: 150%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 1rem auto;
     text-align: justify;
     font-size: 0.9rem;
     padding: 0 2.5rem;
@@ -19,7 +23,7 @@
 
   strong {
     font-weight: 400;
-    background-color: $magic;
+    background-color: $yellow;
     padding: 0 0.25rem;
   }
 }
@@ -30,6 +34,7 @@
   display: flex;
   gap: min(2rem, 3vw);
   justify-content: center;
+  margin-top: 2rem;
 
   img {
     width: min(2.5rem, 5vw);
