@@ -2,27 +2,38 @@ import React, { useState, useRef } from "react";
 import styles from "./Contact.module.scss";
 import { useInView } from "framer-motion";
 import SectionTitle from "../ui/sectionTitle";
+import Loader from "./loader";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
   const formRef = useRef(null);
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e?.preventDefault();
+
     const formData = formRef.current
       ? new FormData(formRef.current)
       : (null as any);
-    const submitData = new URLSearchParams(formData).toString();
-    fetch("/", {
+
+    formData.append("access_key", process.env.FORM_KEY);
+
+    setLoading(true);
+    const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: submitData,
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => console.log(error));
+      body: formData,
+    }).then((res) => res.json());
+
+    console.log(res);
+    if (res.success) {
+      setResult("Message sent!");
+    } else {
+      setResult("Something went wrong...");
+    }
+    setLoading(false);
   }
 
   return (
@@ -34,9 +45,7 @@ export default function Contact() {
         } as React.CSSProperties
       }
     >
-      <div
-        className={styles.contactContainer}
-      >
+      <div className={styles.contactContainer}>
         <SectionTitle>Contact me</SectionTitle>
         <p ref={ref}>
           I am looking for job opportunities, feel free to send me an e-mail or
@@ -47,27 +56,21 @@ export default function Contact() {
         </a>
       </div>
 
-      <form
-        ref={formRef}
-        name="contact"
-        method="post"
-        data-netlify="true"
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" placeholder="Your name"></input>
+      <form ref={formRef} name="contact" onSubmit={handleSubmit} method="POST">
+        <input type="text" name="name" placeholder="Your name" required></input>
         <input
           type="email"
           name="email"
           placeholder="Your e-mail address"
+          required
         ></input>
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit" className={styles.sendButton}>
-          Send
-        </button>
-        {submitted && (
-          <span className={styles.messageAlert}>Message sent!</span>
-        )}
+        <textarea name="message" placeholder="Message" required></textarea>
+        <div className={styles.actionArea}>
+          <button type="submit" className={styles.sendButton}>
+            {loading ? <Loader /> : "Send"}
+          </button>
+          {result && <span className={styles.messageAlert}>{result}</span>}
+        </div>
       </form>
 
       <a href="emailto:medertaab@gmail.com" className={styles.narrowEmail}>

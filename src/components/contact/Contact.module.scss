@@ -74,6 +74,17 @@
       border: 1px solid white;
     }
 
+    .actionArea {
+      display: flex;
+
+      span {
+        margin-left: auto;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+
     .sendButton {
       width: 7rem;
       height: 2.5rem;
@@ -125,8 +136,8 @@
   }
 
   .messageAlert {
-    font-size: 1.5rem;
-    color: $black;
+    font-size: 1.2rem;
+    color: $white;
     transition: 0.1s ease-in;
   }
 }
