@@ -3,13 +3,19 @@
   margin-top: 5rem;
   position: relative;
   animation: slide-up 0.3s ease 0.2s both;
+  display: flex;
+  flex-direction: column;
 
   h3 {
     margin-bottom: 1rem;
   }
 
-  *:nth-child(2) {
-    font-size: 1.2rem;
+  .textBlock {
+    flex: 1;
+
+    *:nth-child(1) {
+      font-size: 1.2rem;
+    }
   }
 
   p {
@@ -29,16 +35,17 @@
 }
 
 .stackContainer {
-  width: 100%;
-  max-width: $max-width;
+  list-style: none;
   display: flex;
-  gap: min(2rem, 3vw);
-  justify-content: center;
-  margin-top: 2rem;
+  margin: 0 auto;
+  gap: 2rem;
+  transition: all 0.125s ease-in-out;
+  margin-top: 1rem;
 
   img {
-    width: min(2.5rem, 5vw);
-    aspect-ratio: 1/1;
+    width: min(2rem, 5vw);
+    height: min(2rem, 5vw);
+    margin: 0 auto;
     transition: 0.2s ease-in-out;
   }
 
@@ -47,12 +54,23 @@
   }
 }
 
-@media (min-width: $widescreen) {
+@media (min-width: ($widescreen + 200px)) {
   .aboutSection {
     margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2rem;
 
     h3 {
       margin-bottom: 2rem;
+    }
+
+    .stackContainer {
+      min-width: 25%;
+      aspect-ratio: 1/1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0;
     }
 
     p {
