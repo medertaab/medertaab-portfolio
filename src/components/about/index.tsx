@@ -12,15 +12,17 @@ export default function About() {
         <p>Hi! My name is Meder Taab and I create web stuff 🔮</p>
 
         <p>
-          I'm a creative professional working in webdev with a focus on{" "}
-          <strong>front-end development</strong>. I enjoy creating delightful,
+          I'm a creative professional working in webdev with a focus on {" "}
+          <strong>front-end development</strong>. 
+
+        I enjoy creating delightful,
           engaging and accessible experiences for web users.
         </p>
 
         <p>
           With a lifelong interest in tech and the web, and over a decade worth
           of experience in creative industries like illustration and writing, I
-          strive to combine strong senses of{" "}
+          strive to combine {" "}
           <strong>creativity and logic</strong> in my work.
         </p>
 

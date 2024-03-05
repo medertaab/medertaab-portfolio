@@ -19,7 +19,7 @@ export default function Contact() {
       ? new FormData(formRef.current)
       : (null as any);
 
-    formData.append("access_key", FORM_KEY);
+    formData.append("access_key", import.meta.env.FORM_KEY);
 
     setLoading(true);
     const res = await fetch("https://api.web3forms.com/submit", {
