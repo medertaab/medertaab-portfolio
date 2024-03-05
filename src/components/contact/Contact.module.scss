@@ -132,7 +132,6 @@
 
   .narrowEmail {
     align-self: flex-end;
-    color: $black;
   }
 
   .messageAlert {
@@ -157,9 +156,9 @@
       display: flex;
       flex-direction: column;
       flex: 1;
-      max-width: calc($max-width/2);
+      max-width: calc($max-width*0.66);
       gap: 1rem;
-      width: 50%;
+      width: 100%;
 
       .wideEmail {
         display: block;

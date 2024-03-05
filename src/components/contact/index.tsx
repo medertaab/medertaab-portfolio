@@ -19,7 +19,7 @@ export default function Contact() {
       ? new FormData(formRef.current)
       : (null as any);
 
-    formData.append("access_key", FORM_KEY);
+    // formData.append("access_key", import.meta.env.FORM_KEY);
 
     setLoading(true);
     const res = await fetch("https://api.web3forms.com/submit", {
@@ -56,7 +56,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <form ref={formRef} name="contact" onSubmit={handleSubmit} method="POST">
+      {/* <form ref={formRef} name="contact" onSubmit={handleSubmit} method="POST">
         <input type="text" name="name" placeholder="Your name" required></input>
         <input
           type="email"
@@ -71,7 +71,7 @@ export default function Contact() {
           </button>
           {result && <span className={styles.messageAlert}>{result}</span>}
         </div>
-      </form>
+      </form> */}
 
       <a href="emailto:medertaab@gmail.com" className={styles.narrowEmail}>
         medertaab@gmail.com
