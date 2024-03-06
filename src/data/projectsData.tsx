@@ -34,7 +34,7 @@ const projects: Projects = [
       "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
     ],
     technologies: ["Javascript", "NextJS", "Tailwind"],
-    url: "https://portfolder.netlify.app/example",
+    url: "https://portfolder.vercel.app/example",
     github: "https://github.com/medertaab/portfolder",
     thumbnail: "./thumbnails/portfolder0.jpg",
     gradient: `
