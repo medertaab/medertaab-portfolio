@@ -20,7 +20,7 @@
     background-position: 40%;
     background-repeat: no-repeat;
     opacity: var(--opacity);
-    transform: scaleY(-1);
+    transform: scaleY(-1) scaleX(-1);
     transition: 2s ease;
     z-index: -1;
   }

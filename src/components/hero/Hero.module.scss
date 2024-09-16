@@ -12,9 +12,7 @@
   z-index: 0;
 
   .staticBg {
-    position: absolute;
-    animation: fade-in 1s ease both;
-    transform: scaleX(-2) scaleY(2) translateY(25%) translateX(25%);
+    transform: scaleX(2) scaleY(2) translateY(20%) translateX(-25%);
   }
 }
 
@@ -22,10 +20,9 @@
   .heroSection {
     height: min(90svh, 75vw);
     height: min(90vh, 75vw);
-    width: 100%;
 
     .staticBg {
-      transform: scaleX(-1) scaleY(1) translateY(0) translateX(0);
+      transform: scaleX(1) scaleY(1) translateY(0%) translateX(0%);
     }
   }
 }
