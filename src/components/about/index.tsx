@@ -42,7 +42,7 @@ export default function About() {
               className={styles.stripe}
               style={{
                 width: isInView ? "103%" : "0%",
-                transitionDelay: "1000ms"
+                transitionDelay: "500ms"
               }}
             ></span>
           </span>{" "}
