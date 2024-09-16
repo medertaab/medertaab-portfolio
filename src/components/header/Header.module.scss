@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 1600px;
   display: flex;
   align-items: center;
   height: 4rem;
@@ -11,6 +11,10 @@
   font-size: 2rem;
   font-family: "Lato", sans-serif;
   font-weight: 900;
+  transition: 300ms ease-in-out;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 
   * {
     mix-blend-mode: exclusion;
@@ -31,6 +35,7 @@
 
   .logo {
     position: relative;
+    margin-right: auto;
 
     &::after {
       content: "";
@@ -53,8 +58,31 @@
     margin-left: 1rem;
   }
 
-  :nth-child(2) {
-    margin-left: auto;
+  .emailButton {
+    display: none;
+  }
+}
+
+@media (min-width: $widescreen) {
+  .header {
+    .emailButton {
+      display: block;
+      width: 8.25rem;
+      font-size: 0.9rem;
+      background-color: $lime;
+      font-family: 'Lato', sans-serif;
+      padding-right: 0.4rem;
+    }
+  
+    .emailButton:hover {
+      background-color: $lime-light;
+      transition: 250ms ease-in-out;
+    }
+
+    .emailButton:active {
+      background-color: $magic;
+      transition: 250ms ease-in-out;
+    }
   }
 }
 

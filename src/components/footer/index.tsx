@@ -22,7 +22,7 @@ export default function Footer({ bgTrigger } : any) {
         </li>
       </ul>
       <span>This website is open source</span>
-      <span>© Copyright 2023, Meder Taab</span>
+      <span>© Copyright 2024, Meder Taab</span>
     </footer>
   );
 }

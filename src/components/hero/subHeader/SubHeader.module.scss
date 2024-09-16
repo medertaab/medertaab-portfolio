@@ -10,7 +10,7 @@ $block-height: min(3.5rem, 10vw);
   flex-direction: column;
   background-color: $magic;
   position: relative;
-  animation: slide-up 0.3s ease 0.1s both;
+  animation: slide-up 1s ease 0.2s both;
 
   &::before {
     content: "";
@@ -64,8 +64,9 @@ $block-height: min(3.5rem, 10vw);
         top: -17%;
         left: 50%;
         width: 60%;
-        transform: translateX(-50%);
-        fill: $yellow;
+        fill: $lime;
+        filter: hue-rotate(7deg);
+        animation: rotate 7s linear infinite forwards;
       }
     }
 
@@ -206,5 +207,17 @@ $block-height: min(3.5rem, 10vw);
     transform: translateY(10%) translateX(-50%);
   } 100% {
     transform: translateY(-10%) translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+    translate: (-50%);
+
+  } 100% {
+    transform: rotateY(360deg);
+    translate: (-50%);
+    ;
   }
 }

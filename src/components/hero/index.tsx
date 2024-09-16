@@ -6,7 +6,7 @@ import SubHeader from "./subHeader";
 import StarFall from "./starFall";
 
 export default function Hero() {
-  const [bgMoving, setBgMoving] = useState(false);
+  const [bgMoving, setBgMoving] = useState(true);
   const [starFall, setStarFall] = useState(false);
 
   function handleStarFall() {
@@ -34,7 +34,7 @@ export default function Hero() {
       />
       <SubHeader />
       <span className={styles.circle}></span>
-      {bgMoving && <Gradient />}
+      <Gradient />
       {starFall && <StarFall />}
     </section>
   );

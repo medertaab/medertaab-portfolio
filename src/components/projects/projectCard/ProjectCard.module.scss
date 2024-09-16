@@ -44,6 +44,10 @@
     background: none;
     border-radius: 2rem;
     flex-grow: 1;
+    background-size: 150%;
+    background-position: right;
+    animation: background-shift 5s ease-in-out infinite;
+
 
     &::after {
       content: "";
@@ -152,12 +156,6 @@
       transition: 1s ease-in-out;
       background-position: center;
       flex: 1;
-
-      &:hover {
-        background-size: 150%;
-        background-position: right;
-        animation: background-shift 3s ease-in-out infinite 1s;
-      }
 
       // Star svg
       &::after {

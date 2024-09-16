@@ -16,7 +16,7 @@ export default function Stack() {
     <ul className={styled.stackContainer} ref={ref}>
       {techStack.map((object: TechObject, index: number) => {
         return (
-          <li>
+          <li key={index}>
             <motion.img
             src={`/icons/${object.path}`}
             alt={`${object.title} icon`}

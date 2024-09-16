@@ -19,22 +19,15 @@ interface ProjectProps {
   index: number;
 }
 
-export default function Project(props: ProjectProps) {
-  const { project, index } = props;
+export default function Project({project, index}: ProjectProps) {
 
   const viewRef = useRef(null);
   const isInView = useInView(viewRef, { once: true });
 
   function technologiesText() {
-    return project.technologies.map((name, index) => {
-      if (index === project.technologies.length - 1) {
-        return `& ${name}`;
-      }
-      if (index === project.technologies.length - 2) {
-        return `${name} `;
-      }
-      return `${name}, `;
-    });
+    const lastTwo = project.technologies.slice(-2).join(' & ');
+    const rest = project.technologies.slice(0, -2).join(', ');
+    return rest ? `${rest}, ${lastTwo}` : lastTwo;
   }
 
   return (
@@ -60,15 +53,15 @@ export default function Project(props: ProjectProps) {
       {/* Card */}
       <div
         className={styles.projectCard}
-        style={{ backgroundImage: project.gradient}}
+        style={{ backgroundImage: project.gradient, animationDelay: `${index * 0.250}ms`}}
       >
         <div className={styles.projectContainer} >
           <img src={project.pin} className={styles.pin} alt="Decorative icon"></img>
           
           <div className={styles.upperHalf}>
             <h4>{project.title}</h4>
-            {project.description.map((text) => (
-              <p>{text}</p>
+            {project.description.map((text, index) => (
+              <p key={index}>{text}</p>
             ))}
           </div>
 

@@ -7,7 +7,7 @@ const techStack = [
   { title: "Tailwind", path: "tailwind.png" },
   { title: "Next.js", path: "nextjs.jpg" },
   { title: "Vite", path: "vite.png" },
-  { title: "Python", path: "python.png" },
+  // { title: "Python", path: "python.png" },
 ];
 
 export default techStack

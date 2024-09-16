@@ -13,7 +13,7 @@ export default function SubHeader() {
       <div className={styles.lowerHalf}>
         <p className={styles.description}>
           ALSO AN ILLUSTRATOR, COPYWRITER AND FULL-TIME INTERNET RESIDENT &#169;
-          2023
+          2024
         </p>
         <div className={styles.graphicWrapper}>
           <img

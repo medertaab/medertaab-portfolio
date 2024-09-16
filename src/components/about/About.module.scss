@@ -2,7 +2,7 @@
   max-width: $max-width;
   margin-top: 5rem;
   position: relative;
-  animation: slide-up 0.3s ease 0.2s both;
+  animation: slide-up 1s ease 0.4s both;
   display: flex;
   flex-direction: column;
 
@@ -12,10 +12,6 @@
 
   .textBlock {
     flex: 1;
-
-    *:nth-child(1) {
-      font-size: 1.2rem;
-    }
   }
 
   p {
@@ -28,8 +24,25 @@
 
   strong {
     font-weight: 400;
-    background-color: $yellow;
+    background-color: $lime;
     padding: 0 0.25rem;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    z-index: 50;
+    mix-blend-mode: difference;
+  
+    .stripe {
+      position: absolute;
+      z-index:  0;
+      background-color: $lime;
+      height: 100%;
+      top: 0;
+      left: -1%;
+      transition: 800ms ease-in;
+    }
   }
 }
 

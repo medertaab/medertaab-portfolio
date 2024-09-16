@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400, 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/fonts/Urbanist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
   --max-width: 1150px;  
   --navbar-height: 2.5rem;
@@ -9,7 +37,7 @@
   --cosmic: #6000fc;
   --cosmic-light: rgb(143, 117, 255);
   --orange: rgb(255, 110, 27);
-  --magic: rgb(120, 133, 255);
+  --magic: rgb(145, 120, 255);
   --magic-transparent: rgba(155, 165, 255, 0.568);
 }
 
@@ -90,4 +118,8 @@ input:focus {
   h4 {
     font-size: 2rem;
   }
+}
+
+.stripe {
+  background-color: $lime;
 }
