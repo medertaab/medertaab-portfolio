@@ -119,11 +119,14 @@
       font-family: "Urbanist", sans-serif;
       background-color: $black;
       max-width: 50%;
+      transition: all 150ms ease-in-out;
     }
 
     a:nth-child(2) {
       background-color: transparent;
     }
+
+
   }
 
   ::-moz-selection {
@@ -197,6 +200,10 @@
         font-size: 1.2rem;
         white-space: nowrap;
         max-width: fit-content;
+      }
+
+      a:hover {
+        background-color: rgba(0, 38, 255, 0.336);
       }
     }
   }
