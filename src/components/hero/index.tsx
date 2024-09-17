@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Gradient from "./gradient";
+import SkyGradient from "./gradient/skyGradient/SkyGradient";
 import styles from "./Hero.module.scss";
 import Name from "./name";
 import SubHeader from "./subHeader";
@@ -40,7 +40,7 @@ export default function Hero() {
       />
       <SubHeader />
       <span className={styles.circle}></span>
-      <Gradient />
+      <SkyGradient />
       {starFall && <StarFall />}
     </section>
   );
