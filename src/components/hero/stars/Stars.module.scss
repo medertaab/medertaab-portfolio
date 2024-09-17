@@ -2,7 +2,8 @@
   position: absolute;
   margin-bottom: 2rem;
   width: 100%;
-  height: 40%;
+  height: 90vh;
+  top: 0;
   pointer-events: none;
 
   svg {
@@ -18,51 +19,47 @@
     left: 8%;
     height: 30px;
     animation-delay: -0.8s;
-
   }
 
   svg:nth-child(2) {
-    top: 70%;
+    top: 80%;
     left: 3%;
     height: 15px;
     animation-delay: -0.2s;
-    
   }
 
   svg:nth-child(3) {
-    top: 12%;
-    left: 12%;
-    height: 22px;
+    top: 21%;
+    left: 25%;
+    height: 25px;
     animation-delay: 0s;
-    
   }
 
   svg:nth-child(4) {
     top: 12%;
-    left: 7%;
-    height: 10px;
+    left: 15%;
+    height: 12px;
     animation-delay: -1.2s;
   }
 
   svg:nth-child(5) {
-    top: 60%;
+    top: 75%;
     right: 5%;
     height: 30px;
     animation-delay: -0.1s;
-
   }
 
   svg:nth-child(6) {
-    top: 80%;
-    right: 12%;
+    top: 85%;
+    right: 20%;
     height: 25px;
     animation-delay: -0.3s;
   }
 
   svg:nth-child(7) {
-    top: 22%;
+    top: 15%;
     right: 10%;
-    height: 15px;
+    height: 25px;
     animation-delay: -1.1s;
   }
 }
@@ -80,25 +77,35 @@
   
     svg:nth-child(2) {
       height: 25px;
+      top: 70%;
     }
   
     svg:nth-child(3) {
       height: 42px;
+      top: 12%;
+      left: 12%;
     }
   
     svg:nth-child(4) {
       height: 20px;
+      top: 12%;
+      left: 7%;
     }
   
     svg:nth-child(5) {
+      top: 60%;
       height: 40px;
     }
   
     svg:nth-child(6) {
       height: 35px;
+      top: 80%;
+      right: 12%;
     }
   
     svg:nth-child(7) {
+      top: 22%;
+      right: 10%;
       height: 30px;
     }
   }

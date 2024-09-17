@@ -4,12 +4,15 @@
   z-index: 1;
   height: $footer-height;
   padding: 0.5rem 1rem;
-  
-  ::-moz-selection { /* Code for Firefox */
+  z-index: 0;
+  opacity: 1;
+
+  ::-moz-selection {
+    /* Code for Firefox */
     color: $white;
     background: $cosmic;
   }
-  
+
   ::selection {
     color: $white;
     background: $cosmic;
@@ -27,7 +30,7 @@
   li {
     color: $black;
     font-size: 0.8rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     transition: 0.15s ease-in-out;
     font-weight: 500;
   }
@@ -39,28 +42,56 @@
   span {
     display: block;
     text-align: right;
-    color: $white;
-    opacity: 0.5;
+    color: $black;
     max-width: $max-width;
     font-size: 0.8rem;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .lightContainer {
+    position: absolute;
+    height: 700px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+
+    &::after {
+      content: "";
+      height: 1800px;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+      border-radius: 99999px;
+      position: absolute;
+      background: radial-gradient(var(--magic), var(--cosmic));
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      top: 350px;
+      z-index: -2;
+      filter: blur(75px);
+    }
   }
 }
 
 @media (min-width: $widescreen) {
   .footer {
     padding: 2rem 1rem 1rem 1rem;
-  
+
     ul {
       justify-content: center;
       gap: 3rem;
     }
-  
+
     li {
       font-size: 0.9rem;
       text-decoration: underline;
     }
-  
+
     span {
       margin: 0 auto;
     }

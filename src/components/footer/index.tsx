@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useRef} from "react";
 import styles from "./Footer.module.scss";
+import { useInView } from "framer-motion";
 
-export default function Footer({ bgTrigger } : any) {
+export default function Footer({ bgTrigger }: any) {
+  const viewRef = useRef(null);
+  const isInView = useInView(viewRef, { once: false, margin: "0px 0px 150px 0px"});
+
   return (
-    <footer
-      className={styles.footer}
-      style={{ "--bgOpacity": bgTrigger ? 1 : 1 } as React.CSSProperties}
-    >
+    <footer className={styles.footer} ref={viewRef}>
       <ul className={styles.links}>
         <li>
-          <a href="https://www.linkedin.com/in/meder-taab-34195b73/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/meder-taab-34195b73/">
+            LinkedIn
+          </a>
         </li>
         <li>
           <a href="https://github.com/medertaab">Github</a>
@@ -23,6 +26,10 @@ export default function Footer({ bgTrigger } : any) {
       </ul>
       <span>This website is open source</span>
       <span>© Copyright 2024, Meder Taab</span>
+      <div
+        className={styles.lightContainer}
+        style={{ opacity: isInView ? "100%" : "0%" } as React.CSSProperties}
+      ></div>
     </footer>
   );
 }
