@@ -37,8 +37,21 @@
   --cosmic: #6000fc;
   --cosmic-light: rgb(143, 117, 255);
   --orange: rgb(255, 110, 27);
-  --magic: rgb(145, 120, 255);
+  --magic: #7572ff;
   --magic-transparent: rgba(155, 165, 255, 0.568);
+
+  --blob1: #a967ff;
+  --blob2: #9a42ff;
+  --blob3: #53acff;
+}
+
+[data-theme="lime"] {
+  --magic: rgb(185, 226, 0);
+  --lime: #7572ff;
+
+  --blob1: #dcff17;
+  --blob2: #16ffcc;
+  --blob3: #21e5ff;
 }
 
 * {

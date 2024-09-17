@@ -1,35 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Name.module.scss";
 import Sparkle from "@public/svg/sparkle.svg";
 import ReactLogo from "@public/svg/reactlogo.svg";
 
-export default function Name({
-  setBgMoving,
-  starFall,
-  handleStarFall,
-}: any) {
+type NameProps = {
+  toggleStars: (value: React.SetStateAction<boolean>) => void;
+};
+
+export default function Name({ toggleStars }: NameProps) {
+  const [theme, setTheme] = useState('magic');
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  const toggleThema = () => {
+    setTheme(prevTheme => (prevTheme === 'magic' ? 'lime' : 'magic'));
+  };
+  
   return (
     <div className={styles.name}>
       <div>
         <h1 className={styles.firstName}>MEDER</h1>
         <button
           aria-label="Star button"
-          disabled={starFall}
           className={styles.starButton}
-          onClick={handleStarFall}
+          onClick={toggleStars as any}
         >
           <Sparkle />
         </button>
       </div>
       <div>
         <button
+          onClick={toggleThema as any}
           aria-label="Atom button"
           className={styles.reactButton}
-          onClick={() => setBgMoving((prev: any) => !prev)}
         >
           <ReactLogo />
         </button>
-        <h1>TAAB</h1>
+        <h1 >TAAB</h1>
       </div>
     </div>
   );

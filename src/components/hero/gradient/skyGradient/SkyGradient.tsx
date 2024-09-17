@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./SkyGradient.module.scss";
-
+//7572ff
 export default function SkyGradient() {
   return (
     <div className={styles.gradientContainer}>
@@ -9,10 +9,9 @@ export default function SkyGradient() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 634 785"
-            fill="none"
             className={styles.blob1}
           >
-            <path fill="#a967ff">
+            <path fill="var(--blob1)">
               <animate
                 attributeName="d"
                 dur="10s"
@@ -24,31 +23,10 @@ export default function SkyGradient() {
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 719 793"
-            fill="none"
+            viewBox="0 0 1644 316"
             className={styles.blob2}
           >
-            <path fill="#53acff">
-              <animate
-                attributeName="d"
-                dur="9s"
-                repeatCount="indefinite"
-                values="
-        M719 0H0C105.995 30.4 226.123 -2 274.409 115.5C322.696 233 305.851 273 446 290.5C586.149 308 707.812 765.5 719 792V0Z;
-        M719 0.5H0C105.995 30.9 316.713 61 365 178.5C413.287 296 395.351 366.5 535.5 384C675.649 401.5 707.812 766 719 792.5V0.5Z;
-        M719 0.5H0.00012207C105.995 30.9 277.713 10.5 326 128C374.287 245.5 437.851 451.5 578 469C718.149 486.5 707.812 766 719 792.5V0.5Z;
-        M719 0H0C105.995 30.4 226.123 -2 274.409 115.5C322.696 233 305.851 273 446 290.5C586.149 308 707.812 765.5 719 792V0Z
-      "
-              />
-            </path>
-          </svg>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1644 316"
-            className={styles.blob3}
-          >
-            <path fill="#9a42ff">
+            <path fill="var(--blob2)">
               <animate
                 attributeName="d"
                 dur="12s"
@@ -63,6 +41,28 @@ export default function SkyGradient() {
               />
             </path>
           </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 719 793"
+            className={styles.blob3}
+          >
+            <path fill="var(--blob3)">
+              <animate
+                attributeName="d"
+                dur="9s"
+                repeatCount="indefinite"
+                values="
+        M719 0H0C105.995 30.4 226.123 -2 274.409 115.5C322.696 233 305.851 273 446 290.5C586.149 308 707.812 765.5 719 792V0Z;
+        M719 0.5H0C105.995 30.9 316.713 61 365 178.5C413.287 296 395.351 366.5 535.5 384C675.649 401.5 707.812 766 719 792.5V0.5Z;
+        M719 0.5H0.00012207C105.995 30.9 277.713 10.5 326 128C374.287 245.5 437.851 451.5 578 469C718.149 486.5 707.812 766 719 792.5V0.5Z;
+        M719 0H0C105.995 30.4 226.123 -2 274.409 115.5C322.696 233 305.851 273 446 290.5C586.149 308 707.812 765.5 719 792V0Z
+      "
+              />
+            </path>
+          </svg>
+
+ 
         </div>
       </div>
       <div className={styles.transition}></div>

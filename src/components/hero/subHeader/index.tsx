@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./SubHeader.module.scss";
-import Planet from "@public/svg/planet.svg";
 
 export default function SubHeader() {
   return (

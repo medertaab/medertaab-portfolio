@@ -18,7 +18,7 @@
     letter-spacing: 0.2rem;
     line-height: min(17vw, 4.5rem);
     font-weight: 500;
-    color: $magic;
+    color: var(--magic);
   }
 
   .firstName {
@@ -33,7 +33,7 @@
     border-radius: 100rem;
     padding: 0.25rem;
     transition: 0.1s ease-in-out;
-    border: 2px solid $magic;
+    border: 2px solid var(--magic);
     margin-top: 0.25rem;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
   }
 
   button:active {
-    background-color: $magic;
+    background-color: var(--magic);
     transition: 0.2s ease;
   }
 
@@ -73,6 +73,7 @@
     h1 {
       font-size: min(12vw, 8rem);
       line-height: min(10vw, 7rem);
+      transition: 250ms ease-in-out;
     }
 
     button {
@@ -95,7 +96,7 @@
     }
 
     button:hover {
-      box-shadow: 0.3rem 0.3rem 0 $magic;
+      box-shadow: 0.3rem 0.3rem 0 var(--magic);
       transform: translate(-0.3rem, -0.3rem);
       transition: 0;
       animation: none;
@@ -107,7 +108,6 @@
     }
 
     button:disabled:hover {
-      cursor: default;
       box-shadow: none;
       transform: translate(0);
       transition: 0;
@@ -150,7 +150,7 @@
     transform: translate(0, 0);
   }
   3% {
-    box-shadow: 0.3rem 0.3rem 0 $magic;
+    box-shadow: 0.3rem 0.3rem 0 var(--magic);
     transform: translate(-0.3rem, -0.3rem);
   }
   6% {
@@ -164,7 +164,7 @@
     box-shadow: none;
   }
   10% {
-    box-shadow: $magic 0px 0px 1rem 0.25rem;
+    box-shadow: var(--magic) 0px 0px 1rem 0.25rem;
   }
   20% {
     box-shadow: none;
