@@ -13,12 +13,6 @@ export default function Header() {
       button.innerText = "✦ Get in touch"
     }, 1000)
   }
-  const { scrollY } = useScroll();
-  const [scrolled, setScrolled] = useState(false) as any;
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    latest > 180 ? setScrolled(true) : setScrolled(false)
-  })
 
   return (
     <header className={styles.header}>
@@ -42,7 +36,6 @@ export default function Header() {
       >
         <LinkedinLogo />
       </a>
-      <motion.span style={{transform: scrolled ? "translateY(0%)" : "translateY(-120%)"}} className={styles.container}></motion.span>
     </header>
   );
 }
