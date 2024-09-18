@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import styles from "./Footer.module.scss";
 import { useInView } from "framer-motion";
 
-export default function Footer({ bgTrigger }: any) {
+export default function Footer() {
   const viewRef = useRef(null);
   const isInView = useInView(viewRef, { once: false, margin: "0px 0px 150px 0px"});
 

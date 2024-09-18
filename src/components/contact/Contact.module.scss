@@ -5,7 +5,7 @@
   position: relative;
   justify-content: center;
   gap: 1rem;
-  z-index: 1;
+  z-index: 20;
   margin-top: 8rem;
 
   ::-moz-selection {
@@ -27,6 +27,7 @@
     padding: 0 2rem;
     margin-top: 1rem;
     text-wrap: pretty;
+    z-index: 5;
   }
 
   a {
@@ -38,6 +39,7 @@
     width: 100%;
     float: right;
     text-align: end;
+    z-index: 20;
 
     &::after {
       content: "✌️";

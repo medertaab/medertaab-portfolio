@@ -78,3 +78,13 @@ $purple-background: linear-gradient(150deg, #7401ef 0%, transparent 40%),
     transform: scale(0);
   }
 } 
+
+@keyframes pulsate {
+  0% {
+    scale: 1.0;
+  } 50% {
+    scale: 1.01;
+  } 100% {
+    scale: 1.0;
+  }
+}

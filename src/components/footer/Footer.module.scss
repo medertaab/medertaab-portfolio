@@ -62,18 +62,19 @@
 
     &::after {
       content: "";
-      height: 1800px;
+      height: 2200px;
       aspect-ratio: 1/1;
       margin: 0 auto;
       border-radius: 99999px;
       position: absolute;
-      background: radial-gradient(var(--magic), var(--cosmic));
+      background: radial-gradient(var(--blob2), var(--cosmic));
       left: 50%;
       transform: translateX(-50%);
       right: 0;
       top: 350px;
       z-index: -2;
       filter: blur(75px);
+      animation: pulsate 2s ease-in-out infinite forwards;
     }
   }
 }
@@ -94,6 +95,13 @@
 
     span {
       margin: 0 auto;
+    }
+
+
+    .lightContainer {
+      &::after {
+        height: 3200px;
+      }
     }
   }
 }

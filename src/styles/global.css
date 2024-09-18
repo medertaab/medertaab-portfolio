@@ -40,7 +40,7 @@
   --magic: #7572ff;
   --magic-transparent: rgba(155, 165, 255, 0.568);
 
-  --blob1: #a967ff;
+  --blob1: #b418fc;
   --blob2: #9a42ff;
   --blob3: #53acff;
 }
@@ -49,9 +49,9 @@
   --magic: rgb(185, 226, 0);
   --lime: #7572ff;
 
-  --blob1: #dcff17;
-  --blob2: #16ffcc;
-  --blob3: #21e5ff;
+  --blob1: #d816ff;
+  --blob2: #aa16ff;
+  --blob3: #c6ff2b;
 }
 
 * {
