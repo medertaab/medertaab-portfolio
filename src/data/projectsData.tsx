@@ -17,7 +17,6 @@ const projects: Projects = [
     title: "Quickstretch",
     description: [
       "A stretching web app that enables you to run quick and easy stretching routines to relieve muscle tension. Features custom illustrations, done by me as well.",
-      "Also comes as a Google Chrome extension.",
     ],
     technologies: ["Typescript", "Vite", "Styled-Components"],
     url: "https://quickstretch.app/",
@@ -33,7 +32,7 @@ const projects: Projects = [
     description: [
       "Compact portfolio builder for illustrators, photographers, and other visual creators or curators",
     ],
-    technologies: ["Javascript", "NextJS", "Tailwind"],
+    technologies: ["Javascript", "NextJS", "Tailwind", "Firebase"],
     url: "https://portfolder.vercel.app/example",
     github: "https://github.com/medertaab/portfolder",
     thumbnail: "./thumbnails/portfolder0.jpg",

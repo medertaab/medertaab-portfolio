@@ -28,7 +28,7 @@ export default function Footer() {
       <span>© Copyright 2024, Meder Taab</span>
       <div
         className={styles.lightContainer}
-        style={{ opacity: isInView ? "100%" : "0%" } as React.CSSProperties}
+        style={{ height: isInView ? "750px" : "600px" } as React.CSSProperties}
       ></div>
     </footer>
   );

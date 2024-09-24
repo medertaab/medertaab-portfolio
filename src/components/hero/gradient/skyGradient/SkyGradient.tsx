@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./SkyGradient.module.scss";
-//7572ff
+
 export default function SkyGradient() {
   return (
     <div className={styles.gradientContainer}>
@@ -15,8 +15,9 @@ export default function SkyGradient() {
               <animate
                 attributeName="d"
                 dur="9s"
+                begin="0s"
                 repeatCount="indefinite"
-                values=" M0 0.499969H634C526 0.499969 502.5 64.5 363 178.5C223.5 292.5 305 244.8 177 302C49 359.2 1.66667 722.167 0 784.5V0.499969Z; M0 0H634C526 0 465.5 73.5 326 187.5C186.5 301.5 243 370.3 115 427.5C-13 484.7 1.66667 721.667 0 784V0Z; M0.00012207 0H634C526 0 574 87 434.5 201C295 315 246.5 312.3 118.5 369.5C-9.5 426.7 1.66679 721.667 0.00012207 784V0Z; M0 0.499969H634C526 0.499969 502.5 64.5 363 178.5C223.5 292.5 305 244.8 177 302C49 359.2 1.66667 722.167 0 784.5V0.499969Z "
+                values="M0 0.499969H634C526 0.499969 502.5 64.5 363 178.5C223.5 292.5 305 244.8 177 302C49 359.2 1.66667 722.167 0 784.5V0.499969Z; M0 0H634C526 0 465.5 73.5 326 187.5C186.5 301.5 243 370.3 115 427.5C-13 484.7 1.66667 721.667 0 784V0Z; M0.00012207 0H634C526 0 574 87 434.5 201C295 315 246.5 312.3 118.5 369.5C-9.5 426.7 1.66679 721.667 0.00012207 784V0Z; M0 0.499969H634C526 0.499969 502.5 64.5 363 178.5C223.5 292.5 305 244.8 177 302C49 359.2 1.66667 722.167 0 784.5V0.499969Z "
               />
             </path>
           </svg>
@@ -30,6 +31,7 @@ export default function SkyGradient() {
               <animate
                 attributeName="d"
                 dur="10s"
+                begin="0s"
                 repeatCount="indefinite"
                 values="
         M1310 0H314C221.5 8.33333 -54.1 156.5 9.49999 216.5C89 291.5 251.5 165 424.5 203C597.5 241 816.5 84.5 967 110C1117.5 135.5 1024.5 216.5 1256 216.5C1303.67 204.333 1654 345.5 1519.5 141C1497.62 107.734 1348.67 9.5 1310 0Z;
@@ -51,6 +53,7 @@ export default function SkyGradient() {
               <animate
                 attributeName="d"
                 dur="8s"
+                begin="0s"
                 repeatCount="indefinite"
                 values="
         M719 0H0C105.995 30.4 226.123 -2 274.409 115.5C322.696 233 305.851 273 446 290.5C586.149 308 707.812 765.5 719 792V0Z;
@@ -61,8 +64,6 @@ export default function SkyGradient() {
               />
             </path>
           </svg>
-
- 
         </div>
       </div>
       <div className={styles.transition}></div>
