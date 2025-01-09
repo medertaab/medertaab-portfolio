@@ -12,7 +12,7 @@ export default function SubHeader() {
       <div className={styles.lowerHalf}>
         <p className={styles.description}>
           ALSO AN ILLUSTRATOR, COPYWRITER AND FULL-TIME INTERNET RESIDENT &#169;
-          2024
+          2024 - {new Date().getFullYear()}
         </p>
         <div className={styles.graphicWrapper}>
           <img
