@@ -5,6 +5,8 @@ import { useInView } from "framer-motion";
 export default function Footer() {
   const viewRef = useRef(null);
   const isInView = useInView(viewRef, { once: false, margin: "0px 0px 150px 0px"});
+  
+  const currentDate = new Date()
 
   return (
     <footer className={styles.footer} ref={viewRef}>
@@ -25,7 +27,7 @@ export default function Footer() {
         </li>
       </ul>
       <span>This website is open source</span>
-      <span>© Copyright 2024, Meder Taab</span>
+      <span>© Copyright 2024-{currentDate.getFullYear()}, Meder Taab</span>
       <div
         className={styles.lightContainer}
         style={{ height: isInView ? "750px" : "600px" } as React.CSSProperties}
