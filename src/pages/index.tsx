@@ -18,6 +18,7 @@ export default function Home() {
   
   const { scrollYProgress } = useScroll();
   const yTranslate = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const overlayParallax = useTransform(scrollYProgress, [0, 1], [0, -70]);
   
   // Parallax effect for hero background - moves slower than scroll
   const bgParallax = useTransform(scrollYProgress, [0, 0.5], [0, -150]);
@@ -76,10 +77,11 @@ export default function Home() {
             />
             
             {/* Gradient Overlay for text readability */}
-            <div 
+            <motion.div 
               className="absolute inset-0 z-[1]"
               style={{
-                background: 'linear-gradient(to top, rgba(10,10,10,0.7) 0%, rgba(0,43,254,0.2) 40%, transparent 100%)'
+                background: 'linear-gradient(to top, transparent 0%, rgba(0,43,254,0.25) 45%, transparent 100%)',
+                y: overlayParallax
               }}
             />
             

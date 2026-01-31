@@ -10,13 +10,12 @@ export const PROJECTS: Project[] = [
   {
     id: 's1',
     category: Category.SOFTWARE,
-    title: 'Arcane Engine',
-    year: '2023',
-    description: 'A custom WebGL rendering engine built for performance and artistic fidelity. Features a node-based shader graph and real-time ray-marching capabilities.',
+    title: 'Boulangerie.kg',
+    description: 'Website for local bakery that features a landing page, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management',
     images: [
-      'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1200'
+      '/',
     ],
+    image: "./thumbnails/boulangerie.jpg",
     link: 'https://github.com'
   },
   {
