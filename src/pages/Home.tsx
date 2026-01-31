@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Category } from '@component/types/portfolio';
 import { PROJECTS } from '@component/data/portfolio';
+import CategorySwitcher from '@component/components/portfolio/CategorySwitcher';
 import NoiseOverlay from '@component/components/portfolio/NoiseOverlay';
 import Noise from '@component/components/Noise';
 import { 
@@ -39,7 +40,7 @@ export default function Home() {
       <div className="relative z-10">
         {/* Black background container for hero + about sections */}
         <motion.div
-          className="bg-brand-black relative overflow-hidden"
+          className="bg-brand-black relative"
           style={{
             marginLeft: aboutMargin,
             marginRight: aboutMargin,
@@ -62,13 +63,21 @@ export default function Home() {
           />
         </motion.div>
 
-        {/* 3. PROJECTS SECTION */}
-        <ProjectsSection
-          ref={projectsSectionRef}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          filteredProjects={filteredProjects}
-        />
+        {/* 3. PROJECTS SECTION WRAPPER */}
+        <div className="relative z-20 pb-32 min-h-screen">
+          <div className="sticky top-0 z-50 px-6 md:px-12 lg:px-24 py-6 bg-brand-blue/95 backdrop-blur-md">
+            <CategorySwitcher
+              active={activeCategory}
+              onChange={setActiveCategory}
+            />
+          </div>
+
+          <ProjectsSection
+            ref={projectsSectionRef}
+            activeCategory={activeCategory}
+            filteredProjects={filteredProjects}
+          />
+        </div>
       </div>
 
       {/* 4. FOOTER */}
