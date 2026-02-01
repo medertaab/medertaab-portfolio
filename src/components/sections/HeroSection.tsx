@@ -1,5 +1,6 @@
 import { motion, MotionValue, useTransform } from 'framer-motion';
-import Noise from '@component/components/Noise';
+// @ts-ignore - JSX component without type declarations
+import Dither from '@component/components/Dither';
 
 // Set to a URL string to use a background image, or leave empty/null for solid bg-brand-blue
 // const HERO_BACKGROUND_IMAGE: string | null = '/hero-bg.png';
@@ -69,9 +70,9 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
         borderRadius: heroRadius,
       }}
     >
-      {/* Background - Image with Parallax or solid color */}
+      {/* Background - Image with Parallax or Dither */}
       <motion.div
-        className={`absolute inset-[-10%] z-0 ${!HERO_BACKGROUND_IMAGE ? 'bg-brand-blue' : ''}`}
+        className={`absolute inset-[-10%] z-0 ${!HERO_BACKGROUND_IMAGE ? 'bg-black' : ''}`}
         variants={bgVariants}
         style={{
           ...(HERO_BACKGROUND_IMAGE && {
@@ -86,40 +87,59 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
         }}
       />
 
-      {/* Noise overlay for solid blue background */}
+      {/* Dither animated background when no image */}
       {!HERO_BACKGROUND_IMAGE && (
-        <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
-          <Noise patternAlpha={25} patternRefreshInterval={3} />
-        </div>
+        <motion.div
+          className="absolute inset-0 z-[1]"
+          variants={bgVariants}
+        >
+          <Dither
+            waveColor={[0,0.2,1]}
+            disableAnimation={false}
+            enableMouseInteraction
+            mouseRadius={0.5}
+            colorNum={4}
+            waveAmplitude={0.03}
+            waveFrequency={0}
+            waveSpeed={0.02}
+          />
+          {/* Brand blue overlay with negative blend */}
+          <div className="absolute inset-0 bg-brand-blue mix-blend-difference pointer-events-none" />
+          <div className="absolute inset-0 bg-brand-blue mix-blend-color pointer-events-none" />
+
+        </motion.div>
       )}
 
-      {/* Gradient Overlay for text readability */}
+      {/* Gradient Overlay for text readability
       <motion.div
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-[1] pointer-events-none"
         variants={bgVariants}
         style={{
           background: 'linear-gradient(to top, transparent 0%, rgba(0,43,254,0.25) 45%, transparent 100%)',
           y: overlayParallax,
           x: contentOffsetX
         }}
-      />
+      /> */}
 
       {/* Text content - offset to stay visually fixed */}
       <motion.div
         variants={textVariants}
         style={{ y: yTranslate, x: contentOffsetX }}
-        className="relative z-10"
+        className="relative z-10 pointer-events-none"
       >
         <h1 className="text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] font-serif font-bold text-brand-cream leading-[0.8] tracking-tighter mb-6 sm:mb-8 md:mb-10 drop-shadow-2xl">
           <span className="inline lg:block mr-3">Meder</span>
+          <span className="inline-flex md:flex items-center gap-2">
           <span className="inline lg:block">Taab</span>
+          <img src="/medertaab_stamp.png" alt="Meder Taab stamp" className="h-[11vw] md:h-[7vw] lg:h-[6vw] ml-2" />
+          </span>
         </h1>
         <motion.h2
           variants={textVariants}
           className="flex flex-col gap-1 mg:gap-2 lg:gap-4 xl:gap-6 text-base sm:text-lg md:text-xl lg:text-[1.75vw] font-light font-serif text-brand-cream opacity-90 drop-shadow-lg"
         >
           <span>Software Engineer.</span> 
-          <span>Also an Digital Artist, Copywriter and Full-Time Internet Resident.</span>
+          <span>Also a Digital Artist, Copywriter and Full-Time Internet Resident.</span>
         </motion.h2>
       </motion.div>
 

@@ -1,6 +1,5 @@
 import { forwardRef, useState, useEffect } from 'react';
 import { motion, MotionValue, useTransform } from 'framer-motion';
-import Noise from '@component/components/Noise';
 
 // Component for animating each character based on scroll progress
 function AnimatedChar({ 
@@ -180,11 +179,6 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>(
         ref={ref}
         className="relative overflow-hidden border-b border-brand-cream/5 z-20 h-screen"
       >
-        {/* Noise overlay for black background */}
-        <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
-          <Noise patternAlpha={25} patternRefreshInterval={3} />
-        </div>
-        
         {/* Text Content - In Front */}
         <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-24 py-32 md:py-48">
           <div className="mx-auto max-w-[80%] text-balance relative text-center">

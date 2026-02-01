@@ -25,8 +25,8 @@ const Noise = ({
       canvas.width = canvasSize;
       canvas.height = canvasSize;
 
-      canvas.style.width = '100%';
-      canvas.style.height = '100%';
+      canvas.style.width = '100vw';
+      canvas.style.height = '100vh';
     };
 
     const drawGrain = () => {

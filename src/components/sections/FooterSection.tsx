@@ -5,9 +5,12 @@ export default function FooterSection() {
   return (
     <footer className="px-6 md:px-12 lg:px-24 py-16 md:py-24 bg-brand-blue text-brand-cream">
       <div className="max-w-8xl mx-auto w-full">
+        <div className="flex items-start">
+        <img src="/sparkles/sparkle_animation1.gif" alt="Meder Taab stamp" className="invert w-20 h-20" />
         <h2 className="text-[10vw] lg:text-[7vw] font-serif font-bold mb-8 leading-[0.8] tracking-tighter">
           Contact
         </h2>
+        </div>
 
         <div className="w-full grid grid-cols-2 gap-4">
           <div></div>

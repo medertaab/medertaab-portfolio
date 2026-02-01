@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import { Category } from "@component/types/portfolio"
-import Noise from "../Noise"
 
 interface CategorySwitcherProps {
   active: Category

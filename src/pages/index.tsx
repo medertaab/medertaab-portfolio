@@ -6,7 +6,6 @@ import { Category } from '@component/types/portfolio';
 import { PROJECTS, SOCIAL_LINKS } from '@component/data/portfolio';
 import ProjectRow from '@component/components/portfolio/ProjectRow';
 import CategorySwitcher from '@component/components/portfolio/CategorySwitcher';
-import NoiseOverlay from '@component/components/portfolio/NoiseOverlay';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState<Category>(Category.SOFTWARE);
@@ -54,8 +53,6 @@ export default function Home() {
       </Head>
 
       <div className="min-h-screen selection:bg-brand-cream selection:text-brand-blue bg-brand-black" ref={containerRef}>
-        <NoiseOverlay />
-
         {/* Main Content Wrapper - Scrolls OVER the footer */}
         <div 
           className="relative z-10 bg-brand-black shadow-[0_50px_100px_rgba(0,0,0,0.5)]" 

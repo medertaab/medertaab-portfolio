@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Category } from "@component/types/portfolio"
 import { PROJECTS } from "@component/data/portfolioData"
 import CategorySwitcher from "@component/components/portfolio/CategorySwitcher"
-import Noise from "@component/components/Noise"
 import {
   HeroSection,
   AboutSection,
@@ -66,11 +65,6 @@ export default function Home() {
             borderBottomRightRadius: aboutRadius,
           }}
         >
-          {/* Noise overlay for black background */}
-          <div className="absolute inset-0 z-[1] pointer-events-none opacity-0">
-            <Noise patternAlpha={25} patternRefreshInterval={3} />
-          </div>
-
           {/* 1. HERO SECTION */}
           <HeroSection scrollYProgress={scrollYProgress} />
 
@@ -83,17 +77,11 @@ export default function Home() {
           {/* 3. PROJECTS SECTION WRAPPER */}
           <div className="relative z-20 pb-16 min-h-screen">
             <div className="sticky top-0 z-50 px-6 md:px-12 lg:px-24 py-6 bg-brand-black">
-              <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
-                <Noise patternAlpha={25} patternRefreshInterval={3} />
-              </div>
               <CategorySwitcher
                 active={activeCategory}
                 onChange={handleCategoryChange}
               />
             </div>
-            <div className="absolute inset-0 z-[0] pointer-events-none opacity-50">
-                <Noise patternAlpha={25} patternRefreshInterval={3} />
-              </div>
             <ProjectsSection
               ref={projectsSectionRef}
               activeCategory={activeCategory}

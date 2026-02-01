@@ -17,7 +17,7 @@ const ProjectsSection = forwardRef<HTMLElement, ProjectsSectionProps>(
     ref
   ) {
     return (
-      <section ref={ref} className="min-h-[60vh] pt-12 px-6 md:px-6">
+      <section ref={ref} className="min-h-[60vh] pt-12 px-6 md:px-6 z-100">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
