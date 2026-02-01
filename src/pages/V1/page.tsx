@@ -1,10 +1,10 @@
-import Header from "@component/components/v1/Header";
-import Hero from "@component/components/v1/Hero";
-import About from "@component/components/v1/About";
-import Projects from "@component/components/v1/Projects";
-import Contact from "@component/components/v1/Contact";
-import Footer from "@component/components/v1/Footer";
-import Head from "@component/components/v1/Head";
+import Header from "@component/components/v1/header";
+import Hero from "@component/components/v1/hero";
+import About from "@component/components/v1/about";
+import Projects from "@component/components/v1/projects";
+import Contact from "@component/components/v1/contact";
+import Footer from "@component/components/v1/footer";
+import Head from "@component/components/v1/head";
 
 export default function V1() {
   return (
