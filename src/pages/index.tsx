@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import Head from 'next/head';
 import { Category } from '@component/types/portfolio';
 import { PROJECTS, SOCIAL_LINKS } from '@component/data/portfolio';
 import ProjectRow from '@component/components/portfolio/ProjectRow';
@@ -44,14 +43,6 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Head>
-        <title>Meder Taab — Software Engineer & Illustrator</title>
-        <meta name="description" content="Transforming ten years of illustration heritage into scalable software engineering." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div className="min-h-screen selection:bg-brand-cream selection:text-brand-blue bg-brand-black" ref={containerRef}>
         {/* Main Content Wrapper - Scrolls OVER the footer */}
         <div 
@@ -252,6 +243,5 @@ export default function Home() {
           </footer>
         </div>
       </div>
-    </>
   );
 }
