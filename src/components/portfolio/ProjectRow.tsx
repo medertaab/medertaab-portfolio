@@ -9,6 +9,19 @@ interface ProjectRowProps {
 }
 
 const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Use images array if available, otherwise fall back to single image
+  const images = project.images?.length ? project.images : (project.image ? [project.image] : []);
+  const hasMultipleImages = images.length > 1;
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   return (
     <motion.div 
@@ -52,13 +65,13 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
         </div>
 
         {/* Right side: Image Container */}
-        <div className="w-full xl:w-7/12 relative h-[200px] md:h-[800px] aspect-video bg-blacktransition-colors pointer-events-none z-10">
+        <div className="w-full xl:w-7/12 relative h-[200px] md:h-[800px] aspect-video bg-black transition-colors z-10">
           
           <AnimatePresence mode="wait">
             <motion.img
-              key={`${project.id}`}
-              src={project.image}
-              alt={project.title}
+              key={`${project.id}-${currentImageIndex}`}
+              src={images[currentImageIndex]}
+              alt={`${project.title} - Image ${currentImageIndex + 1}`}
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -66,6 +79,43 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
               className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity rounded-[1rem]"
             />
           </AnimatePresence>
+
+          {/* Carousel Navigation */}
+          {hasMultipleImages && (
+            <>
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-cream/10 hover:bg-brand-cream/20 backdrop-blur-sm text-brand-cream p-3 rounded-full transition-all"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-cream/10 hover:bg-brand-cream/20 backdrop-blur-sm text-brand-cream p-3 rounded-full transition-all"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Dots Indicator */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentImageIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      idx === currentImageIndex 
+                        ? 'bg-brand-cream w-6' 
+                        : 'bg-brand-cream/40 hover:bg-brand-cream/60'
+                    }`}
+                    aria-label={`Go to image ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
 
         </div>
       </div>

@@ -9,9 +9,10 @@ export interface Project {
   category: Category;
   title: string;
   description: string;
-  images: string[];
+  images?: string[];
+  image?: string;
   link?: string;
-  year: string;
+  year?: string;
 }
 
 export interface SocialLink {

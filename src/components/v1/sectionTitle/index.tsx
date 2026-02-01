@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./SectionTitle.module.scss";
-import Star from "@public/svg/star-medium.svg?react";
+import Star from "@component/svg/star-medium.svg?react";
 import { useInView } from "framer-motion";
 
 export default function SectionTitle({ children }: { children: React.ReactNode }) {

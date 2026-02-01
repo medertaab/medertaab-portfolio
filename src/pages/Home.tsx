@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Category } from '@component/types/portfolio';
-import { PROJECTS } from '@component/data/portfolio';
+import { PROJECTS } from '@component/data/portfolioData';
 import CategorySwitcher from '@component/components/portfolio/CategorySwitcher';
 import NoiseOverlay from '@component/components/portfolio/NoiseOverlay';
 import Noise from '@component/components/Noise';

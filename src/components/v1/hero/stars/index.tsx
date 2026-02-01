@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Stars.module.scss"
-import Sparkle from "@public/svg/sparkle.svg?react";
+import Sparkle from "@component/svg/sparkle.svg?react";
 
 export default function Stars() {
   return (

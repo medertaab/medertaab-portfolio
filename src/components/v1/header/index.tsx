@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
-import GithubLogo from "@public/svg/github.svg?react";
-import LinkedinLogo from "@public/svg/linkedin.svg?react";
+import GithubLogo from "@component/svg/github.svg?react";
+import LinkedinLogo from "@component/svg/linkedin.svg?react";
 
 export default function Header() {
   function handleClick(e: React.MouseEvent<HTMLElement>) {

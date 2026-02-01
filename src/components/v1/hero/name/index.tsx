@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Name.module.scss";
-import Sparkle from "@public/svg/sparkle.svg?react";
-import ReactLogo from "@public/svg/reactlogo.svg?react";
+import Sparkle from "@component/svg/sparkle.svg?react";
+import ReactLogo from "@component/svg/reactlogo.svg?react";
 
 type NameProps = {
   toggleStars: (value: React.SetStateAction<boolean>) => void;
