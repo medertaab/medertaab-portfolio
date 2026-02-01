@@ -47,7 +47,7 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
               {project.description}
             </p>
           ) : (
-            <div className="list-disc list-inside text-md  xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
+            <div className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
               {project.description.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
