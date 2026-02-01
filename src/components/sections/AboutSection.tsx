@@ -22,15 +22,16 @@ function AnimatedChar({
   highlightStart?: number;
   highlightEnd?: number;
 }) {
-  // Each character fades in at a different point in the scroll
-  // Stagger the animation so letters reveal sequentially across all text
-  const start = globalIndex / totalChars;
-  const end = start + (1 / totalChars) * 5; // Overlap for smoother effect
+  const revealStartOffset = 0.1; // Adjust this to make it start later
+  const progressScale = 1 - revealStartOffset;
+  
+  const start = revealStartOffset + (globalIndex / totalChars) * progressScale;
+  const end = start + (1 / totalChars) * 5 * progressScale; // Overlap for smoother effect
   
   const opacity = useTransform(
     scrollYProgress,
     [start, Math.min(end, 1)],
-    [0.15, 1]
+    [0.2, 1]
   );
 
   // If there's a highlight, create a background color transition effect
@@ -291,7 +292,7 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>(
               totalChars={TOTAL_ABOUT_CHARS}
               className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-relaxed mb-8"
               highlightPhrases={[
-                { phrase: 'art and technology', highlightStart: 0.3, highlightEnd: 0.6 }
+                { phrase: 'art and technology', highlightStart: 0.5, highlightEnd: 0.8 }
               ]}
             />
             <ScrollRevealText
