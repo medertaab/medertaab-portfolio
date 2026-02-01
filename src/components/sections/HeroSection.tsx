@@ -13,7 +13,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
   const bgScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
 
   // Hero section transforms - margins and rounded corners on scroll
-  const heroMargin = useTransform(scrollYProgress, [0, 0.15], [0, 32]);
+  const heroMargin = useTransform(scrollYProgress, [0, 0.15], [0, 24]);
   const heroRadius = useTransform(scrollYProgress, [0, 0.15], [0, 48]);
 
   // Counter-offset to keep content visually fixed while container shrinks

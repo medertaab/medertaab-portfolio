@@ -18,9 +18,9 @@ export default function FooterSection() {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-betweenpx-8 py-6 hover:bg-brand-cream hover:border-brand-cream hover:scale-[1.02] transition-all duration-300 ease-out"
+                className="group flex items-center justify-between px-8 py-6 hover:bg-brand-cream hover:border-brand-cream hover:scale-[1.02] transition-all duration-300 ease-out"
               >
-                <span className="text-sm font-black tracking-[0.2em] text-brand-cream group-hover:text-brand-blue uppercase transition-colors">
+                <span className="text-sm tracking-[0.2em] text-brand-cream group-hover:text-brand-blue uppercase transition-colors">
                   {link.label}
                 </span>
                 <ArrowUpRight className="w-5 h-5 text-brand-cream group-hover:text-brand-blue group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />

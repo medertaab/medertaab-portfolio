@@ -25,9 +25,10 @@ export default function Home() {
   const handleCategoryChange = (category: Category) => {
     setActiveCategory(category)
     if (projectsSectionRef.current) {
-      const elementPosition = projectsSectionRef.current.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.scrollY - (4 * 16) // 8rem = 8 * 16px
-      
+      const elementPosition =
+        projectsSectionRef.current.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - 4 * 16 // 8rem = 8 * 16px
+
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth",
@@ -35,8 +36,8 @@ export default function Home() {
     }
   }
 
-// About section transforms - margins and rounded corners on scroll (starts at 50% of section)
-const aboutRadius = useTransform(scrollYProgress, [0.85, 0.95], [0, 48]);
+  // About section transforms - margins and rounded corners on scroll (starts at 50% of section)
+  const aboutRadius = useTransform(scrollYProgress, [0.85, 0.95], [0, 48])
 
   // Scroll progress for about section text animation
   // Animation starts when 50% of section is in view, completes when end enters viewport
@@ -58,14 +59,15 @@ const aboutRadius = useTransform(scrollYProgress, [0.85, 0.95], [0, 48]);
       {/* Main Content Wrapper - Scrolls over the footer */}
       <div className="relative z-10 mb-[650px] bg-brand-blue">
         {/* Black background container */}
-        <motion.div className="bg-brand-black relative rounded-b-[3rem] md:rounded-b-[4rem] min-h-screen"
-        
-        style={{
-          borderRadius: aboutRadius,
-        }}
+        <motion.div
+          className="bg-brand-black relative min-h-screen"
+          style={{
+            borderBottomLeftRadius: aboutRadius,
+            borderBottomRightRadius: aboutRadius,
+          }}
         >
           {/* Noise overlay for black background */}
-          <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
+          <div className="absolute inset-0 z-[1] pointer-events-none opacity-0">
             <Noise patternAlpha={25} patternRefreshInterval={3} />
           </div>
 
@@ -81,12 +83,17 @@ const aboutRadius = useTransform(scrollYProgress, [0.85, 0.95], [0, 48]);
           {/* 3. PROJECTS SECTION WRAPPER */}
           <div className="relative z-20 pb-16 min-h-screen">
             <div className="sticky top-0 z-50 px-6 md:px-12 lg:px-24 py-6 bg-brand-black">
+              <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
+                <Noise patternAlpha={25} patternRefreshInterval={3} />
+              </div>
               <CategorySwitcher
                 active={activeCategory}
                 onChange={handleCategoryChange}
               />
             </div>
-
+            <div className="absolute inset-0 z-[0] pointer-events-none opacity-50">
+                <Noise patternAlpha={25} patternRefreshInterval={3} />
+              </div>
             <ProjectsSection
               ref={projectsSectionRef}
               activeCategory={activeCategory}

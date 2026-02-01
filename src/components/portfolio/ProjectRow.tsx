@@ -32,21 +32,19 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
       className="group relative mb-24"
     >
       {/* Contained Project Box with High Contrast Background */}
-      <div className="bg-brand-blue rounded-[2rem] flex flex-col xl:flex-row gap-12 relative overflow-hidden p-6">
- 
-        
+      <div className="bg-brand-blue rounded-[2rem] flex flex-col xl:flex-row gap-12 relative overflow-hidden p-6 max-h-[85vh]">
         {/* Left side: Content */}
-        <div className="w-full xl:w-5/12 flex flex-col z-10 pt-4 p-8 md:p-12 lg:p-16 pointer-events-none">
-          <h3 className="text-5xl md:text-7xl font-serif font-medium text-brand-cream mb-10 leading-[0.9] tracking-tight">
+        <div className="w-full lg:w-2/5 Cflex flex-col z-10 pt-4 p-8 md:p-12 pointer-events-none">
+          <h3 className="text-5xl md:text-[3vw] font-serif font-medium text-brand-cream mb-10 leading-[0.9] tracking-tight">
             {project.title}
           </h3>
           
           {typeof project.description === 'string' ? (
-            <p className="text-xl text-brand-cream/70 leading-relaxed mb-12 font-light">
+            <p className="text-md text-brand-cream/70 leading-relaxed mb-12 font-light">
               {project.description}
             </p>
           ) : (
-            <div className="list-disc list-inside text-xl text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
+            <div className="list-disc list-inside text-md text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
               {project.description.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
@@ -54,26 +52,22 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
           )}
 
           <div className="mt-auto">
-            {project.link ? (
+            {project.link && (
               <a 
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 bg-brand-blue text-brand-cream px-8 py-4 text-sm font-cream tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
+                className="inline-flex items-center gap-4 bg-brand-cream text-brand-blue px-8 py-4 text-sm font-cream tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
               >
                 View Project 
                 <ArrowUpRight className="w-5 h-5" />
               </a>
-            ) : (
-              <span className="inline-block border border-brand-cream/20 text-brand-cream/40 px-6 py-3 text-xs font-bold tracking-widest uppercase cursor-not-allowed">
-                Private Access
-              </span>
             )}
           </div>
         </div>
 
         {/* Right side: Image Container */}
-        <div className="w-full xl:w-7/12 relative h-[200px] md:h-[700px] bg-black transition-colors z-10 rounded-[2rem] overflow-hidden aspect-[3/4]">
+        <div className="w-full lg:w-3/5 relative bg-black transition-colors z-10 rounded-[1.5rem] overflow-hidden aspect-[4/3]">
           <AnimatePresence mode="wait">
             <motion.img
               key={`${project.id}-${currentImageIndex}`}

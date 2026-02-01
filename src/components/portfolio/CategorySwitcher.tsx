@@ -14,10 +14,8 @@ const CategorySwitcher: React.FC<CategorySwitcherProps> = ({
   const categories = Object.values(Category)
 
   return (
-    <div className="flex flex-wrap gap-4 md:gap-12 items-center pb-2">
-      <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
-            <Noise patternAlpha={25} patternRefreshInterval={3} />
-          </div>
+    <div className="flex flex-wrap gap-4 md:gap-12 items-center pb-2 relative h-full w-full">
+
       {categories.map((cat) => (
         <button
           key={cat}

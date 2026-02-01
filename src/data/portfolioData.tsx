@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     id: 's0',
     category: Category.SOFTWARE,
     title: 'Outtalent (YC S19)',
-    description: ['Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers.', 'It features 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development and maintenance, including design, frontend and backend, database management, and APIs.'],
+    description: ['Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers.', 'I carefully look after its 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development, including UI/UX design, frontend and backend, database management, and APIs.'],
     image: "./screenshots/software/outtalent_tracktalent.jpg",
     link: 'https://outtalent.com/'
   },
@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     id: 's1',
     category: Category.SOFTWARE,
     title: 'Boulangerie.kg',
-    description: ['Website for local bakery that features a branded welcome page, product catalog and a list of vendor locations.', 'Full-stack development and maintenance, including design, frontend and backend, database management, and APIs.'],
+    description: ['Full branded website for local bakery that includes a product catalog and a list of vendor locations.', 'I designed the website and handled its full-stack development, including the product database management.'],
     image: "./screenshots/software/boulangerie.jpg",
     link: 'https://boulangerie.kg/'
   },
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     category: Category.SOFTWARE,
     title: 'Rabbit Repair',
     year: '2024',
-    description: ['Car repair shop landing page and repair booking system for a local US-based business.', 'Full brand identity and website design creation, including logo, brand colors, typography, copy and website design.'],
+    description: ['Car repair shop landing page and repair booking system for a local US-based business.', 'Developed full brand identity, including logo, brand colors, typography, copy and website design; as well as the full-stack development of the website.'],
     image: "./screenshots/software/rabbitrepair.jpg",
     link: 'https://rabbit-repair.com/'
   },
