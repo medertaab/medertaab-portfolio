@@ -32,19 +32,22 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
       className="group relative mb-24"
     >
       {/* Contained Project Box with High Contrast Background */}
-      <div className="bg-brand-blue rounded-[2rem] flex flex-col xl:flex-row gap-12 relative overflow-hidden p-6 max-h-[85vh]">
+      <div className="bg-brand-blue rounded-[2rem] flex flex-col lg:flex-row gap-12 relative overflow-hidden p-6 max-h-[85vh]">
         {/* Left side: Content */}
         <div className="w-full lg:w-2/5 Cflex flex-col z-10 pt-4 p-8 md:p-12 pointer-events-none">
-          <h3 className="text-5xl md:text-[3vw] font-serif font-medium text-brand-cream mb-10 leading-[0.9] tracking-tight">
-            {project.title}
-          </h3>
+          <div className="flex items-start gap-1 md:gap-2">
+            <img src={project.icon} alt={`${project.title} icon`} className="w-10 h-10 md:w-[3vw] md:h-[3vw] mb-8 invert" />
+            <h3 className="text-4xl md:text-[3vw] font-serif font-medium text-brand-cream mb-10 leading-[0.9] tracking-tight">
+              {project.title}
+            </h3>
+          </div>
           
           {typeof project.description === 'string' ? (
             <p className="text-md text-brand-cream/70 leading-relaxed mb-12 font-light">
               {project.description}
             </p>
           ) : (
-            <div className="list-disc list-inside text-md text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
+            <div className="list-disc list-inside text-md  xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
               {project.description.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}

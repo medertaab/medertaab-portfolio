@@ -13,7 +13,8 @@ export const PROJECTS: Project[] = [
     title: 'Outtalent (YC S19)',
     description: ['Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers.', 'I carefully look after its 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development, including UI/UX design, frontend and backend, database management, and APIs.'],
     image: "./screenshots/software/outtalent_tracktalent.jpg",
-    link: 'https://outtalent.com/'
+    link: 'https://outtalent.com/',
+    icon: "./sparkles/sparkle_icon1.gif"
   },
   {
     id: 's1',
@@ -21,7 +22,8 @@ export const PROJECTS: Project[] = [
     title: 'Boulangerie.kg',
     description: ['Full branded website for local bakery that includes a product catalog and a list of vendor locations.', 'I designed the website and handled its full-stack development, including the product database management.'],
     image: "./screenshots/software/boulangerie.jpg",
-    link: 'https://boulangerie.kg/'
+    link: 'https://boulangerie.kg/',
+    icon: "./sparkles/sparkle_icon2.gif"
   },
   {
     id: 's2',
@@ -30,7 +32,8 @@ export const PROJECTS: Project[] = [
     year: '2024',
     description: ['Car repair shop landing page and repair booking system for a local US-based business.', 'Developed full brand identity, including logo, brand colors, typography, copy and website design; as well as the full-stack development of the website.'],
     image: "./screenshots/software/rabbitrepair.jpg",
-    link: 'https://rabbit-repair.com/'
+    link: 'https://rabbit-repair.com/',
+    icon: "./sparkles/sparkle_icon3.gif"
   },
   {
     id: 's3',
@@ -39,7 +42,8 @@ export const PROJECTS: Project[] = [
     year: '2024',
     description: ['Calendrier is an early stage French startup that provides an event calendar, piecing together key dates from the worlds of art, fashion, design and culture.', 'Full-stack development based on close cooperation with the founder and the design team.'],
     image: "./screenshots/software/calendrier.jpg",
-    link: 'https://calendrierenligne.com/'
+    link: 'https://calendrierenligne.com/',
+    icon: "./sparkles/sparkle_icon4.gif"
   },
   {
     id: 'd1',
@@ -50,6 +54,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/design/disney_1.jpg",
       "./screenshots/design/disney_2.jpg",
     ],
+    icon: "./sparkles/sparkle_icon1.gif"
   },
   {
     id: 'd2',
@@ -60,6 +65,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/design/adventuretime_1.jpg",
       "./screenshots/design/adventuretime_2.jpg",
     ],
+    icon: "./sparkles/sparkle_icon2.gif"
   },
   {
     id: 'd3',
@@ -70,6 +76,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/design/footballnavigator_1.jpg",
       "./screenshots/design/footballnavigator_2.jpg",
     ],
+    icon: "./sparkles/sparkle_icon3.gif"
   },
   {
     id: 'i1',
@@ -83,6 +90,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/illustrations/avatar_4.jpg",
 
     ],
+    icon: "./sparkles/sparkle_icon4.gif"
   },
   {
     id: 'i2',
@@ -96,6 +104,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/illustrations/sirens_4.jpg",
 
     ],
+    icon: "./sparkles/sparkle_icon1.gif"
   },
   {
     id: 'i3',
@@ -110,6 +119,7 @@ export const PROJECTS: Project[] = [
       "./screenshots/illustrations/fantasy_5.jpg",
       "./screenshots/illustrations/fantasy_6.jpg",
     ],
+    icon: "./sparkles/sparkle_icon2.gif"
   }
 ];
 

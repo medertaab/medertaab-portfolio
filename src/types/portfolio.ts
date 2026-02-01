@@ -13,6 +13,7 @@ export interface Project {
   image?: string;
   link?: string;
   year?: string;
+  icon?: string;
 }
 
 export interface SocialLink {

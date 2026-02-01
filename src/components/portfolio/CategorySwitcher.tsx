@@ -15,7 +15,6 @@ const CategorySwitcher: React.FC<CategorySwitcherProps> = ({
 
   return (
     <div className="flex flex-wrap gap-4 md:gap-12 items-center pb-2 relative h-full w-full">
-
       {categories.map((cat) => (
         <button
           key={cat}

@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
-import V1 from './pages/V1';
+import V1 from './pages/V1/page';
 
 export default function App() {
   return (

@@ -58,16 +58,14 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
         style={{ y: yTranslate, x: contentOffsetX }}
         className="relative z-10"
       >
-        <h1 className="text-[8vw] font-serif font-bold text-brand-cream leading-[0.8] tracking-tighter mb-10 drop-shadow-2xl">
-          Meder<br />
-          Taab
+        <h1 className="text-[15vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] font-serif font-bold text-brand-cream leading-[0.8] tracking-tighter mb-6 sm:mb-8 md:mb-10 drop-shadow-2xl">
+          <span className="inline lg:block mr-3">Meder</span>
+          <span className="inline lg:block">Taab</span>
         </h1>
-        <div className="flex flex-col md:flex-row gap-8 md:items-end justify-between">
-          <p className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-tight opacity-90 drop-shadow-lg">
-            Software Engineer. <br />
-            Also an Illustrator, Copywriter and Full-Time Internet Resident.
-          </p>
-        </div>
+          <h2 className="flex flex-col gap-1 mg:gap-2 lg:gap-4 xl:gap-6 text-base sm:text-lg md:text-xl lg:text-[1.75vw] font-light font-serif text-brand-cream opacity-90 drop-shadow-lg">
+            <span>Software Engineer.</span> 
+            <span>Also an Digital Artist, Copywriter and Full-Time Internet Resident.</span>
+          </h2>
       </motion.div>
 
     </motion.section>

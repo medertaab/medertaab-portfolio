@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: 'EMAIL', url: 'mailto:hello@medertaab.com' },
-  { label: 'LINKEDIN', url: 'https://linkedin.com/in/medertaab' },
+  { label: 'EMAIL', url: 'mailto:medertaab@gmail.com' },
+  { label: 'LINKEDIN', url: 'https://www.linkedin.com/in/meder-taab-34195b73/' },
   { label: 'GITHUB', url: 'https://github.com/medertaab' }
 ];
