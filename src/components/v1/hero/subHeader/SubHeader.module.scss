@@ -1,0 +1,223 @@
+@use "../../../../styles/variables.scss" as *;
+$block-height: min(3.5rem, 10vw);
+
+.subHeader {
+  width: calc(100% - 3rem);
+  max-width: $max-width;
+  z-index: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--magic);
+  position: relative;
+  animation: slide-up 1s ease 0.2s both;
+  transition: 250ms ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    z-index: -1;
+    left: -1rem;
+    top: -1rem;
+    animation: border 5s infinite;
+  }
+
+  .upperHalf {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    span {
+      display: block;
+      color: $off-black;
+      font-size: min(3rem, 7vw);
+    }
+
+    h2 {
+      font-size: min(4.5rem, 8.5vw);
+      font-family: "Urbanist", sans-serif;
+      font-weight: 500;
+      color: $off-black;
+    }
+  }
+
+  .lowerHalf {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $off-black;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+
+    .graphicWrapper {
+      height: 2rem;
+      width: 7rem;
+      background-color: $off-black;
+      max-width: 49%;
+      position: relative;
+      overflow: hidden;
+      padding: 1rem;
+
+      img {
+        position: absolute;
+        top: -17%;
+        left: 50%;
+        width: 60%;
+        filter: hue-rotate(7deg);
+        animation: rotate 7s linear infinite forwards;
+      }
+    }
+
+    .description {
+      color: $off-black;
+      font-size: min(0.7rem, 1.7vw);
+      font-weight: 500;
+      width: 100%;
+      margin-bottom: 0.5rem;
+      margin-right: 0.5rem;
+      text-align: end;
+    }
+
+    .barcode {
+      height: 2rem;
+      margin-left: auto;
+      max-width: 49%;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .subHeader {
+    .upperHalf {
+      padding: 0 0.5rem;
+    }
+
+    .lowerHalf {
+      gap: 1rem;
+
+      .graphicWrapper {
+        height: $block-height;
+        width: calc(($block-height*35)/10);
+        order: 0;
+      }
+
+      .description {
+        max-width: 200px;
+        order: 1;
+        text-align: left;
+      }
+
+      .barcode {
+        order: 2;
+        height: $block-height;
+      }
+    }
+  }
+}
+
+@keyframes border {
+  0% {
+    border-image: linear-gradient(
+        135deg,
+        transparent -33%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  2% {
+    border-image: linear-gradient(
+        135deg,
+        $yellow 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  4% {
+    border-image: linear-gradient(
+        135deg,
+        $yellow 0%,
+        $yellow 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  6% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        $yellow 33%,
+        $yellow 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  8% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        $yellow 66%,
+        $yellow 100%
+      )
+      1 / 1px;
+  }
+  10% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        $yellow 100%
+      )
+      1 / 1px;
+  }
+  12% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+  14% {
+    border-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 33%,
+        transparent 66%,
+        transparent 100%
+      )
+      1 / 1px;
+  }
+}
+
+@keyframes graphic {
+  0% {
+    transform: translateY(-10%) translateX(-50%);
+  } 50% {
+    transform: translateY(10%) translateX(-50%);
+  } 100% {
+    transform: translateY(-10%) translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+    translate: (-50%);
+
+  } 100% {
+    transform: rotateY(360deg);
+    translate: (-50%);
+    ;
+  }
+}

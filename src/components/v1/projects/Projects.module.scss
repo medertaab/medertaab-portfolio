@@ -1,0 +1,17 @@
+.projects {
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5rem;
+  z-index: 1;
+}
+
+@media (min-width: $widescreen) {
+  .projects {
+    margin-top: 6rem;
+
+    h3 {
+      margin: 0 auto;
+    }
+  }
+}

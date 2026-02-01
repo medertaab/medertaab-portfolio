@@ -1,0 +1,108 @@
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: $footer-height;
+  padding: 0.5rem 1rem;
+  z-index: 0;
+  opacity: 1;
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: $white;
+    background: $cosmic;
+  }
+
+  ::selection {
+    color: $white;
+    background: $cosmic;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: end;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  li {
+    color: $black;
+    font-size: 0.8rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    transition: 0.15s ease-in-out;
+    font-weight: 500;
+  }
+
+  li:hover {
+    color: $white;
+  }
+
+  span {
+    display: block;
+    text-align: right;
+    color: $black;
+    max-width: $max-width;
+    font-size: 0.8rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .lightContainer {
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    overflow: hidden;
+    transition: 1000ms ease-in-out;
+
+    &::after {
+      top: 20%;
+      content: "";
+      height: 2200px;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+      border-radius: 99999px;
+      position: absolute;
+      background: radial-gradient(var(--blob1), var(--cosmic));
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      top: 350px;
+      z-index: -2;
+      filter: blur(75px);
+      animation: pulsate 3s ease-in-out infinite forwards;
+    }
+  }
+}
+
+@media (min-width: $widescreen) {
+  .footer {
+    padding: 2rem 1rem 1rem 1rem;
+
+    ul {
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    li {
+      font-size: 0.9rem;
+      text-decoration: underline;
+    }
+
+    span {
+      margin: 0 auto;
+    }
+
+
+    .lightContainer {
+      &::after {
+        height: 3200px;
+      }
+    }
+  }
+}
