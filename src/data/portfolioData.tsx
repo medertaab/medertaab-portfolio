@@ -11,10 +11,7 @@ export const PROJECTS: Project[] = [
     id: 's0',
     category: Category.SOFTWARE,
     title: 'Outtalent (YC S19)',
-    description: 'Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers. It features 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system). I am currently the main product engineer and work on full-stack development and maintenance, including design, frontend and backend, database management, and APIs.',
-    images: [
-      '/',
-    ],
+    description: ['Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers.', 'It features 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development and maintenance, including design, frontend and backend, database management, and APIs.'],
     image: "./screenshots/software/outtalent_tracktalent.jpg",
     link: 'https://outtalent.com/'
   },
@@ -22,10 +19,7 @@ export const PROJECTS: Project[] = [
     id: 's1',
     category: Category.SOFTWARE,
     title: 'Boulangerie.kg',
-    description: 'Website for local bakery that features a landing page, product catalog and a list of vendor locations. Implemented with Sanity CMS for data management',
-    images: [
-      '/',
-    ],
+    description: ['Website for local bakery that features a branded welcome page, product catalog and a list of vendor locations.', 'Full-stack development and maintenance, including design, frontend and backend, database management, and APIs.'],
     image: "./screenshots/software/boulangerie.jpg",
     link: 'https://boulangerie.kg/'
   },
@@ -34,7 +28,7 @@ export const PROJECTS: Project[] = [
     category: Category.SOFTWARE,
     title: 'Rabbit Repair',
     year: '2024',
-    description: 'Car repair shop landing page and repair booking system for a local US-based business. Full brand identity and website design creation, including logo, brand colors, typography, copy and website design. Implemented with Next.js, Tailwind CSS, Cal.com and Sanity CMS for data management.',
+    description: ['Car repair shop landing page and repair booking system for a local US-based business.', 'Full brand identity and website design creation, including logo, brand colors, typography, copy and website design.'],
     image: "./screenshots/software/rabbitrepair.jpg",
     link: 'https://rabbit-repair.com/'
   },
@@ -43,7 +37,7 @@ export const PROJECTS: Project[] = [
     category: Category.SOFTWARE,
     title: 'Calendrier',
     year: '2024',
-    description: 'Calendrier is an early stage French startup that provides an event calendar, piecing together key dates from the worlds of art, fashion, design and culture.',
+    description: ['Calendrier is an early stage French startup that provides an event calendar, piecing together key dates from the worlds of art, fashion, design and culture.', 'Full-stack development based on close cooperation with the founder and the design team.'],
     image: "./screenshots/software/calendrier.jpg",
     link: 'https://calendrierenligne.com/'
   },
@@ -83,23 +77,23 @@ export const PROJECTS: Project[] = [
     title: 'Avatar: The Last Airbender portrait series',
     description: 'A series of semi-realistic portraits of the characters from Avatar: The Last Airbender. Over 500k+ likes across social media. Featured on Comicbook.com, Deviantart and more.',
     images: [
-      "./screenshots/illustration/avatar_1.jpg",
-      "./screenshots/illustration/avatar_2.jpg",
-      "./screenshots/illustration/avatar_3.jpg",
-      "./screenshots/illustration/avatar_4.jpg",
+      "./screenshots/illustrations/avatar_1.jpg",
+      "./screenshots/illustrations/avatar_2.jpg",
+      "./screenshots/illustrations/avatar_3.jpg",
+      "./screenshots/illustrations/avatar_4.jpg",
 
     ],
   },
   {
     id: 'i2',
     category: Category.ILLUSTRATION,
-    title: 'Gotham City Sirens character illustrations',
+    title: 'Gotham City Sirens character art',
     description: 'A series of character design illustrations for the Gotham City Sirens.',
     images: [
-      "./screenshots/illustration/sirens_1.jpg",
-      "./screenshots/illustration/sirens_2.jpg",
-      "./screenshots/illustration/sirens_3.jpg",
-      "./screenshots/illustration/sirens_4.jpg",
+      "./screenshots/illustrations/sirens_1.jpg",
+      "./screenshots/illustrations/sirens_2.jpg",
+      "./screenshots/illustrations/sirens_3.jpg",
+      "./screenshots/illustrations/sirens_4.jpg",
 
     ],
   },
@@ -109,12 +103,12 @@ export const PROJECTS: Project[] = [
     title: 'Fantasy Fashion series',
     description: 'Collection of character design illustrations of the main fantasy classes.',
     images: [
-      "./screenshots/illustration/fantasy_1.jpg",
-      "./screenshots/illustration/fantasy_2.jpg",
-      "./screenshots/illustration/fantasy_3.jpg",
-      "./screenshots/illustration/fantasy_4.jpg",
-      "./screenshots/illustration/fantasy_5.jpg",
-      "./screenshots/illustration/fantasy_6.jpg",
+      "./screenshots/illustrations/fantasy_1.jpg",
+      "./screenshots/illustrations/fantasy_2.jpg",
+      "./screenshots/illustrations/fantasy_3.jpg",
+      "./screenshots/illustrations/fantasy_4.jpg",
+      "./screenshots/illustrations/fantasy_5.jpg",
+      "./screenshots/illustrations/fantasy_6.jpg",
     ],
   }
 ];

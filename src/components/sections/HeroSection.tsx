@@ -63,7 +63,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
           Taab
         </h1>
         <div className="flex flex-col md:flex-row gap-8 md:items-end justify-between">
-          <p className="text-xl md:text-xl font-light font-serif text-brand-cream max-w-2xl leading-tight opacity-90 drop-shadow-lg">
+          <p className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-tight opacity-90 drop-shadow-lg">
             Software Engineer. <br />
             Also an Illustrator, Copywriter and Full-Time Internet Resident.
           </p>

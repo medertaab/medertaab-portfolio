@@ -32,7 +32,7 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
       className="group relative mb-24"
     >
       {/* Contained Project Box with High Contrast Background */}
-      <div className="bg-brand-black rounded-[2rem] flex flex-col xl:flex-row gap-12 relative overflow-hidden p-6">
+      <div className="bg-brand-blue rounded-[2rem] flex flex-col xl:flex-row gap-12 relative overflow-hidden p-6">
  
         
         {/* Left side: Content */}
@@ -41,9 +41,17 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
             {project.title}
           </h3>
           
-          <p className="text-xl text-brand-cream/70 leading-relaxed mb-12 font-light max-w-md">
-            {project.description}
-          </p>
+          {typeof project.description === 'string' ? (
+            <p className="text-xl text-brand-cream/70 leading-relaxed mb-12 font-light">
+              {project.description}
+            </p>
+          ) : (
+            <div className="list-disc list-inside text-xl text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
+              {project.description.map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
+            </div>
+          )}
 
           <div className="mt-auto">
             {project.link ? (
@@ -51,7 +59,7 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 bg-brand-blue text-brand-cream px-8 py-4 text-sm font-black tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
+                className="inline-flex items-center gap-4 bg-brand-blue text-brand-cream px-8 py-4 text-sm font-cream tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
               >
                 View Project 
                 <ArrowUpRight className="w-5 h-5" />
@@ -65,18 +73,17 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
         </div>
 
         {/* Right side: Image Container */}
-        <div className="w-full xl:w-7/12 relative h-[200px] md:h-[800px] aspect-video bg-black transition-colors z-10">
-          
+        <div className="w-full xl:w-7/12 relative h-[200px] md:h-[700px] bg-black transition-colors z-10 rounded-[2rem] overflow-hidden aspect-[3/4]">
           <AnimatePresence mode="wait">
             <motion.img
               key={`${project.id}-${currentImageIndex}`}
               src={images[currentImageIndex]}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity rounded-[1rem]"
+              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
             />
           </AnimatePresence>
 
@@ -86,14 +93,14 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
               {/* Navigation Arrows */}
               <button
                 onClick={prevImage}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-cream/10 hover:bg-brand-cream/20 backdrop-blur-sm text-brand-cream p-3 rounded-full transition-all"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-brand-blue/50 hover:bg-brand-blue/20 text-brand-cream p-3 rounded-full transition-all"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-cream/10 hover:bg-brand-cream/20 backdrop-blur-sm text-brand-cream p-3 rounded-full transition-all"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-brand-blue/50 hover:bg-brand-blue/20 text-brand-cream p-3 rounded-full transition-all"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -107,8 +114,8 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
                     onClick={() => setCurrentImageIndex(idx)}
                     className={`w-2 h-2 rounded-full transition-all ${
                       idx === currentImageIndex 
-                        ? 'bg-brand-cream w-6' 
-                        : 'bg-brand-cream/40 hover:bg-brand-cream/60'
+                        ? 'bg-brand-blue w-6' 
+                        : 'bg-brand-blue/40 hover:bg-brand-blue/60'
                     }`}
                     aria-label={`Go to image ${idx + 1}`}
                   />

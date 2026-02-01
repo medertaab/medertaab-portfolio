@@ -8,7 +8,7 @@ export interface Project {
   id: string;
   category: Category;
   title: string;
-  description: string;
+  description: string | string[];
   images?: string[];
   image?: string;
   link?: string;

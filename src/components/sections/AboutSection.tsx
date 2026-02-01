@@ -87,20 +87,20 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>(
         
         {/* Text Content - In Front */}
         <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-12 lg:px-24 py-32 md:py-48">
-          <div className="mx-auto max-w-[90%]">
+          <div className="mx-auto max-w-[90%] text-balance">
             <ScrollRevealText
               text={ABOUT_TEXT_1}
               scrollYProgress={aboutScrollProgress}
               charOffset={0}
               totalChars={TOTAL_ABOUT_CHARS}
-              className="text-xl md:text-[2vw] font-light font-serif text-brand-cream leading-relaxed mb-8"
+              className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-relaxed mb-8"
             />
             <ScrollRevealText
               text={ABOUT_TEXT_2}
               scrollYProgress={aboutScrollProgress}
               charOffset={ABOUT_TEXT_1.length}
               totalChars={TOTAL_ABOUT_CHARS}
-              className="text-xl md:text-[2vw] font-light font-serif text-brand-cream leading-relaxed"
+              className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-relaxed"
             />
           </div>
         </div>
