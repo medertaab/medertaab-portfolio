@@ -1,4 +1,9 @@
 import { motion, MotionValue, useTransform } from 'framer-motion';
+import Noise from '@component/components/Noise';
+
+// Set to a URL string to use a background image, or leave empty/null for solid bg-brand-blue
+// const HERO_BACKGROUND_IMAGE: string | null = '/hero-bg.png';
+const HERO_BACKGROUND_IMAGE: string | null = null;
 
 interface HeroSectionProps {
   scrollYProgress: MotionValue<number>;
@@ -64,20 +69,29 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
         borderRadius: heroRadius,
       }}
     >
-      {/* Background Image with Parallax - offset to stay visually fixed */}
+      {/* Background - Image with Parallax or solid color */}
       <motion.div
-        className="absolute inset-[-10%] z-0"
+        className={`absolute inset-[-10%] z-0 ${!HERO_BACKGROUND_IMAGE ? 'bg-brand-blue' : ''}`}
         variants={bgVariants}
         style={{
-          backgroundImage: 'url(/hero-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          ...(HERO_BACKGROUND_IMAGE && {
+            backgroundImage: `url(${HERO_BACKGROUND_IMAGE})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }),
           y: bgParallax,
           x: contentOffsetX,
           scale: bgScale
         }}
       />
+
+      {/* Noise overlay for solid blue background */}
+      {!HERO_BACKGROUND_IMAGE && (
+        <div className="absolute inset-0 z-[1] pointer-events-none opacity-50">
+          <Noise patternAlpha={25} patternRefreshInterval={3} />
+        </div>
+      )}
 
       {/* Gradient Overlay for text readability */}
       <motion.div
