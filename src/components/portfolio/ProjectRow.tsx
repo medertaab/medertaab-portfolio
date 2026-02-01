@@ -43,7 +43,7 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
           </div>
           
           {typeof project.description === 'string' ? (
-            <p className="text-md text-brand-cream/70 leading-relaxed mb-12 font-light">
+            <p className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light">
               {project.description}
             </p>
           ) : (
