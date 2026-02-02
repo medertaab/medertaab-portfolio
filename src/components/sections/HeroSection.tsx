@@ -101,7 +101,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             colorNum={4}
             waveAmplitude={0.03}
             waveFrequency={0}
-            waveSpeed={0.02}
+            waveSpeed={0.1}
           />
           {/* Brand blue overlay with negative blend */}
           <div className="absolute inset-0 bg-brand-blue mix-blend-difference pointer-events-none" />

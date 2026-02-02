@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Category } from "@component/types/portfolio"
 import { PROJECTS } from "@component/data/portfolioData"
@@ -15,6 +15,7 @@ export default function Home() {
     Category.SOFTWARE,
   )
   const filteredProjects = PROJECTS.filter((p) => p.category === activeCategory)
+  const preloadedCategoriesRef = useRef(new Set<Category>())
 
   const containerRef = useRef(null)
   const aboutSectionRef = useRef<HTMLElement>(null)
@@ -22,6 +23,22 @@ export default function Home() {
   const { scrollYProgress } = useScroll()
 
   const handleCategoryChange = (category: Category) => {
+    if (!preloadedCategoriesRef.current.has(category)) {
+      const urls = PROJECTS.filter((project) => project.category === category)
+        .flatMap((project) =>
+          project.images?.length
+            ? project.images
+            : project.image
+              ? [project.image]
+              : [],
+        )
+      const uniqueUrls = new Set(urls)
+      uniqueUrls.forEach((url) => {
+        const img = new Image()
+        img.src = url
+      })
+      preloadedCategoriesRef.current.add(category)
+    }
     setActiveCategory(category)
     if (projectsSectionRef.current) {
       const elementPosition =
@@ -44,6 +61,26 @@ export default function Home() {
     target: aboutSectionRef,
     offset: ["center end", "end end"],
   })
+
+  useEffect(() => {
+    if (preloadedCategoriesRef.current.has(activeCategory)) {
+      return
+    }
+    const urls = PROJECTS.filter((project) => project.category === activeCategory)
+      .flatMap((project) =>
+        project.images?.length
+          ? project.images
+          : project.image
+            ? [project.image]
+            : [],
+      )
+    const uniqueUrls = new Set(urls)
+    uniqueUrls.forEach((url) => {
+      const img = new Image()
+      img.src = url
+    })
+    preloadedCategoriesRef.current.add(activeCategory)
+  }, [activeCategory])
 
   return (
     <div

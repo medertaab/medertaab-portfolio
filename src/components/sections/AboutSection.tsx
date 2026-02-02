@@ -150,8 +150,10 @@ function ScrollRevealText({
 
 // Define the about section texts
 const ABOUT_TEXT_1 = "I'm a creative software developer who loves bridging art and technology.";
-const ABOUT_TEXT_2 = "Combining a decade of professional digital art work with modern software engineering to build expressive, accessible and human-centered digital experiences.";
-const TOTAL_ABOUT_CHARS = ABOUT_TEXT_1.length + ABOUT_TEXT_2.length;
+const ABOUT_TEXT_2 = "A decade of experience as a professional digital artist creating viral projects amassing 100+ million total impressions, working with major brands like Disney and Warner Bros.";
+const ABOUT_TEXT_3 = "Now building expressive, human-centered digital experiences.";
+
+const TOTAL_ABOUT_CHARS = ABOUT_TEXT_1.length + ABOUT_TEXT_2.length + ABOUT_TEXT_3.length;
 
 interface AboutSectionProps {
   aboutScrollProgress: MotionValue<number>;
@@ -293,6 +295,16 @@ const AboutSection = forwardRef<HTMLElement, AboutSectionProps>(
               text={ABOUT_TEXT_2}
               scrollYProgress={aboutScrollProgress}
               charOffset={ABOUT_TEXT_1.length}
+              totalChars={TOTAL_ABOUT_CHARS}
+              className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-relaxed mb-8"
+              highlightPhrases={[
+                { phrase: '100+ million total impressions', highlightStart: 0.5, highlightEnd: 0.8 }
+              ]}
+            />
+            <ScrollRevealText
+              text={ABOUT_TEXT_3}
+              scrollYProgress={aboutScrollProgress}
+              charOffset={ABOUT_TEXT_1.length + ABOUT_TEXT_2.length}
               totalChars={TOTAL_ABOUT_CHARS}
               className="text-xl md:text-[1.75vw] font-light font-serif text-brand-cream leading-relaxed"
             />

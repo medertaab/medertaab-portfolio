@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '@component/types/portfolio';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -11,6 +11,7 @@ interface ProjectRowProps {
 const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
   
   // Use images array if available, otherwise fall back to single image
   const images = project.images?.length ? project.images : (project.image ? [project.image] : []);
@@ -26,7 +27,13 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
   
   useEffect(() => {
     setIsImageLoaded(false);
-  }, [currentImageIndex]);
+  }, [currentImageIndex, project.id]);
+
+  useEffect(() => {
+    if (imageRef.current?.complete) {
+      setIsImageLoaded(true);
+    }
+  }, [currentImageIndex, images]);
 
   return (
     <motion.div 
@@ -37,9 +44,9 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
       className="group relative mb-24"
     >
       {/* Contained Project Box with High Contrast Background */}
-      <div className="bg-brand-blue rounded-[2rem] flex flex-col lg:flex-row gap-12 relative overflow-hidden p-6 max-h-[85vh]">
+      <div className="bg-brand-blue rounded-[2rem] flex flex-col lg:flex-row gap-6 md:gap-12 relative overflow-hidden p-4 px-4 md:p-8 max-h-none lg:max-h-[85vh]">
         {/* Left side: Content */}
-        <div className="w-full lg:w-2/5 Cflex flex-col z-10 pt-4 p-8 md:p-12 pointer-events-none">
+        <div className="w-full lg:w-2/5 flex flex-col z-10 pt-4 md:p-12 pointer-events-none">
           <div className="flex items-start gap-1 md:gap-2">
             <img src={project.icon} alt={`${project.title} icon`} className="w-10 h-10 md:w-[3vw] md:h-[3vw] mb-8 invert" />
             <h3 className="text-4xl md:text-[3vw] font-serif font-medium text-brand-cream mb-10 leading-[0.9] tracking-tight">
@@ -48,11 +55,11 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
           </div>
           
           {typeof project.description === 'string' ? (
-            <p className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light">
+            <p className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed font-light">
               {project.description}
             </p>
           ) : (
-            <div className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed mb-12 font-light flex flex-col gap-4">
+            <div className="text-md xl:text-[1vw] text-brand-cream/70 leading-relaxed font-light flex flex-col gap-4">
               {project.description.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
@@ -65,9 +72,9 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
                 href={project.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 bg-brand-cream text-brand-blue px-8 py-4 text-sm font-cream tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
+                className="inline-flex mt-6 md:mt-12 items-center gap-4 bg-brand-cream text-brand-blue px-8 py-4 text-sm font-cream tracking-[0.2em] hover:text-opacity-80 transition-all uppercase group/btn pointer-events-auto"
               >
-                View Project 
+                Visit Project 
                 <ArrowUpRight className="w-5 h-5" />
               </a>
             )}
@@ -79,6 +86,7 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
           <AnimatePresence mode="wait">
             <motion.img
               key={`${project.id}-${currentImageIndex}`}
+              ref={imageRef}
               src={images[currentImageIndex]}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
               onLoad={() => setIsImageLoaded(true)}
