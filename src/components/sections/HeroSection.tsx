@@ -138,8 +138,8 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
           variants={textVariants}
           className="flex flex-col gap-1 mg:gap-2 lg:gap-4 xl:gap-6 text-base sm:text-lg md:text-xl lg:text-[1.75vw] font-light font-serif text-brand-cream opacity-90 drop-shadow-lg"
         >
-          <span>Software Engineer.</span> 
-          <span>Also a Digital Artist, Copywriter and Full-Time Internet Resident.</span>
+          <span>Creative Software Engineer.</span> 
+          <span>Digital Artist with 100+ million artwork impressions.</span>
         </motion.h2>
       </motion.div>
 

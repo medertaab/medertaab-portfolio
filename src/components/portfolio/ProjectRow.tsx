@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '@component/types/portfolio';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -10,6 +10,7 @@ interface ProjectRowProps {
 
 const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   
   // Use images array if available, otherwise fall back to single image
   const images = project.images?.length ? project.images : (project.image ? [project.image] : []);
@@ -22,6 +23,10 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
+  
+  useEffect(() => {
+    setIsImageLoaded(false);
+  }, [currentImageIndex]);
 
   return (
     <motion.div 
@@ -70,14 +75,15 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ project, index }) => {
         </div>
 
         {/* Right side: Image Container */}
-        <div className="w-full lg:w-3/5 relative bg-black transition-colors z-10 rounded-[1.5rem] overflow-hidden aspect-[4/3]">
+        <div className="w-full lg:w-3/5 relative bg-brand-blue transition-colors z-10 rounded-[1.5rem] overflow-hidden aspect-[4/3]">
           <AnimatePresence mode="wait">
             <motion.img
               key={`${project.id}-${currentImageIndex}`}
               src={images[currentImageIndex]}
               alt={`${project.title} - Image ${currentImageIndex + 1}`}
+              onLoad={() => setIsImageLoaded(true)}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: isImageLoaded ? 1 : 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
               className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"

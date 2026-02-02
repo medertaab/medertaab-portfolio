@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     id: 's0',
     category: Category.SOFTWARE,
     title: 'Outtalent (YC S19)',
-    description: ['Outtalent is a Y Combinator backed online mentorship and career acceleration platform for software engineers.', 'I carefully look after its 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development, including UI/UX design, frontend and backend, database management, and APIs.'],
+    description: ['Outtalent is a Y Combinator backed and Googler-founded online mentorship and career acceleration platform for software engineers.', 'I carefully look after its 5 user-facing platforms, including Outtalent Launchpad (educational web app) and TrackTalent (job tracking and application management system).', 'I am the main product engineer and work on full-stack development, including UI/UX design, frontend and backend, database management, and APIs.'],
     image: "./screenshots/software/outtalent_tracktalent.jpg",
     link: 'https://outtalent.com/',
     icon: "./sparkles/sparkle_icon1.gif"
@@ -20,9 +20,9 @@ export const PROJECTS: Project[] = [
     id: 's1',
     category: Category.SOFTWARE,
     title: 'Boulangerie.kg',
-    description: ['Full branded website for local bakery that includes a product catalog and a list of vendor locations.', 'I designed the website and handled its full-stack development, including the product database management.'],
+    description: ['Full branded website for bakery that includes a product catalog and a list of vendor locations.', 'I designed the website and handled its full-stack development, including the product database management.'],
     image: "./screenshots/software/boulangerie.jpg",
-    link: 'https://boulangerie.kg/',
+    link: 'https://boulangeriekg.pages.dev',
     icon: "./sparkles/sparkle_icon2.gif"
   },
   {
@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     category: Category.SOFTWARE,
     title: 'Rabbit Repair',
     year: '2024',
-    description: ['Car repair shop landing page and repair booking system for a local US-based business.', 'Developed full brand identity, including logo, brand colors, typography, copy and website design; as well as the full-stack development of the website.'],
+    description: ['Car repair shop landing page and repair booking system for a US-based business.', 'Built the full-stack website. Developed full brand identity, including logo, brand colors, typography, copy and website design.'],
     image: "./screenshots/software/rabbitrepair.jpg",
     link: 'https://rabbit-repair.com/',
     icon: "./sparkles/sparkle_icon3.gif"
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'd1',
     category: Category.DESIGN,
-    title: 'Disney Villains',
+    title: 'Disney - Disney Villains',
     description: 'Apparel design for Disney villains, licensed by Disney and printed for a limited time by Threadless.',
     images: [
       "./screenshots/design/disney_1.jpg",
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'd2',
     category: Category.DESIGN,
-    title: 'Adventure Time',
+    title: 'Warner Bros. - Adventure Time',
     description: 'Print design for Adventure Time, licensed by Cartoon Network and printed for a limited time by Redbubble.',
     images: [
       "./screenshots/design/adventuretime_1.jpg",
@@ -70,7 +70,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'd3',
     category: Category.DESIGN,
-    title: 'Football Navigator',
+    title: 'Atlético Madrid - Football Navigator',
     description: 'Logo design for Football Navigator, a football camp for young kids, in partneship with Atlético Madrid academy.',
     images: [
       "./screenshots/design/footballnavigator_1.jpg",
@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
     id: 'i1',
     category: Category.ILLUSTRATION,
     title: 'Avatar: The Last Airbender portrait series',
-    description: 'A series of semi-realistic portraits of the characters from Avatar: The Last Airbender. Over 500k+ likes across social media. Featured on Comicbook.com, Deviantart and more.',
+    description: ['A series of semi-realistic portraits of the characters from Avatar: The Last Airbender.', '500k+ likes across social media. Featured on Comicbook.com, Deviantart and more.'],
     images: [
       "./screenshots/illustrations/avatar_1.jpg",
       "./screenshots/illustrations/avatar_2.jpg",
